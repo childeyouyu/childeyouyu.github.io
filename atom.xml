@@ -3,11 +3,11 @@
   <title>语之屋</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2023-10-18T14:56:37.471Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://childeyouyu.github.io/"/>
+  <updated>2023-10-19T07:11:02.819Z</updated>
+  <id>https://childeyouyu.github.io/</id>
   
   <author>
     <name>公子语</name>
@@ -17,23 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://example.com/2023/10/18/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/"/>
-    <id>http://example.com/2023/10/18/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/</id>
-    <published>2023-10-18T13:20:41.040Z</published>
-    <updated>2023-10-18T14:56:37.471Z</updated>
+    <title>一个听歌的软件</title>
+    <link href="https://childeyouyu.github.io/2023/10/19/%E4%B8%80%E4%B8%AA%E5%90%AC%E6%AD%8C%E7%9A%84%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://childeyouyu.github.io/2023/10/19/%E4%B8%80%E4%B8%AA%E5%90%AC%E6%AD%8C%E7%9A%84%E8%BD%AF%E4%BB%B6/</id>
+    <published>2023-10-19T06:45:18.000Z</published>
+    <updated>2023-10-19T07:11:02.819Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;烟与黄昏&quot;&gt;&lt;a href=&quot;#烟与黄昏&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;前情提要&quot;&gt;&lt;a href=&quot;#前情提要&quot; class=&quot;headerlink&quot; title=&quot;前情提要&quot;&gt;&lt;/a&gt;前情提要&lt;/h1&gt;&lt;p&gt;我最爱用的LX</summary>
         
       
     
     
     
+    
+    <category term="软件" scheme="https://childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="音乐" scheme="https://childeyouyu.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+    <category term="命令行" scheme="https://childeyouyu.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>烟与黄昏</title>
+    <link href="https://childeyouyu.github.io/2022/12/19/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/"/>
+    <id>https://childeyouyu.github.io/2022/12/19/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/</id>
+    <published>2022-12-19T06:45:18.000Z</published>
+    <updated>2023-10-19T07:10:59.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;回到北方，面对的是炊烟袅袅的乡村，远离了杭州，仿佛梦幻一样，距离阿里巴巴、网易只有十几公里的位置的互联网之乡。&lt;/p&gt;
+&lt;p&gt;曾经我与杭州相处了半年，才后知后觉的发现这其实是一座知名的城市。就想着不如去逛一逛，见识一下大厂是什么样子的。&lt;/p&gt;
+&lt;p&gt;约了他们一个又一个人，</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
