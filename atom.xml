@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2023-10-20T01:08:36.028Z</updated>
+  <updated>2023-10-31T03:21:01.929Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>折腾日记</title>
+    <link href="https://childeyouyu.github.io/article/dc01.html"/>
+    <id>https://childeyouyu.github.io/article/dc01.html</id>
+    <published>2023-10-31T03:19:11.000Z</published>
+    <updated>2023-10-31T03:21:01.929Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;这两天从学长的手里买来一台小主机，配置还算可用，于是决定拿来玩一下。&lt;/p&gt;
+&lt;p&gt;配置：&lt;/p&gt;
+&lt;p&gt;*</summary>
+        
+      
+    
+    
+    
+    
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
+    
+    <category term="问题小记" scheme="https://childeyouyu.github.io/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>2023 年在通辽的最后一天</title>
