@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>SSH 安装和查看 · 语之屋</title><meta name="description" content="安装SSH（Secure Shell）服务是在Linux系统中进行远程管理和安全登录的常见做法。
+以下是在常见的Linux发行版中安装SSH服务的步骤：
+
+打开终端，并以管理员权限（sudo）登录。
+
+输入适用于你的Linux发行版的安装命令：
+
+Ubuntu&amp;#x2F;Debian：
+sudo a"><meta name="og:description" content="安装SSH（Secure Shell）服务是在Linux系统中进行远程管理和安全登录的常见做法。
+以下是在常见的Linux发行版中安装SSH服务的步骤：
+
+打开终端，并以管理员权限（sudo）登录。
+
+输入适用于你的Linux发行版的安装命令：
+
+Ubuntu&amp;#x2F;Debian：
+sudo a"><meta name="twitter:site" content="语之屋"><meta name="twitter:title" content="SSH 安装和查看"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style-dark.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">走自己的路，让别人说去吧。</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">君子慎独</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li class="soc"><a href="https://childeyouyu.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2023&nbsp;<a target="_blank" href="https://childeyouyu.github.io" rel="noopener noreferrer">公子语</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>SSH 安装和查看</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-11-10</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/tags/Linux/" title="Linux">Linux</a><span>&nbsp;</span></span></p><p class="post-abstract"><p>安装SSH（Secure Shell）服务是在Linux系统中进行远程管理和安全登录的常见做法。</p>
+<p>以下是在常见的Linux发行版中安装SSH服务的步骤：</p>
+<ol>
+<li><p>打开终端，并以管理员权限（sudo）登录。</p>
+</li>
+<li><p>输入适用于你的Linux发行版的安装命令：</p>
+<ul>
+<li><p>Ubuntu&#x2F;Debian：</p>
+<pre><code>sudo apt-get install openssh-server
+</code></pre>
+</li>
+<li><p>CentOS&#x2F;Fedora：</p>
+<pre><code>sudo dnf install openssh-server
+</code></pre>
+</li>
+<li><p>Arch Linux&#x2F;Manjaro：</p>
+<pre><code>sudo pacman -S openssh
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>输入管理员密码以确认安装。输入密码后，按下回车键继续。</p>
+</li>
+<li><p>安装完成后，SSH服务将自动启动。使用以下命令检查SSH服务的状态：</p>
+<ul>
+<li><p>Ubuntu&#x2F;Debian：</p>
+<pre><code>systemctl status ssh
+</code></pre>
+</li>
+<li><p>CentOS&#x2F;Fedora：</p>
+<pre><code>systemctl status sshd
+</code></pre>
+</li>
+<li><p>Arch Linux&#x2F;Manjaro：</p>
+<pre><code>systemctl status sshd
+</code></pre>
+</li>
+</ul>
+<p>如果服务正在运行，你将看到类似于”active (running)”的状态信息。</p>
+<pre class="line-numbers language-cmd"><code class="language-cmd">● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2023-11-10 10:49:09 CST; 32min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 17171 (sshd)
+      Tasks: 1 (limit: 4165)
+     Memory: 1.4M
+        CPU: 138ms
+     CGroup: /system.slice/ssh.service
+             └─17171 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+11月 10 10:49:09 E systemd[1]: Starting OpenBSD Secure Shell server...
+11月 10 10:49:09 E sshd[17171]: Server listening on 0.0.0.0 port 22.
+11月 10 10:49:09 E sshd[17171]: Server listening on :: port 22.
+11月 10 10:49:09 E systemd[1]: Started OpenBSD Secure Shell server.
+11月 10 10:52:57 E sshd[18783]: Accepted password for youyu from 192.168.10.164 port 64557 ssh2
+11月 10 10:52:57 E sshd[18783]: pam_unix(sshd:session): session opened for user youyu(uid=1000) by (uid=0)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://childeyouyu.github.io/article/ec0.html%20语之屋%20SSH 安装和查看"></a></span></div><div class="pagination"><p class="clearfix"><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/article/7d63.html" title="scoop安装和使用">下一篇: scoop安装和使用&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2023&nbsp;<a target="_blank" href="https://childeyouyu.github.io" rel="noopener noreferrer">公子语</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>

@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2023-10-31T03:21:01.929Z</updated>
+  <updated>2023-11-10T03:23:02.149Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -17,11 +17,90 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SSH 安装和查看</title>
+    <link href="https://childeyouyu.github.io/article/ec0.html"/>
+    <id>https://childeyouyu.github.io/article/ec0.html</id>
+    <published>2023-11-10T03:22:37.000Z</published>
+    <updated>2023-11-10T03:23:02.149Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;安装SSH（Secure</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Linux" scheme="https://childeyouyu.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scoop安装和使用</title>
+    <link href="https://childeyouyu.github.io/article/7d63.html"/>
+    <id>https://childeyouyu.github.io/article/7d63.html</id>
+    <published>2023-11-10T02:35:02.000Z</published>
+    <updated>2023-11-10T02:40:01.828Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;关于新电脑上管理员用户scoop的安装和使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;Windows 11</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>去签售会</title>
+    <link href="https://childeyouyu.github.io/article/a8a8.html"/>
+    <id>https://childeyouyu.github.io/article/a8a8.html</id>
+    <published>2023-11-09T07:59:03.000Z</published>
+    <updated>2023-11-10T02:42:14.309Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;半个月前的周末，我打定主意去慈溪看一次签售会，今年的下半年卢思浩跑了许多地方，起初我想着可以赶辽宁的那一场，结果回家完了几天，好在浙江还有两场。&lt;br&gt;整备好了行装，起床随便吃了点东西就走上了去往余姚的地铁，看窗外风景，浙江多山，短短40分钟的路途过了好几个隧道。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+    <category term="读书" scheme="https://childeyouyu.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>折腾日记</title>
     <link href="https://childeyouyu.github.io/article/dc01.html"/>
     <id>https://childeyouyu.github.io/article/dc01.html</id>
     <published>2023-10-31T03:19:11.000Z</published>
-    <updated>2023-10-31T03:21:01.929Z</updated>
+    <updated>2023-11-10T03:18:01.859Z</updated>
     
     
       
@@ -30,7 +109,8 @@
         
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;这两天从学长的手里买来一台小主机，配置还算可用，于是决定拿来玩一下。&lt;/p&gt;
 &lt;p&gt;配置：&lt;/p&gt;
-&lt;p&gt;*</summary>
+&lt;ul&gt;
+&lt;li&gt;处理器：双核 AMD</summary>
         
       
     
