@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2023-11-10T03:33:56.855Z</updated>
+  <updated>2023-11-22T03:18:59.369Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java中文乱码问题 - 2021年困扰我的万恶之源</title>
+    <link href="https://childeyouyu.github.io/article/4d37.html"/>
+    <id>https://childeyouyu.github.io/article/4d37.html</id>
+    <published>2023-11-22T03:13:15.000Z</published>
+    <updated>2023-11-22T03:18:59.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2021年，我选了一门名为《高级编程技术》的课，课程内容是Java编程，我很感兴趣，彼时我使用最新的 JDK 18，以及</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Java" scheme="https://childeyouyu.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计量的几处风景</title>
+    <link href="https://childeyouyu.github.io/article/e7fe.html"/>
+    <id>https://childeyouyu.github.io/article/e7fe.html</id>
+    <published>2023-11-11T15:18:42.000Z</published>
+    <updated>2023-11-22T03:11:32.707Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;三月的一个晚上，在九号楼后面的小路上偶遇一只小小的橘猫，看起来年纪不大的样子，声音有些沙哑的在我身边蹭着，像是寻觅着实物，彼时还有供人喂猫的公益猫粮，我取了些许递给他。&lt;/p&gt;
+&lt;p&gt;它等待着，却没有吃。向更黑的树林里呼唤着，叫来了他的同伴，更加胆小的小猫，他们躲在黑暗里，</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    
+    <category term="校园风光" scheme="https://childeyouyu.github.io/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/"/>
+    
+  </entry>
   
   <entry>
     <title>SSH 安装和查看</title>
@@ -231,7 +284,7 @@
     <link href="https://childeyouyu.github.io/article/2386.html"/>
     <id>https://childeyouyu.github.io/article/2386.html</id>
     <published>2022-10-25T00:14:45.000Z</published>
-    <updated>2023-11-11T00:23:14.602Z</updated>
+    <updated>2023-11-11T00:23:36.708Z</updated>
     
     
       
