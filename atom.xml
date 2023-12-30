@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2023-12-05T17:11:18.494Z</updated>
+  <updated>2023-12-30T08:23:05.966Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AHK 上手以及编辑器配置</title>
+    <link href="https://childeyouyu.github.io/article/65a0.html"/>
+    <id>https://childeyouyu.github.io/article/65a0.html</id>
+    <published>2023-12-30T08:18:44.000Z</published>
+    <updated>2023-12-30T08:23:05.966Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="AHK" scheme="https://childeyouyu.github.io/tags/AHK/"/>
+    
+  </entry>
   
   <entry>
     <title>Anaconda 使用的几个点</title>
@@ -36,11 +61,11 @@
     
     
     
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
     <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
     <category term="Python" scheme="https://childeyouyu.github.io/tags/Python/"/>
-    
-    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -144,9 +169,9 @@
     
     
     
-    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
-    
     <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
   </entry>
   
