@@ -1,18 +1,257 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>语之屋</title><meta name="description" content="A Blog Powered By Hexo"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style-dark.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">走自己的路，让别人说去吧。</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">君子慎独</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a class="current" href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li class="soc"><a href="https://github.com/childeyouyu" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://childeyouyu.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2023&nbsp;<a target="_blank" href="https://childeyouyu.github.io" rel="noopener noreferrer">公子语</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-container"><p class="post-title"><a href="/article/65a0.html">AHK 上手以及编辑器配置</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-12-30</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/tags/AHK/" title="AHK">AHK</a><span>&nbsp;</span></span></p><p class="post-abstract">前言最近要写一点简短的小东西，想起了以前加入过的一个脚本语言社区，名字是AutoHotKey，应该可以满足我的需求，花费了半个小时搞定环境和编辑器，主要是安装路径出了一点问题。
-AHK介绍以及安装Chris Mallett，这个人在2003年11月发布了AHK的第一个版本，经过数年的完善，在（08年）Lexiko...</p></div><div class="post-container"><p class="post-title"><a href="/article/ae8e.html">Anaconda 使用的几个点</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-12-05</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/tags/Windows/" title="Windows">Windows</a><span>&nbsp;</span><a class="a-tag" href="/tags/Python/" title="Python">Python</a><span>&nbsp;</span></span></p><p class="post-abstract">最近工作需要，重新配置了 Anaconda，过程中出现了些许问题，特此做个记录和汇总。
+<!DOCTYPE html><html lang="zh-cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>语之屋</title><meta name="author" content="公子语"><meta name="copyright" content="公子语"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="语之屋"><meta name="application-name" content="语之屋"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="website"><meta property="og:title" content="语之屋"><meta property="og:url" content="https://childeyouyu.github.io/index.html"><meta property="og:site_name" content="语之屋"><meta property="og:description"><meta property="og:locale" content="zh-cn"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="公子语"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://childeyouyu.github.io/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 公子语","link":"链接: ","source":"来源: 语之屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '语之屋',
+  title: '语之屋',
+  postAI: '',
+  pageFillDescription: '',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-12-31 22:50:10',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">语之屋</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AHK/" style="font-size: 1.05rem;">AHK<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 1.05rem;">命令行<sup>1</sup></a><a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 1.05rem;">奇思妙想<sup>2</sup></a><a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 1.05rem;">好玩的 Linux<sup>1</sup></a><a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84Linux/" style="font-size: 1.05rem;">好玩的Linux<sup>1</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.05rem;">小说<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>5</sup></a><a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 1.05rem;">校园风光<sup>1</sup></a><a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 1.05rem;">看世界<sup>2</sup></a><a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.05rem;">读书<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem;">软件<sup>1</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 1.05rem;">问题小记<sup>1</sup></a><a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.05rem;">随笔<sup>4</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.05rem;">音乐<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div id="home_top"><div class="swiper_container_card" style="height: auto;width: 100%"><div id="bannerGroup"><div id="random-banner"><canvas id="peoplecanvas"></canvas><a id="random-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-paper-plane"></i><div class="bannerText">随便逛逛<i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div></a></div><div class="categoryGroup"><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-blue)"><a class="categoryButton blue" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"><span class="categoryButtonText">前端</span><i class="anzhiyufont anzhiyu-icon-dove"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-red)"><a class="categoryButton red" href="/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B6%AF/"><span class="categoryButtonText">大学</span><i class="anzhiyufont anzhiyu-icon-fire"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-green)"><a class="categoryButton green" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"><span class="categoryButtonText">生活</span><i class="anzhiyufont anzhiyu-icon-book"></i></a></div></div></div><div class="topGroup"><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/article/65a0.html&quot;)"><div class="post_cover left_radius"><a href="article/65a0.html" title="AHK 上手以及编辑器配置"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="article/65a0.html" title="AHK 上手以及编辑器配置">AHK 上手以及编辑器配置</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/article/5d29.html&quot;)"><div class="post_cover left_radius"><a href="article/5d29.html" title="2023 年在通辽的最后一天"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="article/5d29.html" title="2023 年在通辽的最后一天">2023 年在通辽的最后一天</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/article/ae8e.html&quot;)"><div class="post_cover left_radius"><a href="article/ae8e.html" title="Anaconda 使用的几个点"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="article/ae8e.html" title="Anaconda 使用的几个点">Anaconda 使用的几个点</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/article/4d37.html&quot;)"><div class="post_cover left_radius"><a href="article/4d37.html" title="Java中文乱码问题 - 2021年困扰我的万恶之源"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="article/4d37.html" title="Java中文乱码问题 - 2021年困扰我的万恶之源">Java中文乱码问题 - 2021年困扰我的万恶之源</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/article/7d63.html&quot;)"><div class="post_cover left_radius"><a href="article/7d63.html" title="scoop安装和使用"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="article/7d63.html" title="scoop安装和使用">scoop安装和使用</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/article/ec0.html&quot;)"><div class="post_cover left_radius"><a href="article/ec0.html" title="SSH 安装和查看"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="article/ec0.html" title="SSH 安装和查看">SSH 安装和查看</a></div></div><a class="todayCard" id="todayCard" target="_blank" rel="noopener" href="https://docs.anheyu.com/" style="z-index: 1;"><div class="todayCard-info"><div class="todayCard-tips">新品主题</div><div class="todayCard-title">Theme-AnZhiYu</div></div><img class="todayCard-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="封面"><div class="banner-button-group"><div class="banner-button" onclick="event.stopPropagation();event.preventDefault();anzhiyu.hideTodayCard();"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i><span class="banner-button-text">更多推荐</span></div></div></a></div><link rel="stylesheet"></div></div><div class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div id="categoryBar"><div class="category-bar" id="category-bar"><div id="catalog-bar"><div id="catalog-list"><div class="catalog-list-item" id="首页"><a href="/">首页</a></div></div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/article/65a0.html')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><span class="newPost">最新</span><a class="unvisited-post" href="/article/65a0.html" title="AHK 上手以及编辑器配置">未读</a></div><a class="article-title" href="/article/65a0.html" title="AHK 上手以及编辑器配置">AHK 上手以及编辑器配置</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-30T08:18:44.000Z" title="发表于 2023-12-30 16:18:44" time="2023-12-30 16:18:44">2023-12-30</time><time class="time_hidden" datetime="2023-12-30T08:23:26.589Z" title="更新于 2023-12-30 16:23:26" time="2023-12-30 16:23:26">2023-12-30</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>技术</span></a><a class="article-meta__tags" href="/tags/AHK/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AHK</span></a></span></div><div class="content">前言最近要写一点简短的小东西，想起了以前加入过的一个脚本语言社区，名字是AutoHotKey，应该可以满足我的需求，花费了半个小时搞定环境和编辑器，主要是安装路径出了一点问题。
+AHK介绍以及安装Chris Mallett，这个人在2003年11月发布了AHK的第一个版本，经过数年的完善，在（08年）Lexikos等人的帮助下，发布了经典版本：1.0.48.05。
+2011年开始社区主要开始由Lexikos主导，并开发AutoHotkey v2-alpha至今。
+通常情况下，大家更支持使用经典的版本，不过我这人就喜欢玩新的，于是果断下载了最新版。
+目前的官网：www.autohotkey.com
+编辑器选择以及坑其实我还是比较喜欢每个语言都有自己的编辑器的，Java就用IDEA，Python使用Pycharm，但是扫了一眼目前大家推荐的编辑器还是挺丑的，就算了，还是老老实实用vscode吧。
+下载ahk、安装vscode、应用商店搜索AutoHotkey，一气呵成，写下第一个脚本。
+运行失败
+
+嗯，看一下报错：
+(哦，忘记截图了）
+
+大概就是C盘位置没有找到ahk文件，那应该是默认安装 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/ae8e.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/ae8e.html" title="Anaconda 使用的几个点">未读</a></div><a class="article-title" href="/article/ae8e.html" title="Anaconda 使用的几个点">Anaconda 使用的几个点</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-05T15:38:18.000Z" title="发表于 2023-12-05 23:38:18" time="2023-12-05 23:38:18">2023-12-05</time><time class="time_hidden" datetime="2023-12-05T17:11:18.494Z" title="更新于 2023-12-06 01:11:18" time="2023-12-06 01:11:18">2023-12-06</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>技术</span></a><a class="article-meta__tags" href="/tags/Windows/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Windows</span></a><a class="article-meta__tags" href="/tags/Python/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Python</span></a></span></div><div class="content">最近工作需要，重新配置了 Anaconda，过程中出现了些许问题，特此做个记录和汇总。
 1. 系统环境配置Win + S搜索 env –&gt; 编辑系统环境变量 –&gt; 环境变量。
 在 Path 中新建三个系统环境变量：
- 
+① anaconda 安装的目录 D:\anaconda
+
+② anaconda/scripts 的目录 D:\anaconda\Scripts
+
+③ bin 的目录 D:\Download\anaconda\Scripts\Library\bin
+
 
 PS：在安装时勾选添加anaconda3 到PATH就会自动配置了。
 
 
-2. ...</p></div><div class="post-container"><p class="post-title"><a href="/article/4d37.html">Java中文乱码问题 - 2021年困扰我的万恶之源</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-11-22</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/tags/Java/" title="Java">Java</a><span>&nbsp;</span></span></p><p class="post-abstract">2021年，我选了一门名为《高级编程技术》的课，课程内容是Java编程，我很感兴趣，彼时我使用最新的 JDK 18，以及 IDEA。
+2. Pycharm 识别配置好了后，我的pycharm还是识别不到conda的可执行文件，新建环境，选择conda，conda安装文件夹bin文件下面的conda.bat 文件。
+后面遇到其他情况我再进行补充。
+3. 常用命令查看conda版本：conda --version
+
+创建新环境：conda create --name 环境名 python=python版本（3.12）
+
+删除环境：conda remove --name env ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/4d37.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/4d37.html" title="Java中文乱码问题 - 2021年困扰我的万恶之源">未读</a></div><a class="article-title" href="/article/4d37.html" title="Java中文乱码问题 - 2021年困扰我的万恶之源">Java中文乱码问题 - 2021年困扰我的万恶之源</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-22T03:13:15.000Z" title="发表于 2023-11-22 11:13:15" time="2023-11-22 11:13:15">2023-11-22</time><time class="time_hidden" datetime="2023-11-22T03:19:20.123Z" title="更新于 2023-11-22 11:19:20" time="2023-11-22 11:19:20">2023-11-22</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>技术</span></a><a class="article-meta__tags" href="/tags/Java/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Java</span></a></span></div><div class="content">2021年，我选了一门名为《高级编程技术》的课，课程内容是Java编程，我很感兴趣，彼时我使用最新的 JDK 18，以及 IDEA。
 我遇到了一点小小的问题，控制台输出的文字永远是乱码，网络上的三五种方法尝试了许久也不能解决。
-时隔一年发现，或许是 JDK 18与 IDEA 之间有些不可调和的矛盾，于是改用了 J...</p></div><div class="post-container"><p class="post-title"><a href="/article/e7fe.html">计量的几处风景</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-11-11</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/随笔/" title="随笔">随笔</a><span>&nbsp;</span><a class="a-tag" href="/tags/看世界/" title="看世界">看世界</a><span>&nbsp;</span><a class="a-tag" href="/tags/校园风光/" title="校园风光">校园风光</a><span>&nbsp;</span></span></p><p class="post-abstract">三月的一个晚上，在九号楼后面的小路上偶遇一只小小的橘猫，看起来年纪不大的样子，声音有些沙哑的在我身边蹭着，像是寻觅着实物，彼时还有供人喂猫的公益猫粮，我取了些许递给他。
+时隔一年发现，或许是 JDK 18与 IDEA 之间有些不可调和的矛盾，于是改用了 JDK 17。
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/e7fe.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/e7fe.html" title="计量的几处风景">未读</a></div><a class="article-title" href="/article/e7fe.html" title="计量的几处风景">计量的几处风景</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-11T15:18:42.000Z" title="发表于 2023-11-11 23:18:42" time="2023-11-11 23:18:42">2023-11-11</time><time class="time_hidden" datetime="2023-11-22T03:19:20.125Z" title="更新于 2023-11-22 11:19:20" time="2023-11-22 11:19:20">2023-11-22</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%9A%8F%E7%AC%94/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>随笔</span></a><a class="article-meta__tags" href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>看世界</span></a><a class="article-meta__tags" href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>校园风光</span></a></span></div><div class="content">三月的一个晚上，在九号楼后面的小路上偶遇一只小小的橘猫，看起来年纪不大的样子，声音有些沙哑的在我身边蹭着，像是寻觅着实物，彼时还有供人喂猫的公益猫粮，我取了些许递给他。
 它等待着，却没有吃。向更黑的树林里呼唤着，叫来了他的同伴，更加胆小的小猫，他们躲在黑暗里，向路人卖力的展示自己作为猫咪的可爱之处。
-我说：“你们...</p></div><div class="post-container"><p class="post-title"><a href="/article/ec0.html">SSH 安装和查看</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-11-10</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/tags/好玩的Linux/" title="好玩的Linux">好玩的Linux</a><span>&nbsp;</span></span></p><p class="post-abstract">安装SSH（Secure Shell）服务是在Linux系统中进行远程管理和安全登录的常见做法。
+我说：“你们来这边，七号楼的女学生们最爱喂猫了。”
+后来看着两只小猫日渐有了精神，也变得健康了些。
+大约一个月后，我听闻生活区里有一只橘猫被撞死了，女友说正是那晚讨好我们的小橘猫。
+
+在日月湖的两侧，一侧有一群大白鹅聚众嬉戏，或是一头扎进水里，扬起一片水花；在小桥的另外一侧，是一只灰鹅，或是被欺负，或是出了其他的意外，腿卡在翅膀中间，失去了平衡，只能在小小的区域里转圈圈。
+
+一日在体育馆上完了课，看着朋友几分钟前发来消息说快来六楼，看今天的晚霞。
+我匆匆跑上楼去，将手上的东西随手丢在了路过的桌子上，来不及等电梯。
+但是只能看到一抹残阳，我静静的看着夕阳消散，夜幕降临。慨叹夕阳无限好。
+
+暑假时在校外租了房子，出去实习。
+偶尔回到学校见见朋友拿些东西，只看寝室逐渐变空，约到的朋友越来越少，直 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/ec0.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/ec0.html" title="SSH 安装和查看">未读</a></div><a class="article-title" href="/article/ec0.html" title="SSH 安装和查看">SSH 安装和查看</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-10T03:22:37.000Z" title="发表于 2023-11-10 11:22:37" time="2023-11-10 11:22:37">2023-11-10</time><time class="time_hidden" datetime="2023-11-10T03:33:56.855Z" title="更新于 2023-11-10 11:33:56" time="2023-11-10 11:33:56">2023-11-10</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>技术</span></a><a class="article-meta__tags" href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84Linux/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>好玩的Linux</span></a></span></div><div class="content">安装SSH（Secure Shell）服务是在Linux系统中进行远程管理和安全登录的常见做法。
 以下是在常见的Linux发行版中安装SSH服务的步骤：
 
 打开终端，并以管理员权限（sudo）登录。
@@ -20,14 +259,51 @@ PS：在安装时勾选添加anaconda3 到PATH就会自动配置了。
 输入适用于你的Linux发行版的安装命令：
 
 Ubuntu&#x2F;Debian：
- 
+sudo apt-get install openssh-server
 
-CentOS&#x2...</p></div><div class="post-container"><p class="post-title"><a href="/article/7d63.html">scoop安装和使用</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-11-10</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/tags/Windows/" title="Windows">Windows</a><span>&nbsp;</span></span></p><p class="post-abstract">
+
+CentOS&#x2F;Fedora：
+sudo dnf install openssh-server
+
+
+Arch Linux&#x2F;Manjaro：
+sudo pacman -S openssh
+
+
+
+
+输入管理员密码以确认安装。输入密码后，按下回车键继续。
+
+安装完成后，SSH服务将自动启动。使用以下命令检查SSH服务的状态：
+
+Ubuntu&#x2F;Debian：
+systemctl status ssh
+
+
+CentOS&#x2F;Fedora：
+systemctl status sshd
+
+
+Arch Linux&#x2F;Manjaro：
+systemctl status sshd
+
+
+
+如果服务正在运行，你 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/7d63.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/7d63.html" title="scoop安装和使用">未读</a></div><a class="article-title" href="/article/7d63.html" title="scoop安装和使用">scoop安装和使用</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-10T02:35:02.000Z" title="发表于 2023-11-10 10:35:02" time="2023-11-10 10:35:02">2023-11-10</time><time class="time_hidden" datetime="2023-11-10T03:28:50.534Z" title="更新于 2023-11-10 11:28:50" time="2023-11-10 11:28:50">2023-11-10</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>技术</span></a><a class="article-meta__tags" href="/tags/Windows/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Windows</span></a></span></div><div class="content">
 关于新电脑上管理员用户scoop的安装和使用
 
-前言Windows 11 的优化实在是让人不能恭维，使用了长达两年五个月左右，期间有过数次的重新安装，最近变得十分卡顿，不只是自己到底设置了些什么，于是在上个周末还是选择了重新安装和使用 windows10 的系统，再次回归第一印象就是：“流畅，流畅，还他妈的是流...</p></div><div class="post-container"><p class="post-title"><a href="/article/a8a8.html">去签售会</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-11-09</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/读书/" title="读书">读书</a><span>&nbsp;</span><a class="a-tag" href="/tags/看世界/" title="看世界">看世界</a><span>&nbsp;</span></span></p><p class="post-abstract">半个月前的周末，我打定主意去慈溪看一次签售会，今年的下半年卢思浩跑了许多地方，起初我想着可以赶辽宁的那一场，结果回家完了几天，好在浙江还有两场。整备好了行装，起床随便吃了点东西就走上了去往余姚的地铁，看窗外风景，浙江多山，短短40分钟的路途过了好几个隧道。
+前言Windows 11 的优化实在是让人不能恭维，使用了长达两年五个月左右，期间有过数次的重新安装，最近变得十分卡顿，不只是自己到底设置了些什么，于是在上个周末还是选择了重新安装和使用 windows10 的系统，再次回归第一印象就是：“流畅，流畅，还他妈的是流畅！”。
+一些常用的软件还是需要配置的，轻车熟路的搞好了 PyCharm、Git、迁移了博客（迁移到了我的小电脑上）、最后所需要的就是搞定听歌软件了，不久前刚刚安装的 musicfox ，却是卡在了安装 scoop 的步骤上面了，研究了许久发现本地默认创建的是管理员用户。
+解决方案
+在 github 找到 install.ps1 文件，复制文件内容。
+本地新建 install.ps1 将复制的内容填充进去。
+在 install.ps1 所在文件夹打开 powershell ，依次输入命令 ​irm get.scoop.sh -outfile &#39;install.ps1&#39;​​ ​.\install.ps1 -RunAsAdmin​​ ​iex &quot;&amp; ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/a8a8.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/a8a8.html" title="去签售会">未读</a></div><a class="article-title" href="/article/a8a8.html" title="去签售会">去签售会</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-09T07:59:03.000Z" title="发表于 2023-11-09 15:59:03" time="2023-11-09 15:59:03">2023-11-09</time><time class="time_hidden" datetime="2023-11-10T03:28:50.536Z" title="更新于 2023-11-10 11:28:50" time="2023-11-10 11:28:50">2023-11-10</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E8%AF%BB%E4%B9%A6/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>读书</span></a><a class="article-meta__tags" href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>看世界</span></a></span></div><div class="content">半个月前的周末，我打定主意去慈溪看一次签售会，今年的下半年卢思浩跑了许多地方，起初我想着可以赶辽宁的那一场，结果回家完了几天，好在浙江还有两场。整备好了行装，起床随便吃了点东西就走上了去往余姚的地铁，看窗外风景，浙江多山，短短40分钟的路途过了好几个隧道。
 抵达后时间尚早，于是悠闲的选择了公交车出行。
-上一次见还...</p></div><div class="post-container"><p class="post-title"><a href="/article/dc01.html">折腾日记</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-10-31</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/好玩的-Linux/" title="好玩的 Linux">好玩的 Linux</a><span>&nbsp;</span><a class="a-tag" href="/tags/问题小记/" title="问题小记">问题小记</a><span>&nbsp;</span></span></p><p class="post-abstract">前言这两天从学长的手里买来一台小主机，配置还算可用，于是决定拿来玩一下。
+上一次见还是在20年，那时候我还在上大一，跑了半个杭州到大悦城，那时候内场无座，我买了一本增订的《离开前请叫醒我》，在场外看完了整场。此后三年再没去过大悦城，没有目的实在不想跑去那么远的地方。
+去慈溪还是一样，我没弄清楚宁波慈溪为什么下了车是余姚站，只是查找目的地，抵达现场，静坐着、等待着、倾听着，然后去要签字，坐上离开的车。
+时间还是太短暂了，只有那么一瞬间我与周围的几十个同伴有了共情，我们在做同样的事情。
+于是走的时候还是带了些许的遗憾，多折一段路程去买了些生腌（最后还是发现，自己对生腌的确是接受无能），然后回家。
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/dc01.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/dc01.html" title="折腾日记">未读</a></div><a class="article-title" href="/article/dc01.html" title="折腾日记">折腾日记</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-31T03:19:11.000Z" title="发表于 2023-10-31 11:19:11" time="2023-10-31 11:19:11">2023-10-31</time><time class="time_hidden" datetime="2023-11-10T03:18:01.859Z" title="更新于 2023-11-10 11:18:01" time="2023-11-10 11:18:01">2023-11-10</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>好玩的 Linux</span></a><a class="article-meta__tags" href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>问题小记</span></a></span></div><div class="content">前言这两天从学长的手里买来一台小主机，配置还算可用，于是决定拿来玩一下。
 配置：
 
 处理器：双核 AMD Athlon pro 300u w&#x2F; radeon vega mobile gfx
@@ -37,8 +313,158 @@ CentOS&#x2...</p></div><div class="post-container"><p class="post-title"><a href
 显卡：AMD&#x2F;ATI
 电源：10W
 
-起...</p></div><div class="post-container"><p class="post-title"><a href="/article/5d29.html">2023 年在通辽的最后一天</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-10-20</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/随笔/" title="随笔">随笔</a><span>&nbsp;</span></span></p><p class="post-abstract">飞机是下午的，但车要在早上出发，于是七点就到了通辽，却没有合适的地方去度过这个上午。
+起初我试图运行docker，但是运行了docker对他的内存不是很友好，常常卡死，后来下载了 Elementary OS 做为常用系统，可以满足一点简单的需求，配上 SSH ，终于算是稳定了系统环境，接下来尝试着做文件备份和研究一下有没有其他的玩法。
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/5d29.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/5d29.html" title="2023 年在通辽的最后一天">未读</a></div><a class="article-title" href="/article/5d29.html" title="2023 年在通辽的最后一天">2023 年在通辽的最后一天</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-20T00:59:19.000Z" title="发表于 2023-10-20 08:59:19" time="2023-10-20 08:59:19">2023-10-20</time><time class="time_hidden" datetime="2023-11-10T04:57:04.616Z" title="更新于 2023-11-10 12:57:04" time="2023-11-10 12:57:04">2023-11-10</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%9A%8F%E7%AC%94/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>随笔</span></a></span></div><div class="content">飞机是下午的，但车要在早上出发，于是七点就到了通辽，却没有合适的地方去度过这个上午。
 三月开学时也曾有过同样的经历，那时候选择了火车站旁边的招待所，30 元一天，8 平米的空间却让人憋得心里发慌，最后待了两个小时就跑去车站了。
-在路边站了许久，小红书上搜了一下附近的娱乐设施，发现了大学生自习室，环境不错又安安静静...</p></div><div class="post-container"><p class="post-title"><a href="/article/ea40.html">一个听歌的软件</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-10-19</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/软件/" title="软件">软件</a><span>&nbsp;</span><a class="a-tag" href="/tags/音乐/" title="音乐">音乐</a><span>&nbsp;</span><a class="a-tag" href="/tags/命令行/" title="命令行">命令行</a><span>&nbsp;</span></span></p><p class="post-abstract">前情提要我最爱用的 LX Music 结束生命周期了，起码今天的到的消息是这样，腾讯的律师函还是蛮狠的。
+在路边站了许久，小红书上搜了一下附近的娱乐设施，发现了大学生自习室，环境不错又安安静静的很适合坐下来看一会书。
+八点还早，屋子里只有寥寥几人，安静的氛围更好过大学图书馆。可惜了我没有来这地方的需求，不然可真是一个好地方。
+</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/article/ea40.html')"><div class="recent-post-info"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><a class="unvisited-post" href="/article/ea40.html" title="一个听歌的软件">未读</a></div><a class="article-title" href="/article/ea40.html" title="一个听歌的软件">一个听歌的软件</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-19T06:45:18.000Z" title="发表于 2023-10-19 14:45:18" time="2023-10-19 14:45:18">2023-10-19</time><time class="time_hidden" datetime="2023-10-19T09:39:16.507Z" title="更新于 2023-10-19 17:39:16" time="2023-10-19 17:39:16">2023-10-19</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>软件</span></a><a class="article-meta__tags" href="/tags/%E9%9F%B3%E4%B9%90/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>音乐</span></a><a class="article-meta__tags" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>命令行</span></a></span></div><div class="content">前情提要我最爱用的 LX Music 结束生命周期了，起码今天的到的消息是这样，腾讯的律师函还是蛮狠的。
 说起来这也是今年第二次听说南山必胜客的律师函了，上一次是一口气杀死了大批的自动跳过工具，本就半死不活的李跳跳彻底失去了活力，只剩下了社区规则的支持。
-MusicFox一个网易云命令行工具，只能说还好我对听歌这...</p></div><div class="pagination no-margin-bottom"><p class="clearfix"><p> 第 1 页 / 共 2 页 &nbsp;</p><p><span class="pre pagbuttons"><i class="fa fa-angle-double-left"></i>&nbsp;<a role="navigation" href="/" aria-label="上一页">上一页</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/page/2/" aria-label="下一页">下一页</a>&nbsp;<i class="fa fa-angle-double-right"></i></span></p></p></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2023&nbsp;<a target="_blank" href="https://childeyouyu.github.io" rel="noopener noreferrer">公子语</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
+MusicFox一个网易云命令行工具，只能说还好我对听歌这件事执念不深，打开一个播放器放到后台为我的工作添加一点声音，也不去管都播放些什么，不吵到我就可以了。
+于是看到了这篇文章，看到了这个名为MusicFox的工具，一个在命令行中的网易云音乐，打开即用，登录了我的网易云，每天打开电脑打开 MusicFox 丢到后台就不再去管了。
+安装和使用安装包管理器：scoop​ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+​ irm get.scoop.sh | iex
+
+因为我已经安装好了，显示上面的提示。
+安装MusicFoxscoop bucket add go-mu ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><div class="pagination_tips_next">下页</div><i style="font-weight: inherit; font-size: 1rem;" class="anzhiyufont anzhiyu-icon-chevron-right fa-fw"></i></a><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" onkeyup="this.value=this.value.replace(/[^u4e00-u9fa5w]/g,'')" aria-label="toPage"><a id="toPageButton" onclick="anzhiyu.toPage()"><i class="anzhiyufont anzhiyu-icon-angles-right" style="font-weight: inherit; font-size: 1rem;"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget"><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AHK/" style="font-size: 1.05rem;">AHK<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 1.05rem;">命令行<sup>1</sup></a><a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 1.05rem;">奇思妙想<sup>2</sup></a><a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 1.05rem;">好玩的 Linux<sup>1</sup></a><a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84Linux/" style="font-size: 1.05rem;">好玩的Linux<sup>1</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.05rem;">小说<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>5</sup></a><a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 1.05rem;">校园风光<sup>1</sup></a><a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 1.05rem;">看世界<sup>2</sup></a><a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.05rem;">读书<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem;">软件<sup>1</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 1.05rem;">问题小记<sup>1</sup></a><a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.05rem;">随笔<sup>4</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.05rem;">音乐<sup>1</sup></a></div></div><hr/><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/><div class="card-webinfo"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-file-lines"></i><div class="item-name">文章总数 :</div></div><div class="item-count">14</div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-stopwatch"></i><div class="item-name">建站天数 :</div></div><div class="item-count" id="runtimeshow" data-publishDate="2021-03-31T16:00:00.000Z"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></div></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2023 By <a class="footer-bar-link" href="/" title="公子语" target="_blank">公子语</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">语之屋</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AHK/" style="font-size: 0.88rem;">AHK<sup>1</sup></a><a href="/tags/Java/" style="font-size: 0.88rem;">Java<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 0.88rem;">Windows<sup>2</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 0.88rem;">命令行<sup>1</sup></a><a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 0.88rem;">奇思妙想<sup>2</sup></a><a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 0.88rem;">好玩的 Linux<sup>1</sup></a><a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84Linux/" style="font-size: 0.88rem;">好玩的Linux<sup>1</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 0.88rem;">小说<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>5</sup></a><a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 0.88rem;">校园风光<sup>1</sup></a><a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 0.88rem;">看世界<sup>2</sup></a><a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 0.88rem;">读书<sup>1</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 0.88rem;">软件<sup>1</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 0.88rem;">问题小记<sup>1</sup></a><a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 0.88rem;">随笔<sup>4</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 0.88rem;">音乐<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 公子语 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>if (typeof gsap === "object") {
+  getScript("/js/anzhiyu/people.js", {defer:true})
+} else {
+  getScript("https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/gsap/gsap.min.js").then(()=>{
+    getScript("/js/anzhiyu/people.js", {defer:true})
+  });
+}</script><input type="hidden" name="page-type" id="page-type" value="anzhiyu"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
