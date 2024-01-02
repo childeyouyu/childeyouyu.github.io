@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>scoop安装和使用 · 语之屋</title><meta name="description" content="关于新电脑上管理员用户scoop的安装和使用
+
+前言Windows 11 的优化实在是让人不能恭维，使用了长达两年五个月左右，期间有过数次的重新安装，最近变得十分卡顿，不只是自己到底设置了些什么，于是在上个周末还是选择了重新安装和使用 windows10 的系统，再次回归第一印象就是：“流畅，流畅，"><meta name="og:description" content="关于新电脑上管理员用户scoop的安装和使用
+
+前言Windows 11 的优化实在是让人不能恭维，使用了长达两年五个月左右，期间有过数次的重新安装，最近变得十分卡顿，不只是自己到底设置了些什么，于是在上个周末还是选择了重新安装和使用 windows10 的系统，再次回归第一印象就是：“流畅，流畅，"><meta name="twitter:site" content="语之屋"><meta name="twitter:title" content="scoop安装和使用"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style-dark.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">走自己的路，让别人说去吧。</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">君子慎独</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li class="soc"><a href="https://github.com/childeyouyu" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://childeyouyu.github.io/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://childeyouyu.github.io" rel="noopener noreferrer">公子语</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>scoop安装和使用</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2023-11-10</span><span class="meta-item"><i class="fa fa-tag"></i><span>&nbsp;</span><a class="a-tag" href="/tags/技术/" title="技术">技术</a><span>&nbsp;</span><a class="a-tag" href="/tags/Windows/" title="Windows">Windows</a><span>&nbsp;</span></span></p><p class="post-abstract"><blockquote>
+<p>关于新电脑上管理员用户scoop的安装和使用</p>
+</blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Windows 11 的优化实在是让人不能恭维，使用了长达两年五个月左右，期间有过数次的重新安装，最近变得十分卡顿，不只是自己到底设置了些什么，于是在上个周末还是选择了重新安装和使用 windows10 的系统，再次回归第一印象就是：“流畅，流畅，还他妈的是流畅！”。</p>
+<p>一些常用的软件还是需要配置的，轻车熟路的搞好了 PyCharm、Git、迁移了博客（迁移到了我的小电脑上）、最后所需要的就是搞定听歌软件了，不久前刚刚安装的 musicfox ，却是卡在了安装 scoop 的步骤上面了，研究了许久发现本地默认创建的是管理员用户。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><ol>
+<li>在 <code>github</code> 找到 <code>install.ps1</code> 文件，复制文件内容。</li>
+<li>本地新建 <code>install.ps1</code> 将复制的内容填充进去。</li>
+<li>在 <code>install.ps1</code> 所在文件夹打开 powershell ，依次输入命令<br> <code>​irm get.scoop.sh -outfile &#39;install.ps1&#39;​​</code><br> <code>​.\install.ps1 -RunAsAdmin​​</code><br> <code>​iex &quot;&amp; &#123;$(irm get.scoop.sh)&#125; -RunAsAdmin&quot;​​</code></li>
+<li>如果没有安装git，安装git：<br> ​<code>scoop install git​​</code></li>
+</ol>
+<h1 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h1><p>回到最初的目的，安装<a href="https://childeyouyu.github.io/article/ea40.html"><code>musicfox</code></a>：</p>
+<pre class="line-numbers language-cmd"><code class="language-cmd">scoop bucket add go-musicfox https://github.com/go-musicfox/go-musicfox.git
+scoop install go-musicfox
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="附录·一些scoop的命令"><a href="#附录·一些scoop的命令" class="headerlink" title="附录·一些scoop的命令"></a>附录·一些<code>scoop</code>的命令</h1><pre class="line-numbers language-cmd"><code class="language-cmd"># 更新 scoop 及软件包列表
+scoop update
+
+## 安装软件 ##
+# 非全局安装（并禁止安装包缓存）
+scoop install -k <app>
+# 全局安装（并禁止安装包缓存）
+sudo scoop install -gk <app>
+
+## 卸载软件 ##
+# 卸载非全局软件（并删除配置文件）
+scoop uninstall -p <app>
+# 卸载全局软件（并删除配置文件）
+sudo scoop uninstall -gp <app>
+
+## 更新软件 ##
+# 更新所有非全局软件（并禁止安装包缓存）
+scoop update -k *
+# 更新所有软件（并禁止安装包缓存）
+sudo scoop update -gk *
+
+## 垃圾清理 ##
+# 删除所有旧版本非全局软件（并删除软件包缓存）
+scoop cleanup -k *
+# 删除所有旧版本软件（并删除软件包缓存）
+sudo scoop cleanup -gk *
+# 清除软件包缓存
+scoop cache rm *
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=https://childeyouyu.github.io/article/7d63.html%20语之屋%20scoop安装和使用"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/article/ec0.html" title="SSH 安装和查看"><i class="fa fa-angle-double-left"></i>&nbsp;上一篇: SSH 安装和查看</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/article/a8a8.html" title="去签售会">下一篇: 去签售会&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2024&nbsp;<a target="_blank" href="https://childeyouyu.github.io" rel="noopener noreferrer">公子语</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/google-analytics.js"></script><script src="/js/typography.js"></script></body></html>
