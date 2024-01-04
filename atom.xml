@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-01-01T16:33:46.253Z</updated>
+  <updated>2024-01-04T12:29:23.462Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Next Cloud 容器挂载主机文件夹</title>
+    <link href="https://childeyouyu.github.io/article/9ea6.html"/>
+    <id>https://childeyouyu.github.io/article/9ea6.html</id>
+    <published>2024-01-04T12:24:20.000Z</published>
+    <updated>2024-01-04T12:29:23.462Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hello,大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;我们打开 zimaos，应用商店搜索 Next Cloud</summary>
+        
+      
+    
+    
+    
+    
+    <category term="折腾日记" scheme="https://childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>2023 年终总结</title>
@@ -150,7 +177,7 @@
     <link href="https://childeyouyu.github.io/article/ec0.html"/>
     <id>https://childeyouyu.github.io/article/ec0.html</id>
     <published>2023-11-10T03:22:37.000Z</published>
-    <updated>2023-11-10T03:33:56.855Z</updated>
+    <updated>2024-01-04T12:29:28.650Z</updated>
     
     
       
@@ -166,7 +193,7 @@
     
     <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="好玩的Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84Linux/"/>
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
   </entry>
   
