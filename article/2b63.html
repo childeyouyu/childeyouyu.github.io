@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          685 words
+          685 vortoj
         
       </span>
     
@@ -265,7 +265,7 @@
         
         
         
-          6 mins
+          6 minutoj
         
       </span>
     
@@ -275,7 +275,7 @@
       
         <span id="busuanzi_container_page_pv" style="display: none">
           <i class="iconfont icon-eye" aria-hidden="true"></i>
-          <span id="busuanzi_value_page_pv"></span> views
+          <span id="busuanzi_value_page_pv"></span> rigardoj
         </span>
         
       
@@ -359,20 +359,20 @@
     <div class="license-meta">
       
         <div class="license-meta-item">
-          <div>Author</div>
+          <div>Aŭtoro</div>
           <div>公子语</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
-          <div>Posted on</div>
+          <div>Postigita</div>
           <div>2023年6月10日</div>
         </div>
       
       
       
         <div class="license-meta-item">
-          <div>Licensed under</div>
+          <div>Lizenta</div>
           <div>
             
               
@@ -401,7 +401,7 @@
                       <a href="/article/ea40.html" title="一个听歌的软件">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">一个听歌的软件</span>
-                        <span class="visible-mobile">Previous</span>
+                        <span class="visible-mobile">Antaŭa afiŝo</span>
                       </a>
                     
                   </article>
@@ -410,7 +410,7 @@
                     
                       <a href="/article/a169.html" title="烟与黄昏">
                         <span class="hidden-mobile">烟与黄昏</span>
-                        <span class="visible-mobile">Next</span>
+                        <span class="visible-mobile">Sekva afiŝo</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -424,11 +424,19 @@
   
     <article id="comments" lazyload>
       
-  <div id="SOHUCS" sid='https://childeyouyu.github.io/article/2b63.html'></div>
+  <div id="gitalk-container"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-        window.changyan.api.config({"appid":"cyx4XY7xq","appkey":"9574a728d142e81dffa1b237fde30472"})
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"c4b6c26cf85d31b4ea06","clientSecret":"bce3b14254405843b0dfaa36a08b77d6e9101953","repo":"childeyouyu.github.io","owner":"childeyouyu","admin":["childeyouyu"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '1cb6abfe1a2639db0b6b3bef6b7c34cd'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
       });
     });
   </script>
@@ -450,7 +458,7 @@
     <div id="toc">
   <p class="toc-header">
     <i class="iconfont icon-list"></i>
-    <span>Table of Contents</span>
+    <span>Enhavtabelo</span>
   </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
@@ -506,7 +514,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Serĉi</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -514,7 +522,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">ŝlosivorto</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -542,14 +550,14 @@
   
     
       <span id="busuanzi_container_site_pv" style="display: none">
-        Views: 
+        Vidoj: 
         <span id="busuanzi_value_site_pv"></span>
         
       </span>
     
     
       <span id="busuanzi_container_site_uv" style="display: none">
-        Visitors: 
+        Visitoj: 
         <span id="busuanzi_value_site_uv"></span>
         
       </span>
@@ -719,7 +727,7 @@
   
 
   <noscript>
-    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+    <div class="noscript-warning">Blogo funkcias plej bone kun JavaScript ebligita</div>
   </noscript>
 </body>
 </html>
