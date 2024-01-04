@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-01-04T12:29:40.409Z</updated>
+  <updated>2024-01-04T14:50:05.312Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>左手</title>
+    <link href="https://childeyouyu.github.io/article/a706.html"/>
+    <id>https://childeyouyu.github.io/article/a706.html</id>
+    <published>2024-01-04T14:46:41.000Z</published>
+    <updated>2024-01-04T14:50:05.312Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;生为左手&quot;&gt;&lt;a href=&quot;#生为左手&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
+    
+    
+    <category term="散文" scheme="https://childeyouyu.github.io/tags/%E6%95%A3%E6%96%87/"/>
+    
+    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>Next Cloud 容器挂载主机文件夹</title>
@@ -351,9 +378,9 @@
     
     
     
-    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
     <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
@@ -387,7 +414,7 @@
     <link href="https://childeyouyu.github.io/article/2386.html"/>
     <id>https://childeyouyu.github.io/article/2386.html</id>
     <published>2022-10-25T00:14:45.000Z</published>
-    <updated>2023-11-11T00:23:36.708Z</updated>
+    <updated>2024-01-04T14:49:52.927Z</updated>
     
     
       
@@ -400,6 +427,8 @@
       
     
     
+    
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
     <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
@@ -425,9 +454,9 @@
     
     
     
-    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
     <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
