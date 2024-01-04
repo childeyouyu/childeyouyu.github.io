@@ -37,9 +37,9 @@
     
     
     
-    <category term="折腾日记" scheme="https://childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
-    
     <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
+    
+    <category term="折腾日记" scheme="https://childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
@@ -111,11 +111,11 @@
     
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
     <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
     <category term="Python" scheme="https://childeyouyu.github.io/tags/Python/"/>
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -219,9 +219,9 @@
     
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
     <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
