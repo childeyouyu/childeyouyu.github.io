@@ -478,19 +478,24 @@
   
     <article id="comments" lazyload>
       
-  <div id="gitalk-container"></div>
+  <div id="waline"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://cdn.staticfile.org/waline/2.15.5/waline.min.css')
+      Fluid.utils.createScript('https://cdn.staticfile.org/waline/2.15.5/waline.min.js', function() {
         var options = Object.assign(
-          {"clientID":"c4b6c26cf85d31b4ea06","clientSecret":"bce3b14254405843b0dfaa36a08b77d6e9101953","repo":"childeyouyu.github.io","owner":"childeyouyu","admin":["childeyouyu"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"serverURL":"https://commit-ny5j2dqh4-childeyouyus-projects.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
           {
-            id: 'dfca1c6e0fdaa421ad7cc6908ca33584'
+            el: '#waline',
+            path: window.location.pathname
           }
         )
-        var gitalk = new Gitalk(options);
-        gitalk.render('gitalk-container');
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
       });
     });
   </script>

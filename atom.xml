@@ -37,9 +37,9 @@
     <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
-    
     <category term="散文" scheme="https://childeyouyu.github.io/tags/%E6%95%A3%E6%96%87/"/>
+    
+    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
     
   </entry>
   
@@ -146,11 +146,11 @@
     <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
     <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
     <category term="Python" scheme="https://childeyouyu.github.io/tags/Python/"/>
-    
-    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -263,9 +263,9 @@
     <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
-    
     <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -406,9 +406,9 @@
     <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
     <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
@@ -486,9 +486,9 @@
     <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
     <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
