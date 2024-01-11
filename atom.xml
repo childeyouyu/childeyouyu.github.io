@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-01-11T13:39:02.157Z</updated>
+  <updated>2024-01-11T13:40:59.880Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://childeyouyu.github.io/article/d3ee.html"/>
     <id>https://childeyouyu.github.io/article/d3ee.html</id>
     <published>2024-01-11T11:26:15.000Z</published>
-    <updated>2024-01-11T13:39:02.157Z</updated>
+    <updated>2024-01-11T13:40:59.880Z</updated>
     
     
     <summary type="html">昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。</summary>
@@ -87,9 +87,9 @@
     <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
-    
     <category term="折腾日记" scheme="https://childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
   </entry>
   
