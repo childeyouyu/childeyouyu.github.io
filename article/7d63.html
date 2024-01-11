@@ -63,6 +63,11 @@
 <link  rel="stylesheet" href="/css/main.css" />
 
 
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
 
 
 
@@ -261,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          499 字
+          515 字
         
       </span>
     
@@ -334,23 +339,23 @@
 <li>如果没有安装 git，安装 git：<br> ​<code>scoop install git​​</code></li>
 </ol>
 <h1 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h1><p>回到最初的目的，安装<a href="https://childeyouyu.github.io/article/ea40.html"><code>musicfox</code></a>：</p>
-<pre class="line-numbers language-cmd"><code class="language-cmd">scoop bucket add go-musicfox https://github.com/go-musicfox/go-musicfox.git
-scoop install go-musicfox
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h1 id="附录·一些scoop的命令"><a href="#附录·一些scoop的命令" class="headerlink" title="附录·一些scoop的命令"></a>附录·一些<code>scoop</code>的命令</h1><pre class="line-numbers language-cmd"><code class="language-cmd"># 更新 scoop 及软件包列表
+<figure><div class="code-wrapper"><pre class="language-cmd" data-language="cmd"><code class="language-cmd">scoop bucket add go-musicfox https:&#x2F;&#x2F;github.com&#x2F;go-musicfox&#x2F;go-musicfox.git
+scoop install go-musicfox</code></pre></div></figure>
+
+<h1 id="附录·一些scoop的命令"><a href="#附录·一些scoop的命令" class="headerlink" title="附录·一些scoop的命令"></a>附录·一些<code>scoop</code>的命令</h1><figure><div class="code-wrapper"><pre class="language-cmd" data-language="cmd"><code class="language-cmd"># 更新 scoop 及软件包列表
 scoop update
 
 ## 安装软件 ##
 # 非全局安装（并禁止安装包缓存）
-scoop install -k <app>
+scoop install -k &lt;app&gt;
 # 全局安装（并禁止安装包缓存）
-sudo scoop install -gk <app>
+sudo scoop install -gk &lt;app&gt;
 
 ## 卸载软件 ##
 # 卸载非全局软件（并删除配置文件）
-scoop uninstall -p <app>
+scoop uninstall -p &lt;app&gt;
 # 卸载全局软件（并删除配置文件）
-sudo scoop uninstall -gp <app>
+sudo scoop uninstall -gp &lt;app&gt;
 
 ## 更新软件 ##
 # 更新所有非全局软件（并禁止安装包缓存）
@@ -364,8 +369,8 @@ scoop cleanup -k *
 # 删除所有旧版本软件（并删除软件包缓存）
 sudo scoop cleanup -gk *
 # 清除软件包缓存
-scoop cache rm *
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+scoop cache rm *</code></pre></div></figure>
+
 
                 
               </div>
@@ -539,6 +544,9 @@ scoop cache rm *
 
 
 
+
+
+  
 
 
 

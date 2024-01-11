@@ -63,6 +63,11 @@
 <link  rel="stylesheet" href="/css/main.css" />
 
 
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
 
 
 
@@ -261,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          910 字
+          956 字
         
       </span>
     
@@ -336,11 +341,11 @@
 </li>
 </ol>
 <h1 id="初步尝试"><a href="#初步尝试" class="headerlink" title="初步尝试"></a>初步尝试</h1><p>  第一版代码出来了：</p>
-<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton::&#123;
-KeyWait "LButton"
-Send "^c"
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure><div class="code-wrapper"><pre class="language-ahk" data-language="ahk"><code class="language-ahk">~LButton::&#123;
+KeyWait &quot;LButton&quot;
+Send &quot;^c&quot;
+&#125;</code></pre></div></figure>
+
 <p>  写的很快，错的也很快。</p>
 <p>  虽然实现了快速复制，但是我每次鼠标点击都会触发事件。</p>
 <p>  回到需求 2，很明显复制的文本会立刻被覆盖，难道用来（搭配微信输入法）做剪贴板同步吗？</p>
@@ -350,26 +355,26 @@ Send "^c"
 <p>  初步将这个时间定为 <strong>1s</strong>。</p>
 <p>  首先是决定加入<code>sleep</code>​，简单的加入并不能解决问题，因为会阻塞运行，导致我的鼠标勾选不显示。</p>
 <p>  由群里@逍遥大佬的第一版本建议出现了，我接触到一个新的函数<code>GetKeyState</code>​：</p>
-<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton::&#123;
-    StartTime := A_TickCount
-    While GetKeyState("LButton", "P")
+<figure><div class="code-wrapper"><pre class="language-ahk" data-language="ahk"><code class="language-ahk">~LButton::&#123;
+    StartTime :&#x3D; A_TickCount
+    While GetKeyState(&quot;LButton&quot;, &quot;P&quot;)
     &#123;
-        If (A_TickCount - StartTime > 2000)
+        If (A_TickCount - StartTime &gt; 2000)
         &#123;
-            Send "^c"
+            Send &quot;^c&quot;
             Return
         &#125;
         Sleep 10
     &#125;
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre><code>
+&#125;</code></pre></div></figure>
+
+<figure><div class="code-wrapper"><pre class="language-none"><code class="language-none">
 
 建议的很好，仍然觉得哪里不对，打开文档查一下：
 
 &gt; 对于键盘键和鼠标按钮，如果键位向下 (或切换开启), 该函数返回 1(true) 如果键位向上 (或切换关闭), 该函数返回 0(false).
 
-  咦，这样看来，`while`​循环发生在我按住鼠标的时候啊，那岂不是不等我完全选中就要开始复制了？
+  咦，这样看来，&#96;while&#96;​循环发生在我按住鼠标的时候啊，那岂不是不等我完全选中就要开始复制了？
 
   事实证明，的确如此（大哭）。
 
@@ -381,57 +386,57 @@ Send "^c"
 
   第一个版本仍然是逍遥大佬给出的：
 
-```ahk
+&#96;&#96;&#96;ahk
 ~LButton:: &#123;
-    StartTime := A_TickCount
-    While GetKeyState(&quot;LButton&quot;, &quot;P&quot;)
-    &#123;
-        Sleep 10
-    &#125;
-    If (A_TickCount - StartTime &gt; 1000)
-    &#123;
-        ; MsgBox &quot;长按左键 1 秒钟了！&quot;
-        Send &quot;^c&quot;
-    &#125;
-&#125;
-</code></pre>
+	StartTime :&#x3D; A_TickCount
+	While GetKeyState(&quot;LButton&quot;, &quot;P&quot;)
+	&#123;
+		Sleep 10
+	&#125;
+	If (A_TickCount - StartTime &gt; 1000)
+	&#123;
+		; MsgBox &quot;长按左键 1 秒钟了！&quot;
+		Send &quot;^c&quot;
+	&#125;
+&#125;</code></pre></div></figure>
+
 <p>  这个解法的思路是：要在松开左键时判断，那就在左键按住时阻塞他，于是有了<code>while</code>​循环的<code>Sleep</code>​，当释放鼠标，进行判断。</p>
 <p>  思路奇妙而省心。（今日大收获之<code>while</code>​不仅可以用来循环，还可以用来等待）</p>
 <p>  第二个版本是@白天提出：</p>
-<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton:: &#123;
-    StartTime := A_Now
-    KeyWait "LButton"
-    if DateDiff(A_Now, StartTime, "Seconds") >= 1 &#123;
-        SendInput "^c"
-    &#125;
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure><div class="code-wrapper"><pre class="language-ahk" data-language="ahk"><code class="language-ahk">~LButton:: &#123;
+	StartTime :&#x3D; A_Now
+	KeyWait &quot;LButton&quot;
+	if DateDiff(A_Now, StartTime, &quot;Seconds&quot;) &gt;&#x3D; 1 &#123;
+		SendInput &quot;^c&quot;
+	&#125;
+&#125;</code></pre></div></figure>
+
 <p>  这里以按下左键触发程序，然后立刻做了一个锚点<code>StartTime</code>​，当 KeyWait 执行结束后将时间进行对比，这其实更加的合理，只是我最初的思路是，一步到位的等待 KeyWait LButton Up，反而执行失败。</p>
 <p>  思考的点在于，我没料到，在我一直按住左键这段时间，可以额外添加一个<code>KeyWait &quot;LButton&quot;</code>​来进行判断。</p>
 <hr>
 <p>  写程序最重要的是思维，今天一个程序的两个解法让我收获匪浅，今后将继续学习下去。</p>
 <p>  最后重新放上两种解法：</p>
-<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton:: &#123;
-    StartTime := A_TickCount
-    While GetKeyState("LButton", "P")
-    &#123;
-        Sleep 10
-    &#125;
-    If (A_TickCount - StartTime > 1000)
-    &#123;
-        ; MsgBox "长按左键 1 秒钟了！"
-        Send "^c"
-    &#125;
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton:: &#123;
-    StartTime := A_Now
-    KeyWait "LButton"
-    if DateDiff(A_Now, StartTime, "Seconds") >= 1 &#123;
-        SendInput "^c"
-    &#125;
-&#125;
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure><div class="code-wrapper"><pre class="language-ahk" data-language="ahk"><code class="language-ahk">~LButton:: &#123;
+	StartTime :&#x3D; A_TickCount
+	While GetKeyState(&quot;LButton&quot;, &quot;P&quot;)
+	&#123;
+		Sleep 10
+	&#125;
+	If (A_TickCount - StartTime &gt; 1000)
+	&#123;
+		; MsgBox &quot;长按左键 1 秒钟了！&quot;
+		Send &quot;^c&quot;
+	&#125;
+&#125;</code></pre></div></figure>
+
+<figure><div class="code-wrapper"><pre class="language-ahk" data-language="ahk"><code class="language-ahk">~LButton:: &#123;
+	StartTime :&#x3D; A_Now
+	KeyWait &quot;LButton&quot;
+	if DateDiff(A_Now, StartTime, &quot;Seconds&quot;) &gt;&#x3D; 1 &#123;
+		SendInput &quot;^c&quot;
+	&#125;
+&#125;</code></pre></div></figure>
+
 <p>  ‍</p>
 
                 
@@ -600,6 +605,9 @@ Send "^c"
 
 
 
+
+
+  
 
 
 
