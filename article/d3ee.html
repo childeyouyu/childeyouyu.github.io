@@ -18,30 +18,25 @@
   <meta name="author" content="公子语">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hello，大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。  我们打开 zimaos，应用商店搜索 Next Cloud 安装；  打开文件，选择一个我们想要去映射的文件夹，我选择 download，现在记住这个地址是 DATA&#x2F;Download；  打开 Next Cloud 容器右上角三个点，选择设置，添加卷，选择刚刚的 Download，右面输入">
+    <meta name="description" content="昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Next Cloud 容器挂载主机文件夹">
-<meta property="og:url" content="https://childeyouyu.github.io/article/9ea6.html">
+<meta property="og:title" content="AHK 自动复制的实现与逻辑分析">
+<meta property="og:url" content="https://childeyouyu.github.io/article/d3ee.html">
 <meta property="og:site_name" content="语之屋">
-<meta property="og:description" content="Hello，大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。  我们打开 zimaos，应用商店搜索 Next Cloud 安装；  打开文件，选择一个我们想要去映射的文件夹，我选择 download，现在记住这个地址是 DATA&#x2F;Download；  打开 Next Cloud 容器右上角三个点，选择设置，添加卷，选择刚刚的 Download，右面输入">
+<meta property="og:description" content="昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202056-fjkilov.png?imageView2/2/interlace/1/format/webp">
-<meta property="og:image" content="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202157-eme3ch9.png?imageView2/2/interlace/1/format/webp">
-<meta property="og:image" content="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202254-57dfxrd.png?imageView2/2/interlace/1/format/webp">
-<meta property="og:image" content="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202327-639wxiu.png?imageView2/2/interlace/1/format/webp">
-<meta property="article:published_time" content="2024-01-04T12:24:20.000Z">
-<meta property="article:modified_time" content="2024-01-04T15:59:18.044Z">
+<meta property="article:published_time" content="2024-01-11T11:26:15.000Z">
+<meta property="article:modified_time" content="2024-01-11T11:51:15.824Z">
 <meta property="article:author" content="公子语">
-<meta property="article:tag" content="折腾日记">
-<meta property="article:tag" content="好玩的 Linux">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="AHK">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202056-fjkilov.png?imageView2/2/interlace/1/format/webp">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Next Cloud 容器挂载主机文件夹 - 语之屋</title>
+  <title>AHK 自动复制的实现与逻辑分析 - 语之屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -248,7 +243,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Next Cloud 容器挂载主机文件夹"></span>
+            <span id="subtitle" data-typed-text="AHK 自动复制的实现与逻辑分析"></span>
           
         </div>
 
@@ -259,8 +254,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-04 20:24" pubdate>
-          2024年1月4日 晚上
+        <time datetime="2024-01-11 19:26" pubdate>
+          2024年1月11日 晚上
         </time>
       </span>
     
@@ -271,7 +266,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          271 字
+          1.1k 字
         
       </span>
     
@@ -282,7 +277,7 @@
         
         
         
-          3 分钟
+          9 分钟
         
       </span>
     
@@ -327,39 +322,62 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Next Cloud 容器挂载主机文件夹</h1>
+            <h1 id="seo-header">AHK 自动复制的实现与逻辑分析</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Hello，大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。</p>
+                <blockquote>
+<p>温馨提示：</p>
+<p>本文使用 Ahk v2 进行代码编写，如有需求，自行修改为 v1 代码。</p>
+<p>文章涉及思路分析与错误代码展示，需要成品可以下拉到最后查看。</p>
+</blockquote>
+<p>昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。</p>
+<p>说干就干，仔细分析一下功能需求：</p>
 <ol>
-<li><p>我们打开 zimaos，应用商店搜索 Next Cloud 安装；</p>
+<li><p>鼠标左键按下，选中文本，实现复制；</p>
 </li>
-<li><p>打开文件，选择一个我们想要去映射的文件夹，我选择 download，现在记住这个地址是 DATA&#x2F;Download；</p>
-</li>
-<li><p>打开 Next Cloud 容器右上角三个点，选择设置，添加卷，选择刚刚的 Download，右面输入 <code>/download</code>。记住右侧的路径；<img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202056-fjkilov.png?imageView2/2/interlace/1/format/webp" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>701 x 3942560 x 1440</p>
-</li>
-<li><p>打开 Next Cloud，点击右上角，选择应用，我们向下滑，找到一个名字是 External storage support 的应用，启用；</p>
-</li>
-<li><p>打开设置，这里要注意，不是个人，下面有个管理，划到管理，在下面有一个外部储存；<br>​<img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202157-eme3ch9.png?imageView2/2/interlace/1/format/webp" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>701 x 3942560 x 1440</p>
-</li>
-<li><p>选中允许用户挂载储存；</p>
-</li>
-<li><p>现在我选择这里增加储存，选择本地；</p>
-</li>
-<li><p>目录名称：挂载后显示的名称；配置：刚刚保存的 <code>/Download</code>；可用于：所有用户或是选择单个用户；点击右侧对号保存，最左侧显示绿色对号则挂载成功。</p>
-<p><img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202254-57dfxrd.png?imageView2/2/interlace/1/format/webp" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>701 x 3942560 x 1440</p>
-</li>
-<li><p>回到文件目录可以查看。<br>​<img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202327-639wxiu.png?imageView2/2/interlace/1/format/webp" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>701 x 3942560 x 1440</p>
+<li><p>鼠标点击需要插入文本的地方<code>Ctrl+V</code>粘贴文本。</p>
 </li>
 </ol>
-<p>  ‍</p>
+<h1 id="初步尝试"><a href="#初步尝试" class="headerlink" title="初步尝试"></a>初步尝试</h1><p>第一版代码出来了：</p>
+<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span>&#123;<br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	Send <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span>&#123;<br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	Send <span class="hljs-string">"^c"</span><br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
 
+<p>写的很快，错的也很快。</p>
+<p>虽然实现了快速复制，但是我每次鼠标点击都会触发事件。</p>
+<p>回到需求 2，很明显复制的文本会立刻被覆盖，难道用来（搭配微信输入法）做剪贴板同步吗？</p>
+<p>鸡肋！（骂骂咧咧继续思考）</p>
+<h1 id="引入sleep和GetKeyState"><a href="#引入sleep和GetKeyState" class="headerlink" title="引入sleep和GetKeyState"></a>引入<code>sleep</code>和<code>GetKeyState</code></h1><p>一夜无果，第二天重新思考并在群里进行了询问。</p>
+<p>很明显，我不需要在任何时候去进行复制，而选择被复制的文本肯定需要一定时间。</p>
+<p>初步将这个时间定为 <strong>1s</strong>。</p>
+<p>首先是决定加入<code>sleep</code>，简单的加入并不能解决问题，因为会阻塞运行，导致我的鼠标勾选不显示。</p>
+<p>由群里@逍遥大佬的第一版本建议出现了，我接触到一个新的函数<code>GetKeyState</code>：</p>
+<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span>&#123;<br>    StartTime := <span class="hljs-built_in">A_TickCount</span><br>    While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>    &#123;<br>        If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">2000</span>)<br>        &#123;<br>            Send <span class="hljs-string">&quot;^c&quot;</span><br>            <span class="hljs-keyword">Return</span><br>        &#125;<br>        Sleep <span class="hljs-number"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span>&#123;<br>    StartTime := <span class="hljs-built_in">A_TickCount</span><br>    While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>    &#123;<br>        If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">2000</span>)<br>        &#123;<br>            Send <span class="hljs-string">&quot;^c&quot;</span><br>            <span class="hljs-keyword">Return</span><br>        &#125;<br>        Sleep <span class="hljs-number">10</span><br>    &#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+
+<p>建议的很好，仍然觉得哪里不对，打开文档查一下：</p>
+<blockquote>
+<p>对于键盘键和鼠标按钮，如果键位向下 (或切换开启), 该函数返回 1(true) 如果键位向上 (或切换关闭), 该函数返回 0(false).</p>
+</blockquote>
+<p>咦，这样看来，<code>while</code>循环发生在我按住鼠标的时候啊，那岂不是不等我完全选中就要开始复制了？</p>
+<p>事实证明，的确如此（大哭）。</p>
+<h1 id="问题解决（两种方案）"><a href="#问题解决（两种方案）" class="headerlink" title="问题解决（两种方案）"></a>问题解决（两种方案）</h1><p>我没解决，饭后再看发现群里已经出现了两种解法，鲁迅说过：拿来吧你，现在都是我的了。</p>
+<p>本着拿来主义精神，我对代码分析后得到了满足需求的两个版本：</p>
+<p>第一个版本仍然是逍遥大佬给出的：</p>
+<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+
+<p>这个解法的思路是：要在松开左键时判断，那就在左键按住时阻塞他，于是有了<code>while</code>循环的<code>Sleep</code>，当释放鼠标，进行判断。</p>
+<p>思路奇妙而省心。（今日大收获之<code>while</code>不仅可以用来循环，还可以用来等待）</p>
+<p>第二个版本是@白天提出：</p>
+<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+
+<p>这里以按下左键触发程序，然后立刻做了一个锚点<code>StartTime</code>，当 KeyWait 执行结束后将时间进行对比，这其实更加的合理，只是我最初的思路是，一步到位的等待 KeyWait LButton Up，反而执行失败。</p>
+<p>思考的点在于，我没料到，在我一直按住左键这段时间，可以额外添加一个<code>KeyWait &quot;LButton&quot;</code>来进行判断。</p>
+<hr>
+<p>写程序最重要的是思维，今天一个程序的两个解法让我收获匪浅，今后将继续学习下去。</p>
+<p>最后重新放上两种解法：</p>
+<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+
+<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -392,9 +410,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" class="print-no-link">#折腾日记</a>
+        <a href="/tags/%E6%8A%80%E6%9C%AF/" class="print-no-link">#技术</a>
       
-        <a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" class="print-no-link">#好玩的 Linux</a>
+        <a href="/tags/AHK/" class="print-no-link">#AHK</a>
       
     </div>
   
@@ -406,8 +424,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Next Cloud 容器挂载主机文件夹</div>
-      <div>https://childeyouyu.github.io/article/9ea6.html</div>
+      <div>AHK 自动复制的实现与逻辑分析</div>
+      <div>https://childeyouyu.github.io/article/d3ee.html</div>
     </div>
     <div class="license-meta">
       
@@ -419,7 +437,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月4日</div>
+          <div>2024年1月11日</div>
         </div>
       
       
@@ -451,18 +469,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/article/a706.html" title="左手">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">左手</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/article/fef3.html" title="2023 年终总结">
-                        <span class="hidden-mobile">2023 年终总结</span>
+                      <a href="/article/a706.html" title="左手">
+                        <span class="hidden-mobile">左手</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
