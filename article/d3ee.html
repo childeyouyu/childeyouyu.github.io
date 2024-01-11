@@ -26,7 +26,7 @@
 <meta property="og:description" content="昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-11T11:26:15.000Z">
-<meta property="article:modified_time" content="2024-01-11T13:40:59.880Z">
+<meta property="article:modified_time" content="2024-01-11T13:54:56.509Z">
 <meta property="article:author" content="公子语">
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="AHK">
@@ -62,11 +62,6 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
 
 
 
@@ -266,7 +261,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          910 字
         
       </span>
     
@@ -277,7 +272,7 @@
         
         
         
-          9 分钟
+          8 分钟
         
       </span>
     
@@ -332,52 +327,113 @@
 <p>本文使用 Ahk v2 进行代码编写，如有需求，自行修改为 v1 代码。</p>
 <p>文章涉及思路分析与错误代码展示，需要成品可以下拉到最后查看。</p>
 </blockquote>
-<p>昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。</p>
-<p>说干就干，仔细分析一下功能需求：</p>
+<p>  昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。</p>
+<p>  说干就干，仔细分析一下功能需求：</p>
 <ol>
 <li><p>鼠标左键按下，选中文本，实现复制；</p>
 </li>
-<li><p>鼠标点击需要插入文本的地方<code>Ctrl+V</code>粘贴文本。</p>
+<li><p>鼠标点击需要插入文本的地方<code>Ctrl+V</code>​粘贴文本。</p>
 </li>
 </ol>
-<h1 id="初步尝试"><a href="#初步尝试" class="headerlink" title="初步尝试"></a>初步尝试</h1><p>第一版代码出来了：</p>
-<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs rust">~LButton::&#123;<br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	<span class="hljs-built_in">Send</span> <span class="hljs-string"><code class="language-hljs rust">~LButton::&#123;<br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	<span class="hljs-built_in">Send</span> <span class="hljs-string">"^c"</span><br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+<h1 id="初步尝试"><a href="#初步尝试" class="headerlink" title="初步尝试"></a>初步尝试</h1><p>  第一版代码出来了：</p>
+<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton::&#123;
+KeyWait "LButton"
+Send "^c"
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  写的很快，错的也很快。</p>
+<p>  虽然实现了快速复制，但是我每次鼠标点击都会触发事件。</p>
+<p>  回到需求 2，很明显复制的文本会立刻被覆盖，难道用来（搭配微信输入法）做剪贴板同步吗？</p>
+<p>  鸡肋！（骂骂咧咧继续思考）</p>
+<h1 id="引入sleep​和GetKeyState​"><a href="#引入sleep​和GetKeyState​" class="headerlink" title="引入sleep​和GetKeyState​"></a>引入<code>sleep</code>​和<code>GetKeyState</code>​</h1><p>  一夜无果，第二天重新思考并在群里进行了询问。</p>
+<p>  很明显，我不需要在任何时候去进行复制，而选择被复制的文本肯定需要一定时间。</p>
+<p>  初步将这个时间定为 <strong>1s</strong>。</p>
+<p>  首先是决定加入<code>sleep</code>​，简单的加入并不能解决问题，因为会阻塞运行，导致我的鼠标勾选不显示。</p>
+<p>  由群里@逍遥大佬的第一版本建议出现了，我接触到一个新的函数<code>GetKeyState</code>​：</p>
+<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton::&#123;
+    StartTime := A_TickCount
+    While GetKeyState("LButton", "P")
+    &#123;
+        If (A_TickCount - StartTime > 2000)
+        &#123;
+            Send "^c"
+            Return
+        &#125;
+        Sleep 10
+    &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>
 
-<p>写的很快，错的也很快。</p>
-<p>虽然实现了快速复制，但是我每次鼠标点击都会触发事件。</p>
-<p>回到需求 2，很明显复制的文本会立刻被覆盖，难道用来（搭配微信输入法）做剪贴板同步吗？</p>
-<p>鸡肋！（骂骂咧咧继续思考）</p>
-<h1 id="引入sleep和GetKeyState"><a href="#引入sleep和GetKeyState" class="headerlink" title="引入sleep和GetKeyState"></a>引入<code>sleep</code>和<code>GetKeyState</code></h1><p>一夜无果，第二天重新思考并在群里进行了询问。</p>
-<p>很明显，我不需要在任何时候去进行复制，而选择被复制的文本肯定需要一定时间。</p>
-<p>初步将这个时间定为 <strong>1s</strong>。</p>
-<p>首先是决定加入<code>sleep</code>，简单的加入并不能解决问题，因为会阻塞运行，导致我的鼠标勾选不显示。</p>
-<p>由群里@逍遥大佬的第一版本建议出现了，我接触到一个新的函数<code>GetKeyState</code>：</p>
-<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span>&#123;<br>    StartTime := <span class="hljs-built_in">A_TickCount</span><br>    While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>    &#123;<br>        If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">2000</span>)<br>        &#123;<br>            Send <span class="hljs-string">&quot;^c&quot;</span><br>            <span class="hljs-keyword">Return</span><br>        &#125;<br>        Sleep <span class="hljs-number"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span>&#123;<br>    StartTime := <span class="hljs-built_in">A_TickCount</span><br>    While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>    &#123;<br>        If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">2000</span>)<br>        &#123;<br>            Send <span class="hljs-string">&quot;^c&quot;</span><br>            <span class="hljs-keyword">Return</span><br>        &#125;<br>        Sleep <span class="hljs-number">10</span><br>    &#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+建议的很好，仍然觉得哪里不对，打开文档查一下：
 
-<p>建议的很好，仍然觉得哪里不对，打开文档查一下：</p>
-<blockquote>
-<p>对于键盘键和鼠标按钮，如果键位向下 (或切换开启), 该函数返回 1(true) 如果键位向上 (或切换关闭), 该函数返回 0(false).</p>
-</blockquote>
-<p>咦，这样看来，<code>while</code>循环发生在我按住鼠标的时候啊，那岂不是不等我完全选中就要开始复制了？</p>
-<p>事实证明，的确如此（大哭）。</p>
-<h1 id="问题解决（两种方案）"><a href="#问题解决（两种方案）" class="headerlink" title="问题解决（两种方案）"></a>问题解决（两种方案）</h1><p>我没解决，饭后再看发现群里已经出现了两种解法，鲁迅说过：拿来吧你，现在都是我的了。</p>
-<p>本着拿来主义精神，我对代码分析后得到了满足需求的两个版本：</p>
-<p>第一个版本仍然是逍遥大佬给出的：</p>
-<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+&gt; 对于键盘键和鼠标按钮，如果键位向下 (或切换开启), 该函数返回 1(true) 如果键位向上 (或切换关闭), 该函数返回 0(false).
 
-<p>这个解法的思路是：要在松开左键时判断，那就在左键按住时阻塞他，于是有了<code>while</code>循环的<code>Sleep</code>，当释放鼠标，进行判断。</p>
-<p>思路奇妙而省心。（今日大收获之<code>while</code>不仅可以用来循环，还可以用来等待）</p>
-<p>第二个版本是@白天提出：</p>
-<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+  咦，这样看来，`while`​循环发生在我按住鼠标的时候啊，那岂不是不等我完全选中就要开始复制了？
 
-<p>这里以按下左键触发程序，然后立刻做了一个锚点<code>StartTime</code>，当 KeyWait 执行结束后将时间进行对比，这其实更加的合理，只是我最初的思路是，一步到位的等待 KeyWait LButton Up，反而执行失败。</p>
-<p>思考的点在于，我没料到，在我一直按住左键这段时间，可以额外添加一个<code>KeyWait &quot;LButton&quot;</code>来进行判断。</p>
+  事实证明，的确如此（大哭）。
+
+# 问题解决（两种方案）
+
+  我没解决，饭后再看发现群里已经出现了两种解法，鲁迅说过：拿来吧你，现在都是我的了。
+
+  本着拿来主义精神，我对代码分析后得到了满足需求的两个版本：
+
+  第一个版本仍然是逍遥大佬给出的：
+
+```ahk
+~LButton:: &#123;
+    StartTime := A_TickCount
+    While GetKeyState(&quot;LButton&quot;, &quot;P&quot;)
+    &#123;
+        Sleep 10
+    &#125;
+    If (A_TickCount - StartTime &gt; 1000)
+    &#123;
+        ; MsgBox &quot;长按左键 1 秒钟了！&quot;
+        Send &quot;^c&quot;
+    &#125;
+&#125;
+</code></pre>
+<p>  这个解法的思路是：要在松开左键时判断，那就在左键按住时阻塞他，于是有了<code>while</code>​循环的<code>Sleep</code>​，当释放鼠标，进行判断。</p>
+<p>  思路奇妙而省心。（今日大收获之<code>while</code>​不仅可以用来循环，还可以用来等待）</p>
+<p>  第二个版本是@白天提出：</p>
+<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton:: &#123;
+    StartTime := A_Now
+    KeyWait "LButton"
+    if DateDiff(A_Now, StartTime, "Seconds") >= 1 &#123;
+        SendInput "^c"
+    &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  这里以按下左键触发程序，然后立刻做了一个锚点<code>StartTime</code>​，当 KeyWait 执行结束后将时间进行对比，这其实更加的合理，只是我最初的思路是，一步到位的等待 KeyWait LButton Up，反而执行失败。</p>
+<p>  思考的点在于，我没料到，在我一直按住左键这段时间，可以额外添加一个<code>KeyWait &quot;LButton&quot;</code>​来进行判断。</p>
 <hr>
-<p>写程序最重要的是思维，今天一个程序的两个解法让我收获匪浅，今后将继续学习下去。</p>
-<p>最后重新放上两种解法：</p>
-<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_TickCount</span><br>	While GetKeyState(<span class="hljs-string">&quot;LButton&quot;</span>, <span class="hljs-string">&quot;P&quot;</span>)<br>	&#123;<br>		Sleep <span class="hljs-number">10</span><br>	&#125;<br>	If (<span class="hljs-built_in">A_TickCount</span> - StartTime &gt; <span class="hljs-number">1000</span>)<br>	&#123;<br>		<span class="hljs-comment">; MsgBox &quot;长按左键1秒钟了！&quot;</span><br>		Send <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+<p>  写程序最重要的是思维，今天一个程序的两个解法让我收获匪浅，今后将继续学习下去。</p>
+<p>  最后重新放上两种解法：</p>
+<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton:: &#123;
+    StartTime := A_TickCount
+    While GetKeyState("LButton", "P")
+    &#123;
+        Sleep 10
+    &#125;
+    If (A_TickCount - StartTime > 1000)
+    &#123;
+        ; MsgBox "长按左键 1 秒钟了！"
+        Send "^c"
+    &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-ahk"><code class="language-ahk">~LButton:: &#123;
+    StartTime := A_Now
+    KeyWait "LButton"
+    if DateDiff(A_Now, StartTime, "Seconds") >= 1 &#123;
+        SendInput "^c"
+    &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>  ‍</p>
 
-<figure class="highlight ahk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string"><code class="language-hljs ahk"><span class="hljs-title">~LButton::</span> &#123;<br>	StartTime := <span class="hljs-built_in">A_Now</span><br>	KeyWait <span class="hljs-string">&quot;LButton&quot;</span><br>	if DateDiff(<span class="hljs-built_in">A_Now</span>, StartTime, <span class="hljs-string">&quot;Seconds&quot;</span>) &gt;= <span class="hljs-number">1</span> &#123;<br>		SendInput <span class="hljs-string">"^c"</span><br>	&#125;<br>&#125;<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -544,9 +600,6 @@
 
 
 
-
-
-  
 
 
 

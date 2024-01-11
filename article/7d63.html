@@ -63,11 +63,6 @@
 <link  rel="stylesheet" href="/css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
 
 
 
@@ -339,10 +334,38 @@
 <li>如果没有安装 git，安装 git：<br> ​<code>scoop install git​​</code></li>
 </ol>
 <h1 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h1><p>回到最初的目的，安装<a href="https://childeyouyu.github.io/article/ea40.html"><code>musicfox</code></a>：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs cmd"><code class="language-hljs cmd">scoop bucket add go-musicfox https://github.com/go-musicfox/go-musicfox.git<br>scoop install go-musicfox<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+<pre class="line-numbers language-cmd"><code class="language-cmd">scoop bucket add go-musicfox https://github.com/go-musicfox/go-musicfox.git
+scoop install go-musicfox
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="附录·一些scoop的命令"><a href="#附录·一些scoop的命令" class="headerlink" title="附录·一些scoop的命令"></a>附录·一些<code>scoop</code>的命令</h1><pre class="line-numbers language-cmd"><code class="language-cmd"># 更新 scoop 及软件包列表
+scoop update
 
-<h1 id="附录·一些scoop的命令"><a href="#附录·一些scoop的命令" class="headerlink" title="附录·一些scoop的命令"></a>附录·一些<code>scoop</code>的命令</h1><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre class="line-numbers language-hljs cmd"><code class="language-hljs cmd"># 更新 scoop 及软件包列表<br>scoop update<br><br>## 安装软件 ##<br># 非全局安装（并禁止安装包缓存）<br>scoop install -k <app><br># 全局安装（并禁止安装包缓存）<br>sudo scoop install -gk <app><br><br>## 卸载软件 ##<br># 卸载非全局软件（并删除配置文件）<br>scoop uninstall -p <app><br># 卸载全局软件（并删除配置文件）<br>sudo scoop uninstall -gp <app><br><br>## 更新软件 ##<br># 更新所有非全局软件（并禁止安装包缓存）<br>scoop update -k *<br># 更新所有软件（并禁止安装包缓存）<br>sudo scoop update -gk *<br><br>## 垃圾清理 ##<br># 删除所有旧版本非全局软件（并删除软件包缓存）<br>scoop cleanup -k *<br># 删除所有旧版本软件（并删除软件包缓存）<br>sudo scoop cleanup -gk *<br># 清除软件包缓存<br>scoop cache rm *<br><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></td></tr></table></figure>
+## 安装软件 ##
+# 非全局安装（并禁止安装包缓存）
+scoop install -k <app>
+# 全局安装（并禁止安装包缓存）
+sudo scoop install -gk <app>
 
+## 卸载软件 ##
+# 卸载非全局软件（并删除配置文件）
+scoop uninstall -p <app>
+# 卸载全局软件（并删除配置文件）
+sudo scoop uninstall -gp <app>
+
+## 更新软件 ##
+# 更新所有非全局软件（并禁止安装包缓存）
+scoop update -k *
+# 更新所有软件（并禁止安装包缓存）
+sudo scoop update -gk *
+
+## 垃圾清理 ##
+# 删除所有旧版本非全局软件（并删除软件包缓存）
+scoop cleanup -k *
+# 删除所有旧版本软件（并删除软件包缓存）
+sudo scoop cleanup -gk *
+# 清除软件包缓存
+scoop cache rm *
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
               </div>
@@ -516,9 +539,6 @@
 
 
 
-
-
-  
 
 
 
