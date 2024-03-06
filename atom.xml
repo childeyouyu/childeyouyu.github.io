@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-03-06T12:49:02.623Z</updated>
+  <updated>2024-03-06T13:55:26.343Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 RSS 来保护隐私和提高效率-(翻译)</title>
+    <link href="https://childeyouyu.github.io/article/1066.html"/>
+    <id>https://childeyouyu.github.io/article/1066.html</id>
+    <published>2024-03-06T13:01:04.000Z</published>
+    <updated>2024-03-06T13:55:26.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;看到一篇不错的 RSS 介绍文章，翻译一下。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="翻译" scheme="https://childeyouyu.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
   
   <entry>
     <title>3 月软件推荐</title>
