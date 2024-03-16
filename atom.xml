@@ -34,29 +34,6 @@
   </entry>
   
   <entry>
-    <title>3 月软件推荐</title>
-    <link href="https://childeyouyu.github.io/article/fc02.html"/>
-    <id>https://childeyouyu.github.io/article/fc02.html</id>
-    <published>2024-03-03T00:05:59.000Z</published>
-    <updated>2024-03-11T11:53:24.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;2024-03-11&quot;&gt;&lt;a href=&quot;#2024-03-11&quot; class=&quot;headerlink&quot; title=&quot;2024-03-11&quot;&gt;&lt;/a&gt;2024-03-11&lt;/h2&gt;&lt;h3 id=&quot;Flow-Launcher&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="软件推荐" scheme="https://childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    
-  </entry>
-  
-  <entry>
     <title>AHK 自动复制的实现与逻辑分析</title>
     <link href="https://childeyouyu.github.io/article/d3ee.html"/>
     <id>https://childeyouyu.github.io/article/d3ee.html</id>
@@ -207,11 +184,11 @@
     <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
     <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
     <category term="Python" scheme="https://childeyouyu.github.io/tags/Python/"/>
-    
-    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -324,9 +301,9 @@
     <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
-    
     <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
   </entry>
   
