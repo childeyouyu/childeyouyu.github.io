@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-03-06T14:01:51.679Z</updated>
+  <updated>2024-03-18T01:44:54.509Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://childeyouyu.github.io/article/1066.html"/>
     <id>https://childeyouyu.github.io/article/1066.html</id>
     <published>2024-03-06T13:01:04.000Z</published>
-    <updated>2024-03-06T14:01:51.679Z</updated>
+    <updated>2024-03-18T01:44:54.509Z</updated>
     
     
     <summary type="html">看到一篇不错的 RSS 介绍文章，翻译一下。</summary>
@@ -30,6 +30,29 @@
     
     
     <category term="翻译" scheme="https://childeyouyu.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3 月软件推荐</title>
+    <link href="https://childeyouyu.github.io/article/fc02.html"/>
+    <id>https://childeyouyu.github.io/article/fc02.html</id>
+    <published>2024-03-03T00:05:59.000Z</published>
+    <updated>2024-03-11T11:53:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;2024-03-软件推荐&quot;&gt;&lt;a href=&quot;#2024-03-软件推荐&quot; class=&quot;headerlink&quot; title=&quot;2024-03 软件推荐&quot;&gt;&lt;/a&gt;2024-03 软件推荐&lt;/h2&gt;&lt;h2 id=&quot;2024-03-16&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="软件推荐" scheme="https://childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
@@ -75,9 +98,9 @@
     <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
-    
     <category term="散文" scheme="https://childeyouyu.github.io/tags/%E6%95%A3%E6%96%87/"/>
+    
+    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
     
   </entry>
   
@@ -104,9 +127,9 @@
     <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
-    
     <category term="折腾日记" scheme="https://childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
+    
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
   </entry>
   
@@ -444,9 +467,9 @@
     <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
     <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
@@ -524,9 +547,9 @@
     <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
     <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
