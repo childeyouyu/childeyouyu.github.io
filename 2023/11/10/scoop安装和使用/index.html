@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>scoop 安装和使用 | 语之屋</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.ico"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.11.0"><!-- inject head--><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/7pOrz0WXB5ZWJPX/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="关于新电脑上管理员用户 scoop 的安装和使用 前言Windows 11 的优化实在是让人不能恭维，使用了长达两年五个月左右，期间有过数次的重新安装，最近变得十分卡顿，不只是自己到底设置了些什么，于是在上个周末还是选择了重新安装和使用 windows10 的系统，再次回归第一印象就是：“流畅，"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="语之屋"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.ico"><link rel="apple-touch-icon" href="/img/pwa/favicon.ico" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.11.0",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: undefined,
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.webp'
+    },
+    copyright: {"limit":50,"author":"作者: 公子语","link":"链接: ","source":"来源: 语之屋","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可"},
+    aside: {
+        sayhello: {
+            morning: '一日之计在于晨',
+            noon: '吃饱了才有力气干活',
+            afternoon: '集中精力，攻克难关',
+            night: '不要太劳累了，早睡更健康',
+            goodnight: '睡个好觉，保证精力充沛',
+        },
+        sayhello2: [],
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: false,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude st-side-bar-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>显示模式</span></span></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结<sup>1</sup></a><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔<sup>4</sup></a><a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/">看世界<sup>3</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">软件推荐<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/">技术<sup>6</sup></a><a href="/tags/AHK/">AHK<sup>2</sup></a><a href="/tags/Java/">Java<sup>1</sup></a><a href="/tags/Windows/">Windows<sup>2</sup></a><a href="/tags/Python/">Python<sup>1</sup></a><a href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/">折腾日记<sup>1</sup></a><a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/">好玩的 Linux<sup>3</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件<sup>1</sup></a><a href="/tags/%E9%9F%B3%E4%B9%90/">音乐<sup>1</sup></a><a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行<sup>1</sup></a><a href="/tags/%E7%BF%BB%E8%AF%91/">翻译<sup>1</sup></a><a href="/tags/%E8%AF%BB%E4%B9%A6/">读书<sup>1</sup></a><a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/">问题小记<sup>1</sup></a><a href="/tags/%E5%B0%8F%E8%AF%B4/">小说<sup>2</sup></a><a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/">奇思妙想<sup>3</sup></a><a href="/tags/%E6%95%A3%E6%96%87/">散文<sup>1</sup></a><a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/">校园风光<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><a id="site-name" href="/" title="返回博客主页"><span class="title">Solitude</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">scoop 安装和使用</a></div></div><div id="menus"></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/default.png" alt="scoop 安装和使用"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/"><span class="tags-name tags-punctuation">技术</span></a><a class="post-meta__tags" href="/tags/Windows/"><span class="tags-name tags-punctuation">Windows</span></a></div></div></div></div><h1 class="post-title">scoop 安装和使用</h1><div id="post-meta"><div class="meta-secondline"></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>关于新电脑上管理员用户 scoop 的安装和使用</p>
+</blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Windows 11 的优化实在是让人不能恭维，使用了长达两年五个月左右，期间有过数次的重新安装，最近变得十分卡顿，不只是自己到底设置了些什么，于是在上个周末还是选择了重新安装和使用 windows10 的系统，再次回归第一印象就是：“流畅，流畅，还他妈的是流畅！”。</p>
+<p>一些常用的软件还是需要配置的，轻车熟路的搞好了 PyCharm、Git、迁移了博客（迁移到了我的小电脑上）、最后所需要的就是搞定听歌软件了，不久前刚刚安装的 musicfox，却是卡在了安装 scoop 的步骤上面了，研究了许久发现本地默认创建的是管理员用户。</p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><ol>
+<li>在 <code>github</code> 找到 <code>install.ps1</code> 文件，复制文件内容。</li>
+<li>本地新建 <code>install.ps1</code> 将复制的内容填充进去。</li>
+<li>在 <code>install.ps1</code> 所在文件夹打开 powershell，依次输入命令<br> <code>​irm get.scoop.sh -outfile &#39;install.ps1&#39;​​</code><br> <code>​.\install.ps1 -RunAsAdmin​​</code><br> <code>​iex &quot;&amp; &#123;$(irm get.scoop.sh)&#125; -RunAsAdmin&quot;​​</code></li>
+<li>如果没有安装 git，安装 git：<br> ​<code>scoop install git​​</code></li>
+</ol>
+<h1 id="大功告成"><a href="#大功告成" class="headerlink" title="大功告成"></a>大功告成</h1><p>回到最初的目的，安装<a href="https://childeyouyu.github.io/article/ea40.html"><code>musicfox</code></a>：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scoop bucket add go-musicfox https://github.com/go-musicfox/go-musicfox.git</span><br><span class="line">scoop install go-musicfox</span><br></pre></td></tr></table></figure>
+
+<h1 id="附录·一些scoop的命令"><a href="#附录·一些scoop的命令" class="headerlink" title="附录·一些scoop的命令"></a>附录·一些<code>scoop</code>的命令</h1><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"># 更新 scoop 及软件包列表</span><br><span class="line">scoop update</span><br><span class="line"></span><br><span class="line">## 安装软件 ##</span><br><span class="line"># 非全局安装（并禁止安装包缓存）</span><br><span class="line">scoop install -k &lt;app&gt;</span><br><span class="line"># 全局安装（并禁止安装包缓存）</span><br><span class="line">sudo scoop install -gk &lt;app&gt;</span><br><span class="line"></span><br><span class="line">## 卸载软件 ##</span><br><span class="line"># 卸载非全局软件（并删除配置文件）</span><br><span class="line">scoop uninstall -p &lt;app&gt;</span><br><span class="line"># 卸载全局软件（并删除配置文件）</span><br><span class="line">sudo scoop uninstall -gp &lt;app&gt;</span><br><span class="line"></span><br><span class="line">## 更新软件 ##</span><br><span class="line"># 更新所有非全局软件（并禁止安装包缓存）</span><br><span class="line">scoop update -k *</span><br><span class="line"># 更新所有软件（并禁止安装包缓存）</span><br><span class="line">sudo scoop update -gk *</span><br><span class="line"></span><br><span class="line">## 垃圾清理 ##</span><br><span class="line"># 删除所有旧版本非全局软件（并删除软件包缓存）</span><br><span class="line">scoop cleanup -k *</span><br><span class="line"># 删除所有旧版本软件（并删除软件包缓存）</span><br><span class="line">sudo scoop cleanup -gk *</span><br><span class="line"># 清除软件包缓存</span><br><span class="line">scoop cache rm *</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="/img/pwa/favicon.ico"></a><div class="post-copyright__author_name">语之屋</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">语之屋</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/"><span class="tags-punctuation"></span>技术<span class="tagsPageCount">6</span></a><a class="post-meta__tags" href="/tags/Windows/"><span class="tags-punctuation"></span>Windows<span class="tagsPageCount">2</span></a></div></div><div class="social-share"></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/10/SSH-%E5%AE%89%E8%A3%85%E5%92%8C%E6%9F%A5%E7%9C%8B/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SSH 安装和查看</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/09/%E5%8E%BB%E7%AD%BE%E5%94%AE%E4%BC%9A/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">去签售会</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="/img/avatar.png"><div class="avatar-sticker"><img class="avatar-sticker-img" src="https://7.isyangs.cn/34/65f2e4e0423cc-34.png" alt="心情贴纸"></div></div><div class="author-info__description_group"><div class="author-info__description">分享自己对编程的<b>热爱</b>，对美好生活的<b>向往</b>，对知识海洋<b>探索历程</b>。</div><div class="author-info__description2">相信你可以在这里找到对你有用的知识和教程。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">公子语</div><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E5%8A%9F%E5%91%8A%E6%88%90"><span class="toc-text">大功告成</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%BD%95%C2%B7%E4%B8%80%E4%BA%9Bscoop%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-text">附录·一些scoop的命令</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/24/%E6%B5%8B%E8%AF%95/" title="Untitled"><img alt="Untitled" src="/img/default.png"></a><div class="content"><a class="title" href="/2024/05/24/%E6%B5%8B%E8%AF%95/" title="Untitled">Untitled</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/" title="使用 RSS 来保护隐私和提高效率-(翻译)"><img alt="使用 RSS 来保护隐私和提高效率-(翻译)" src="/img/default.png"></a><div class="content"><a class="title" href="/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/" title="使用 RSS 来保护隐私和提高效率-(翻译)">使用 RSS 来保护隐私和提高效率-(翻译)</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" title="3 月软件推荐"><img alt="3 月软件推荐" src="/img/default.png"></a><div class="content"><a class="title" href="/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" title="3 月软件推荐">3 月软件推荐</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/" title="AHK 自动复制的实现与逻辑分析"><img alt="AHK 自动复制的实现与逻辑分析" src="/img/default.png"></a><div class="content"><a class="title" href="/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/" title="AHK 自动复制的实现与逻辑分析">AHK 自动复制的实现与逻辑分析</a><a class="article-recent_post_categories" href="/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/">探索互联网</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/04/%E5%B7%A6%E6%89%8B/" title="左手"><img alt="左手" src="/img/default.png"></a><div class="content"><a class="title" href="/2024/01/04/%E5%B7%A6%E6%89%8B/" title="左手">左手</a><a class="article-recent_post_categories" href="/2024/01/04/%E5%B7%A6%E6%89%8B/">文艺的风</a></div></div></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Solitude</span></div><div class="footer-bar-description">来自 Efu 的文章</div><a class="footer-bar-link" href="/about/">了解更多</a></div><div id="footer_deal"></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2024 By&nbsp;<a class="footer-bar-link" href="/">公子语</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/valor-x/hexo-theme-solitude" alt="主题">主题</a><a class="footer-bar-link cc" href="/null" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.11.0"></script><script src="/js/main.js?v=1.11.0"></script><script src="/js/third_party/waterfall.min.js?v=1.11.0"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="/js/third_party/universe.min.js?v=1.11.0"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"></div></div><!-- newest comment--><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    is_rm && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- google adsense--><!-- search--><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2024/05/24/测试/","2024/03/06/使用RSS来保护隐私和提高效率-翻译/","2024/03/03/3-月软件推荐/","2024/01/11/AHK-自动复制的实现与逻辑分析/","2024/01/04/左手/","2024/01/04/Next-Cloud-容器挂载主机文件夹/","2024/01/02/2023-年终总结/","2023/12/30/AHK-上手以及编辑器配置/","2023/12/05/Anaconda-使用的几个点/","2023/11/22/Java中文乱码问题-2021年困扰我的万恶之源/","2023/11/11/计量的几处风景/","2023/11/10/SSH-安装和查看/","2023/11/10/scoop安装和使用/","2023/11/09/去签售会/","2023/10/31/折腾日记/","2023/10/20/2023年在通辽的最后一天/","2023/10/19/一个听歌的软件/","2023/06/10/黄泉有景-姜为孟婆/","2022/12/19/随笔 烟与黄昏/","2022/10/25/天空雾雨交织/","2021/02/18/蝇之惑/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>
