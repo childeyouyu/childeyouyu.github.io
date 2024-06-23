@@ -3,11 +3,11 @@
   <title>语之屋</title>
   
   
-  <link href="https://childeyouyu.github.io/childeyouyu.github.io/atom.xml" rel="self"/>
+  <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
-  <link href="https://childeyouyu.github.io/childeyouyu.github.io/"/>
+  <link href="https://childeyouyu.github.io/"/>
   <updated>2024-03-18T01:44:54.509Z</updated>
-  <id>https://childeyouyu.github.io/childeyouyu.github.io/</id>
+  <id>https://childeyouyu.github.io/</id>
   
   <author>
     <name>公子语</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>使用 RSS 来保护隐私和提高效率-(翻译)</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/</id>
+    <link href="https://childeyouyu.github.io/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/"/>
+    <id>https://childeyouyu.github.io/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/</id>
     <published>2024-03-06T13:01:04.000Z</published>
     <updated>2024-03-18T01:44:54.509Z</updated>
     
@@ -31,14 +31,14 @@
     
     
     
-    <category term="翻译" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
+    <category term="翻译" scheme="https://childeyouyu.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
   <entry>
     <title>3 月软件推荐</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</id>
+    <link href="https://childeyouyu.github.io/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    <id>https://childeyouyu.github.io/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</id>
     <published>2024-03-03T00:05:59.000Z</published>
     <updated>2024-03-11T11:53:24.000Z</updated>
     
@@ -53,14 +53,14 @@
     
     
     
-    <category term="软件推荐" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    <category term="软件推荐" scheme="https://childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
   <entry>
     <title>AHK 自动复制的实现与逻辑分析</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/</id>
+    <link href="https://childeyouyu.github.io/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/"/>
+    <id>https://childeyouyu.github.io/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/</id>
     <published>2024-01-11T11:26:15.000Z</published>
     <updated>2024-01-11T13:54:56.509Z</updated>
     
@@ -71,19 +71,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="AHK" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/AHK/"/>
+    <category term="AHK" scheme="https://childeyouyu.github.io/tags/AHK/"/>
     
   </entry>
   
   <entry>
     <title>左手</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2024/01/04/%E5%B7%A6%E6%89%8B/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2024/01/04/%E5%B7%A6%E6%89%8B/</id>
+    <link href="https://childeyouyu.github.io/2024/01/04/%E5%B7%A6%E6%89%8B/"/>
+    <id>https://childeyouyu.github.io/2024/01/04/%E5%B7%A6%E6%89%8B/</id>
     <published>2024-01-04T14:46:41.000Z</published>
     <updated>2024-01-21T04:20:16.537Z</updated>
     
@@ -99,19 +99,19 @@
     
     
     
-    <category term="文艺的风" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="散文" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%95%A3%E6%96%87/"/>
+    <category term="散文" scheme="https://childeyouyu.github.io/tags/%E6%95%A3%E6%96%87/"/>
     
-    <category term="奇思妙想" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
     
   </entry>
   
   <entry>
     <title>Next Cloud 容器挂载主机文件夹</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/</id>
+    <link href="https://childeyouyu.github.io/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+    <id>https://childeyouyu.github.io/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/</id>
     <published>2024-01-04T12:24:20.000Z</published>
     <updated>2024-01-04T15:59:18.044Z</updated>
     
@@ -129,19 +129,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="折腾日记" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
-    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
+    <category term="折腾日记" scheme="https://childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2023 年终总结</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2024/01/02/2023-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2024/01/02/2023-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</id>
+    <link href="https://childeyouyu.github.io/2024/01/02/2023-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <id>https://childeyouyu.github.io/2024/01/02/2023-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</id>
     <published>2024-01-01T16:13:58.000Z</published>
     <updated>2024-01-04T15:55:56.031Z</updated>
     
@@ -156,17 +156,17 @@
     
     
     
-    <category term="追求本我" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
+    <category term="追求本我" scheme="https://childeyouyu.github.io/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
     
     
-    <category term="年终总结" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <category term="年终总结" scheme="https://childeyouyu.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>AHK 上手以及编辑器配置</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/12/30/AHK-%E4%B8%8A%E6%89%8B%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/12/30/AHK-%E4%B8%8A%E6%89%8B%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://childeyouyu.github.io/2023/12/30/AHK-%E4%B8%8A%E6%89%8B%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/"/>
+    <id>https://childeyouyu.github.io/2023/12/30/AHK-%E4%B8%8A%E6%89%8B%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/</id>
     <published>2023-12-30T08:18:44.000Z</published>
     <updated>2024-01-04T15:58:57.565Z</updated>
     
@@ -180,23 +180,23 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="AHK" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/AHK/"/>
+    <category term="AHK" scheme="https://childeyouyu.github.io/tags/AHK/"/>
     
   </entry>
   
   <entry>
     <title>Anaconda 使用的几个点</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/12/05/Anaconda-%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E7%82%B9/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/12/05/Anaconda-%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E7%82%B9/</id>
+    <link href="https://childeyouyu.github.io/2023/12/05/Anaconda-%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E7%82%B9/"/>
+    <id>https://childeyouyu.github.io/2023/12/05/Anaconda-%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E7%82%B9/</id>
     <published>2023-12-05T15:38:18.000Z</published>
     <updated>2024-01-04T15:59:08.691Z</updated>
     
-    <content type="html"><![CDATA[<p>最近工作需要，重新配置了 Anaconda，过程中出现了些许问题，特此做个记录和汇总。</p><h1 id="1-系统环境配置"><a href="#1-系统环境配置" class="headerlink" title="1. 系统环境配置"></a>1. 系统环境配置</h1><p><code>Win + S</code>搜索 env –&gt; 编辑系统环境变量 –&gt; 环境变量。</p><p>在 Path 中新建三个系统环境变量：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">① anaconda 安装的目录 D:\anaconda</span><br><span class="line"></span><br><span class="line">② anaconda/scripts 的目录 D:\anaconda\Scripts</span><br><span class="line"></span><br><span class="line">③ bin 的目录 D:\Download\anaconda\Scripts\Library\bin</span><br></pre></td></tr></table></figure><blockquote><p>PS：在安装时勾选添加anaconda3 到PATH就会自动配置了。</p><p><img src="/childeyouyu.github.io/assets/image-20231205232514-ounax5i.png" alt="image"></p></blockquote><h1 id="2-Pycharm-识别"><a href="#2-Pycharm-识别" class="headerlink" title="2. Pycharm 识别"></a>2. Pycharm 识别</h1><p>配置好了后，我的pycharm还是识别不到conda的可执行文件，新建环境，选择conda，conda安装文件夹bin文件下面的conda.bat 文件。</p><p>后面遇到其他情况我再进行补充。</p><h1 id="3-常用命令"><a href="#3-常用命令" class="headerlink" title="3. 常用命令"></a>3. 常用命令</h1><h2 id="查看conda版本："><a href="#查看conda版本：" class="headerlink" title="查看conda版本："></a>查看conda版本：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure><h2 id="创建新环境："><a href="#创建新环境：" class="headerlink" title="创建新环境："></a>创建新环境：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name 环境名 python=python版本（3.12）</span><br></pre></td></tr></table></figure><h2 id="删除环境："><a href="#删除环境：" class="headerlink" title="删除环境："></a>删除环境：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove --name envname --all</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>最近工作需要，重新配置了 Anaconda，过程中出现了些许问题，特此做个记录和汇总。</p><h1 id="1-系统环境配置"><a href="#1-系统环境配置" class="headerlink" title="1. 系统环境配置"></a>1. 系统环境配置</h1><p><code>Win + S</code>搜索 env –&gt; 编辑系统环境变量 –&gt; 环境变量。</p><p>在 Path 中新建三个系统环境变量：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">① anaconda 安装的目录 D:\anaconda</span><br><span class="line"></span><br><span class="line">② anaconda/scripts 的目录 D:\anaconda\Scripts</span><br><span class="line"></span><br><span class="line">③ bin 的目录 D:\Download\anaconda\Scripts\Library\bin</span><br></pre></td></tr></table></figure><blockquote><p>PS：在安装时勾选添加anaconda3 到PATH就会自动配置了。</p><p><img src="/assets/image-20231205232514-ounax5i.png" alt="image"></p></blockquote><h1 id="2-Pycharm-识别"><a href="#2-Pycharm-识别" class="headerlink" title="2. Pycharm 识别"></a>2. Pycharm 识别</h1><p>配置好了后，我的pycharm还是识别不到conda的可执行文件，新建环境，选择conda，conda安装文件夹bin文件下面的conda.bat 文件。</p><p>后面遇到其他情况我再进行补充。</p><h1 id="3-常用命令"><a href="#3-常用命令" class="headerlink" title="3. 常用命令"></a>3. 常用命令</h1><h2 id="查看conda版本："><a href="#查看conda版本：" class="headerlink" title="查看conda版本："></a>查看conda版本：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure><h2 id="创建新环境："><a href="#创建新环境：" class="headerlink" title="创建新环境："></a>创建新环境：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name 环境名 python=python版本（3.12）</span><br></pre></td></tr></table></figure><h2 id="删除环境："><a href="#删除环境：" class="headerlink" title="删除环境："></a>删除环境：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove --name envname --all</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
@@ -207,21 +207,21 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Windows" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/Windows/"/>
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
-    <category term="Python" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://childeyouyu.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Java 中文乱码问题 - 2021 年困扰我的万恶之源</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/11/22/Java%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98-2021%E5%B9%B4%E5%9B%B0%E6%89%B0%E6%88%91%E7%9A%84%E4%B8%87%E6%81%B6%E4%B9%8B%E6%BA%90/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/11/22/Java%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98-2021%E5%B9%B4%E5%9B%B0%E6%89%B0%E6%88%91%E7%9A%84%E4%B8%87%E6%81%B6%E4%B9%8B%E6%BA%90/</id>
+    <link href="https://childeyouyu.github.io/2023/11/22/Java%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98-2021%E5%B9%B4%E5%9B%B0%E6%89%B0%E6%88%91%E7%9A%84%E4%B8%87%E6%81%B6%E4%B9%8B%E6%BA%90/"/>
+    <id>https://childeyouyu.github.io/2023/11/22/Java%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98-2021%E5%B9%B4%E5%9B%B0%E6%89%B0%E6%88%91%E7%9A%84%E4%B8%87%E6%81%B6%E4%B9%8B%E6%BA%90/</id>
     <published>2023-11-22T03:13:15.000Z</published>
     <updated>2024-01-04T15:59:13.939Z</updated>
     
@@ -237,19 +237,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Java" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://childeyouyu.github.io/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>计量的几处风景</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/11/11/%E8%AE%A1%E9%87%8F%E7%9A%84%E5%87%A0%E5%A4%84%E9%A3%8E%E6%99%AF/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/11/11/%E8%AE%A1%E9%87%8F%E7%9A%84%E5%87%A0%E5%A4%84%E9%A3%8E%E6%99%AF/</id>
+    <link href="https://childeyouyu.github.io/2023/11/11/%E8%AE%A1%E9%87%8F%E7%9A%84%E5%87%A0%E5%A4%84%E9%A3%8E%E6%99%AF/"/>
+    <id>https://childeyouyu.github.io/2023/11/11/%E8%AE%A1%E9%87%8F%E7%9A%84%E5%87%A0%E5%A4%84%E9%A3%8E%E6%99%AF/</id>
     <published>2023-11-11T15:18:42.000Z</published>
     <updated>2024-01-04T15:57:30.237Z</updated>
     
@@ -264,21 +264,21 @@
     
     
     
-    <category term="何不看世界" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
     
-    <category term="随笔" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="看世界" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
-    <category term="校园风光" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/"/>
+    <category term="校园风光" scheme="https://childeyouyu.github.io/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/"/>
     
   </entry>
   
   <entry>
     <title>SSH 安装和查看</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/11/10/SSH-%E5%AE%89%E8%A3%85%E5%92%8C%E6%9F%A5%E7%9C%8B/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/11/10/SSH-%E5%AE%89%E8%A3%85%E5%92%8C%E6%9F%A5%E7%9C%8B/</id>
+    <link href="https://childeyouyu.github.io/2023/11/10/SSH-%E5%AE%89%E8%A3%85%E5%92%8C%E6%9F%A5%E7%9C%8B/"/>
+    <id>https://childeyouyu.github.io/2023/11/10/SSH-%E5%AE%89%E8%A3%85%E5%92%8C%E6%9F%A5%E7%9C%8B/</id>
     <published>2023-11-10T03:22:37.000Z</published>
     <updated>2024-01-04T15:59:27.691Z</updated>
     
@@ -296,19 +296,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
   </entry>
   
   <entry>
     <title>scoop 安装和使用</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/11/10/scoop%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/11/10/scoop%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://childeyouyu.github.io/2023/11/10/scoop%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
+    <id>https://childeyouyu.github.io/2023/11/10/scoop%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/</id>
     <published>2023-11-10T02:35:02.000Z</published>
     <updated>2024-01-04T15:59:22.918Z</updated>
     
@@ -325,19 +325,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Windows" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/Windows/"/>
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
   </entry>
   
   <entry>
     <title>去签售会</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/11/09/%E5%8E%BB%E7%AD%BE%E5%94%AE%E4%BC%9A/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/11/09/%E5%8E%BB%E7%AD%BE%E5%94%AE%E4%BC%9A/</id>
+    <link href="https://childeyouyu.github.io/2023/11/09/%E5%8E%BB%E7%AD%BE%E5%94%AE%E4%BC%9A/"/>
+    <id>https://childeyouyu.github.io/2023/11/09/%E5%8E%BB%E7%AD%BE%E5%94%AE%E4%BC%9A/</id>
     <published>2023-11-09T07:59:03.000Z</published>
     <updated>2024-01-04T15:58:02.535Z</updated>
     
@@ -351,19 +351,19 @@
     
     
     
-    <category term="何不看世界" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
     
-    <category term="看世界" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
-    <category term="读书" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
+    <category term="读书" scheme="https://childeyouyu.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
   <entry>
     <title>折腾日记</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/10/31/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/10/31/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</id>
+    <link href="https://childeyouyu.github.io/2023/10/31/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
+    <id>https://childeyouyu.github.io/2023/10/31/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</id>
     <published>2023-10-31T03:19:11.000Z</published>
     <updated>2024-01-04T15:58:47.292Z</updated>
     
@@ -380,19 +380,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
-    <category term="问题小记" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
+    <category term="问题小记" scheme="https://childeyouyu.github.io/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>2023 年在通辽的最后一天</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/10/20/2023%E5%B9%B4%E5%9C%A8%E9%80%9A%E8%BE%BD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/10/20/2023%E5%B9%B4%E5%9C%A8%E9%80%9A%E8%BE%BD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</id>
+    <link href="https://childeyouyu.github.io/2023/10/20/2023%E5%B9%B4%E5%9C%A8%E9%80%9A%E8%BE%BD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/"/>
+    <id>https://childeyouyu.github.io/2023/10/20/2023%E5%B9%B4%E5%9C%A8%E9%80%9A%E8%BE%BD%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</id>
     <published>2023-10-20T00:59:19.000Z</published>
     <updated>2024-01-04T15:57:45.376Z</updated>
     
@@ -408,19 +408,19 @@
     
     
     
-    <category term="何不看世界" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
     
-    <category term="随笔" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="看世界" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
   </entry>
   
   <entry>
     <title>一个听歌的软件</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/10/19/%E4%B8%80%E4%B8%AA%E5%90%AC%E6%AD%8C%E7%9A%84%E8%BD%AF%E4%BB%B6/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/10/19/%E4%B8%80%E4%B8%AA%E5%90%AC%E6%AD%8C%E7%9A%84%E8%BD%AF%E4%BB%B6/</id>
+    <link href="https://childeyouyu.github.io/2023/10/19/%E4%B8%80%E4%B8%AA%E5%90%AC%E6%AD%8C%E7%9A%84%E8%BD%AF%E4%BB%B6/"/>
+    <id>https://childeyouyu.github.io/2023/10/19/%E4%B8%80%E4%B8%AA%E5%90%AC%E6%AD%8C%E7%9A%84%E8%BD%AF%E4%BB%B6/</id>
     <published>2023-10-19T06:45:18.000Z</published>
     <updated>2024-01-04T15:58:30.293Z</updated>
     
@@ -435,21 +435,21 @@
     
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="软件" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="软件" scheme="https://childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     
-    <category term="音乐" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    <category term="音乐" scheme="https://childeyouyu.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
     
-    <category term="命令行" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    <category term="命令行" scheme="https://childeyouyu.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
   </entry>
   
   <entry>
     <title>黄泉有景 - 姜为孟婆</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2023/06/10/%E9%BB%84%E6%B3%89%E6%9C%89%E6%99%AF-%E5%A7%9C%E4%B8%BA%E5%AD%9F%E5%A9%86/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2023/06/10/%E9%BB%84%E6%B3%89%E6%9C%89%E6%99%AF-%E5%A7%9C%E4%B8%BA%E5%AD%9F%E5%A9%86/</id>
+    <link href="https://childeyouyu.github.io/2023/06/10/%E9%BB%84%E6%B3%89%E6%9C%89%E6%99%AF-%E5%A7%9C%E4%B8%BA%E5%AD%9F%E5%A9%86/"/>
+    <id>https://childeyouyu.github.io/2023/06/10/%E9%BB%84%E6%B3%89%E6%9C%89%E6%99%AF-%E5%A7%9C%E4%B8%BA%E5%AD%9F%E5%A9%86/</id>
     <published>2023-06-09T17:00:10.000Z</published>
     <updated>2024-01-04T15:57:06.473Z</updated>
     
@@ -465,19 +465,19 @@
     
     
     
-    <category term="文艺的风" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="奇思妙想" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
     
-    <category term="小说" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   
   <entry>
     <title>烟与黄昏</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2022/12/19/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2022/12/19/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/</id>
+    <link href="https://childeyouyu.github.io/2022/12/19/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/"/>
+    <id>https://childeyouyu.github.io/2022/12/19/%E9%9A%8F%E7%AC%94%20%E7%83%9F%E4%B8%8E%E9%BB%84%E6%98%8F/</id>
     <published>2022-12-19T06:45:18.000Z</published>
     <updated>2024-01-04T15:58:09.864Z</updated>
     
@@ -493,17 +493,17 @@
     
     
     
-    <category term="文艺的风" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="随笔" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>天空雾雨交织</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2022/10/25/%E5%A4%A9%E7%A9%BA%E9%9B%BE%E9%9B%A8%E4%BA%A4%E7%BB%87/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2022/10/25/%E5%A4%A9%E7%A9%BA%E9%9B%BE%E9%9B%A8%E4%BA%A4%E7%BB%87/</id>
+    <link href="https://childeyouyu.github.io/2022/10/25/%E5%A4%A9%E7%A9%BA%E9%9B%BE%E9%9B%A8%E4%BA%A4%E7%BB%87/"/>
+    <id>https://childeyouyu.github.io/2022/10/25/%E5%A4%A9%E7%A9%BA%E9%9B%BE%E9%9B%A8%E4%BA%A4%E7%BB%87/</id>
     <published>2022-10-25T00:14:45.000Z</published>
     <updated>2024-01-04T14:49:52.927Z</updated>
     
@@ -518,17 +518,17 @@
     
     
     
-    <category term="文艺的风" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="随笔" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>蝇之惑</title>
-    <link href="https://childeyouyu.github.io/childeyouyu.github.io/2021/02/18/%E8%9D%87%E4%B9%8B%E6%83%91/"/>
-    <id>https://childeyouyu.github.io/childeyouyu.github.io/2021/02/18/%E8%9D%87%E4%B9%8B%E6%83%91/</id>
+    <link href="https://childeyouyu.github.io/2021/02/18/%E8%9D%87%E4%B9%8B%E6%83%91/"/>
+    <id>https://childeyouyu.github.io/2021/02/18/%E8%9D%87%E4%B9%8B%E6%83%91/</id>
     <published>2021-02-18T02:34:07.000Z</published>
     <updated>2024-01-04T15:58:38.468Z</updated>
     
@@ -542,12 +542,12 @@
     
     
     
-    <category term="文艺的风" scheme="https://childeyouyu.github.io/childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="奇思妙想" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
     
-    <category term="小说" scheme="https://childeyouyu.github.io/childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
+    <category term="小说" scheme="https://childeyouyu.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
     
   </entry>
   

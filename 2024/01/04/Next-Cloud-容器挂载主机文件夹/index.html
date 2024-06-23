@@ -23,7 +23,7 @@
     <meta name="description" content="Hello，大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。  我们打开 zimaos，应用商店搜索 Next Cloud 安装；  打开文件，选择一个我们想要去映射的文件夹，我选择 download，现在记住这个地址是 DATA&#x2F;Download；  打开 Next Cloud 容器右上角三个点，选择设置，添加卷，选择刚刚的 Download，右面输入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Next Cloud 容器挂载主机文件夹">
-<meta property="og:url" content="https://childeyouyu.github.io/childeyouyu.github.io/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/index.html">
+<meta property="og:url" content="https://childeyouyu.github.io/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/index.html">
 <meta property="og:site_name" content="语之屋">
 <meta property="og:description" content="Hello，大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。  我们打开 zimaos，应用商店搜索 Next Cloud 安装；  打开文件，选择一个我们想要去映射的文件夹，我选择 download，现在记住这个地址是 DATA&#x2F;Download；  打开 Next Cloud 容器右上角三个点，选择设置，添加卷，选择刚刚的 Download，右面输入">
 <meta property="og:locale" content="zh_CN">
@@ -34,18 +34,18 @@
 <meta property="article:published_time" content="2024-01-04T12:24:20.000Z">
 <meta property="article:modified_time" content="2024-01-04T15:59:18.044Z">
 <meta property="article:author" content="公子语">
-<meta property="article:tag" content="折腾日记">
 <meta property="article:tag" content="好玩的 Linux">
+<meta property="article:tag" content="折腾日记">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202056-fjkilov.png?imageView2/2/interlace/1/format/webp">
   
   
   
-  <meta name="keywords" content="折腾日记,好玩的 Linux">
+  <meta name="keywords" content="好玩的 Linux,折腾日记">
 
   <!-- feed -->
   
-    <link rel="alternate" href="/childeyouyu.github.io/atom.xml" title="语之屋" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
   
 
   <link rel="stylesheet" href="/css/main.css?v=1.29.0">
@@ -61,7 +61,7 @@
 <div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/childeyouyu.github.io/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/childeyouyu.github.io/"><div class="main" ff="title">语之屋</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">语之屋</div></a></div></header>
 
 <div class="nav-area">
 <div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
@@ -72,7 +72,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/childeyouyu.github.io/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/"><span class="title">使用 RSS 来保护隐私和提高效率-(翻译)</span></a><a class="item title" href="/childeyouyu.github.io/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"><span class="title">3 月软件推荐</span></a><a class="item title" href="/childeyouyu.github.io/2024/01/04/%E5%B7%A6%E6%89%8B/"><span class="title">左手</span></a><a class="item title" href="/childeyouyu.github.io/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/"><span class="title">AHK 自动复制的实现与逻辑分析</span></a><a class="item title" href="/childeyouyu.github.io/2023/11/10/SSH-%E5%AE%89%E8%A3%85%E5%92%8C%E6%9F%A5%E7%9C%8B/"><span class="title">SSH 安装和查看</span></a><a class="item title" href="/childeyouyu.github.io/2023/11/10/scoop%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"><span class="title">scoop 安装和使用</span></a><a class="item title" href="/childeyouyu.github.io/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/"><span class="title">Next Cloud 容器挂载主机文件夹</span></a><a class="item title" href="/childeyouyu.github.io/2023/11/22/Java%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98-2021%E5%B9%B4%E5%9B%B0%E6%89%B0%E6%88%91%E7%9A%84%E4%B8%87%E6%81%B6%E4%B9%8B%E6%BA%90/"><span class="title">Java 中文乱码问题 - 2021 年困扰我的万恶之源</span></a><a class="item title" href="/childeyouyu.github.io/2023/12/05/Anaconda-%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E7%82%B9/"><span class="title">Anaconda 使用的几个点</span></a><a class="item title" href="/childeyouyu.github.io/2023/12/30/AHK-%E4%B8%8A%E6%89%8B%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/"><span class="title">AHK 上手以及编辑器配置</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19q0-.825.588-1.412T5 17q.825 0 1.413.588T7 19q0 .825-.587 1.413T5 21m13.5 0q-.65 0-1.088-.475T16.9 19.4q-.275-2.425-1.312-4.537T12.9 11.1q-1.65-1.65-3.762-2.687T4.6 7.1q-.65-.075-1.125-.512T3 5.5q0-.65.45-1.062t1.075-.363q3.075.275 5.763 1.563t4.737 3.337q2.05 2.05 3.338 4.738t1.562 5.762q.05.625-.363 1.075T18.5 21m-6 0q-.625 0-1.075-.437T10.85 19.5q-.225-1.225-.787-2.262T8.65 15.35q-.85-.85-1.888-1.412T4.5 13.15q-.625-.125-1.062-.575T3 11.5q0-.65.45-1.075t1.075-.325q1.825.25 3.413 1.063t2.837 2.062q1.25 1.25 2.063 2.838t1.062 3.412q.1.625-.325 1.075T12.5 21"/></svg></a></div><div class="widget-body fs14"><a class="item title" href="/2024/03/06/%E4%BD%BF%E7%94%A8RSS%E6%9D%A5%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%92%8C%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87-%E7%BF%BB%E8%AF%91/"><span class="title">使用 RSS 来保护隐私和提高效率-(翻译)</span></a><a class="item title" href="/2024/03/03/3-%E6%9C%88%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"><span class="title">3 月软件推荐</span></a><a class="item title" href="/2024/01/04/%E5%B7%A6%E6%89%8B/"><span class="title">左手</span></a><a class="item title" href="/2024/01/11/AHK-%E8%87%AA%E5%8A%A8%E5%A4%8D%E5%88%B6%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%B8%8E%E9%80%BB%E8%BE%91%E5%88%86%E6%9E%90/"><span class="title">AHK 自动复制的实现与逻辑分析</span></a><a class="item title" href="/2023/11/10/SSH-%E5%AE%89%E8%A3%85%E5%92%8C%E6%9F%A5%E7%9C%8B/"><span class="title">SSH 安装和查看</span></a><a class="item title" href="/2023/11/10/scoop%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/"><span class="title">scoop 安装和使用</span></a><a class="item title" href="/2024/01/04/Next-Cloud-%E5%AE%B9%E5%99%A8%E6%8C%82%E8%BD%BD%E4%B8%BB%E6%9C%BA%E6%96%87%E4%BB%B6%E5%A4%B9/"><span class="title">Next Cloud 容器挂载主机文件夹</span></a><a class="item title" href="/2023/11/22/Java%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98-2021%E5%B9%B4%E5%9B%B0%E6%89%B0%E6%88%91%E7%9A%84%E4%B8%87%E6%81%B6%E4%B9%8B%E6%BA%90/"><span class="title">Java 中文乱码问题 - 2021 年困扰我的万恶之源</span></a><a class="item title" href="/2023/12/05/Anaconda-%E4%BD%BF%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AA%E7%82%B9/"><span class="title">Anaconda 使用的几个点</span></a><a class="item title" href="/2023/12/30/AHK-%E4%B8%8A%E6%89%8B%E4%BB%A5%E5%8F%8A%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE/"><span class="title">AHK 上手以及编辑器配置</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -83,8 +83,8 @@
 
 <div class="article banner top">
   <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/childeyouyu.github.io/childeyouyu.github.io/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/childeyouyu.github.io/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></div>
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></div>
 <div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-01-04T12:24:20.000Z">2024-01-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-01-04T15:59:18.044Z">2024-01-04</time></span></div></div></div>
     
     <div class="bottom only-title">
@@ -132,7 +132,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/childeyouyu.github.io/2024/01/04/%E5%B7%A6%E6%89%8B/">左手</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/childeyouyu.github.io/2024/01/02/2023-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">2023 年终总结</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/01/04/%E5%B7%A6%E6%89%8B/">左手</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/01/02/2023-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">2023 年终总结</a></div></section></div>
 
 
 
@@ -159,7 +159,7 @@
       hour: `小时前`,
       day: `天前`,
     },
-    root : `/childeyouyu.github.io/`,
+    root : `/`,
   };
 
   // required plugins (only load if needs)
