@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-10-01T00:08:28.641Z</updated>
+  <updated>2024-10-01T00:21:48.276Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://childeyouyu.github.io/2024/10/01/SQLite-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     <id>https://childeyouyu.github.io/2024/10/01/SQLite-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
     <published>2024-10-01T00:03:46.000Z</published>
-    <updated>2024-10-01T00:08:28.641Z</updated>
+    <updated>2024-10-01T00:21:48.276Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Sqlite"><a href="#Sqlite" class="headerlink" title="Sqlite"></a>Sqlite</h1><p>SQLite 是一个让人喜欢的不得了的数据库，对于我个人而言，没有大量数据需要处理，从来没有过一定要使用 MySQL 或者是 PostgreSQL 的场景。</p><h1 id="数据类型记录"><a href="#数据类型记录" class="headerlink" title="数据类型记录"></a>数据类型记录</h1><p>|| 存储类| 描述||<br>|:-:|:-:|:-:|:-:|<br>|| ———| ————————————————————————-||<br>|| NULL| 值是一个 NULL 值。||<br>|| INTEGER| 值是一个带符号的整数，根据值的大小存储在 1、2、3、4、6 或 8 字节中。||<br>|| REAL| 值是一个浮点值，存储为 8 字节的 IEEE 浮点数字。||<br>|| TEXT| 值是一个文本字符串，使用数据库编码（UTF-8、UTF-16BE 或 UTF-16LE）存储。||<br>|| BLOB| 值是一个 blob 数据，完全根据它的输入存储。||</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Sqlite"><a href="#Sqlite" class="headerlink" title="Sqlite"></a>Sqlite</h1><p>SQLite 是一个让人喜欢的不得了的数据库，对于我个人而言，没有大量数据需要处理，从来没有过一定要使用 MySQL 或者是 PostgreSQL 的场景。</p><h1 id="数据类型记录"><a href="#数据类型记录" class="headerlink" title="数据类型记录"></a>数据类型记录</h1><table><thead><tr><th></th><th>存储类</th><th>描述</th><th></th></tr></thead><tbody><tr><td></td><td>NULL</td><td>值是一个 NULL 值。</td><td></td></tr><tr><td></td><td>INTEGER</td><td>值是一个带符号的整数，根据值的大小存储在 1、2、3、4、6 或 8 字节中。</td><td></td></tr><tr><td></td><td>REAL</td><td>值是一个浮点值，存储为 8 字节的 IEEE 浮点数字。</td><td></td></tr><tr><td></td><td>TEXT</td><td>值是一个文本字符串，使用数据库编码（UTF-8、UTF-16BE 或 UTF-16LE）存储。</td><td></td></tr><tr><td></td><td>BLOB</td><td>值是一个 blob 数据，完全根据它的输入存储。</td><td></td></tr></tbody></table>]]></content>
     
     
     <summary type="html">记录使用Sqlite中的学习。</summary>
