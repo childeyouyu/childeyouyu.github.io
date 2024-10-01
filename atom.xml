@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-09-30T23:57:25.512Z</updated>
+  <updated>2024-10-01T00:08:28.641Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQLite 数据类型</title>
+    <link href="https://childeyouyu.github.io/2024/10/01/SQLite-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://childeyouyu.github.io/2024/10/01/SQLite-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2024-10-01T00:03:46.000Z</published>
+    <updated>2024-10-01T00:08:28.641Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Sqlite"><a href="#Sqlite" class="headerlink" title="Sqlite"></a>Sqlite</h1><p>SQLite 是一个让人喜欢的不得了的数据库，对于我个人而言，没有大量数据需要处理，从来没有过一定要使用 MySQL 或者是 PostgreSQL 的场景。</p><h1 id="数据类型记录"><a href="#数据类型记录" class="headerlink" title="数据类型记录"></a>数据类型记录</h1><p>|| 存储类| 描述||<br>|:-:|:-:|:-:|:-:|<br>|| ———| ————————————————————————-||<br>|| NULL| 值是一个 NULL 值。||<br>|| INTEGER| 值是一个带符号的整数，根据值的大小存储在 1、2、3、4、6 或 8 字节中。||<br>|| REAL| 值是一个浮点值，存储为 8 字节的 IEEE 浮点数字。||<br>|| TEXT| 值是一个文本字符串，使用数据库编码（UTF-8、UTF-16BE 或 UTF-16LE）存储。||<br>|| BLOB| 值是一个 blob 数据，完全根据它的输入存储。||</p>]]></content>
+    
+    
+    <summary type="html">记录使用Sqlite中的学习。</summary>
+    
+    
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/tags/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+  </entry>
   
   <entry>
     <title>新电脑：因为在此电脑上禁止运行脚本 问题的解决</title>
@@ -514,31 +535,6 @@
     <summary type="html">&lt;p&gt;回到北方，面对的是炊烟袅袅的乡村，远离了杭州，仿佛梦幻一样，距离阿里巴巴、网易只有十几公里的位置的互联网之乡。&lt;/p&gt;
 &lt;p&gt;曾经我与杭州相处了半年，才后知后觉的发现这其实是一座知名的城市。就想着不如去逛一逛，见识一下大厂是什么样子的。&lt;/p&gt;
 &lt;p&gt;约了他们一个又一个人，</summary>
-      
-    
-    
-    
-    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
-    
-    
-    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>天空雾雨交织</title>
-    <link href="https://childeyouyu.github.io/2022/10/25/%E5%A4%A9%E7%A9%BA%E9%9B%BE%E9%9B%A8%E4%BA%A4%E7%BB%87/"/>
-    <id>https://childeyouyu.github.io/2022/10/25/%E5%A4%A9%E7%A9%BA%E9%9B%BE%E9%9B%A8%E4%BA%A4%E7%BB%87/</id>
-    <published>2022-10-25T00:14:45.000Z</published>
-    <updated>2024-01-04T14:49:52.927Z</updated>
-    
-    <content type="html"><![CDATA[<p>在浙，提笔总是想写下一句，台风来了或是台风去了，自从去年七月以后东海的台风连绵不断，隔三差五的便有依次自入夜到天明，自阳光升起到日斜西头的雨。备上两双防水的鞋，就是在这时候用了。</p><p>地上有大大小小的水洼，彰显着校园里不完美的道路施工和排水系统，也侧映出40年的风雨沧桑，一个年轻的高校是相对世界的诸多百年学府而言的，对我们来说这里像垂暮老人一样权威又严格。</p><p>坐下等待早自修结束的空档，望着校园的彼端，在碧波荡漾的日月湖畔，几座教学楼隐入晨间浅雾之中，在朦胧中格致楼与求是楼仿佛海市蜃楼勾人遐想。</p><p>靠近窗子，轻轻推开一个缝隙，感受缕缕清风，可以看见天空雾雨交织，轻柔洒落仿佛恋人轻抚世界，绵绵软软；而地面学生熙攘，撑伞而行仿若蘑菇出行，五颜六色。</p><p>铃声响起，身后也变得嘈杂起来，惊醒了惊醒了云端人的清梦，伊快速撤去雾气，令窗边人跌出幻想，匆匆收起书本走向教室。生活五味杂陈，忽而短暂的拥有诗与远方。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在浙，提笔总是想写下一句，台风来了或是台风去了，自从去年七月以后东海的台风连绵不断，隔三差五的便有依次自入夜到天明，自阳光升起到日斜西头的雨。备上两双防水的鞋，就是在这时候用了。&lt;/p&gt;
-&lt;p&gt;地上有大大小小的水洼，彰显着校园里不完美的道路施工和排水系统，也侧映出40年的风</summary>
       
     
     
