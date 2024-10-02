@@ -43,23 +43,23 @@
     <link href="https://childeyouyu.github.io/posts/59813.html"/>
     <id>https://childeyouyu.github.io/posts/59813.html</id>
     <published>2024-09-05T03:34:08.000Z</published>
-    <updated>2024-10-02T00:55:58.622Z</updated>
+    <updated>2024-10-02T04:04:21.076Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="问题的发生"><a href="#问题的发生" class="headerlink" title="问题的发生"></a>问题的发生</h1><p>问题发生于使用<code>.ps1</code>下载Windows镜像时，总是会弹出的错误：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">无法加载文件 C:\Users\youyu\Download\Fido.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=<span class="number">135170</span> 中的 about_Execution_Policies。</span><br><span class="line"></span><br><span class="line">+ CategoryInfo : SecurityError: (:) []，ParentContainsErrorRecordException</span><br><span class="line"></span><br><span class="line">+ FullyQualifiedErrorId : UnauthorizedAccess</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="问题出现的原因"><a href="#问题出现的原因" class="headerlink" title="问题出现的原因"></a>问题出现的原因</h1><p>问题描述也很清楚，于是就上网搜一下解决方案。原因在于：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Restricted 执行策略不允许任何脚本运行。  </span><br><span class="line"></span><br><span class="line">AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有数字签名的脚本。</span><br><span class="line"></span><br><span class="line"> 本主题说明如何运行所选未签名脚本（即使在执行策略为 RemoteSigned 的情况下），还说明如何对  脚本进行签名以便您自己使用。</span><br><span class="line"></span><br><span class="line">有关 Windows PowerShell 执行策略的详细信息，请参阅 about_Execution_Policy。</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>进一步确保相关设置是否像问题描述所说的一样可以输入<code>get-executionpolicy</code></p><p>如果运行结果为：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get-executionpolicy</span><br><span class="line">RemoteSigned</span><br></pre></td></tr></table></figure><p>就不是相关原因造成的，可以关闭文章找其他办法了。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>如果不是就打开PowerShell（管理员身份），输入：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>-executionpolicy remotesigned</span><br></pre></td></tr></table></figure><p>在继续选项中输入Y。</p><p>Finished！</p>]]></content>
-    
-    
-    <summary type="html">最近公司的工作频繁变动，经常要重新安装系统，在一台新电脑上想要使用Ps.1下载镜像时遇到了一些问题，将解决方案放在下面。</summary>
+    <content type="html"><![CDATA[<h1 id="问题的发生"><a href="#问题的发生" class="headerlink" title="问题的发生"></a>问题的发生</h1><p>问题发生于使用<code>.ps1</code>下载 Windows 镜像时，总是会弹出的错误：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">无法加载文件 C:\Users\youyu\Download\Fido.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=<span class="number">135170</span> 中的 about_Execution_Policies。</span><br><span class="line"></span><br><span class="line">+ CategoryInfo : SecurityError: (:) []，ParentContainsErrorRecordException</span><br><span class="line"></span><br><span class="line">+ FullyQualifiedErrorId : UnauthorizedAccess</span><br><span class="line"></span><br></pre></td></tr></table></figure><h1 id="问题出现的原因"><a href="#问题出现的原因" class="headerlink" title="问题出现的原因"></a>问题出现的原因</h1><p>问题描述也很清楚，于是就上网搜一下解决方案。原因在于：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Restricted 执行策略不允许任何脚本运行。  </span><br><span class="line"></span><br><span class="line">AllSigned 和 RemoteSigned 执行策略可防止 Windows PowerShell 运行没有数字签名的脚本。</span><br><span class="line"></span><br><span class="line"> 本主题说明如何运行所选未签名脚本（即使在执行策略为 RemoteSigned 的情况下），还说明如何对  脚本进行签名以便您自己使用。</span><br><span class="line"></span><br><span class="line">有关 Windows PowerShell 执行策略的详细信息，请参阅 about_Execution_Policy。</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>进一步确保相关设置是否像问题描述所说的一样可以输入<code>get-executionpolicy</code></p><p>如果运行结果为：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get-executionpolicy</span><br><span class="line">RemoteSigned</span><br></pre></td></tr></table></figure><p>就不是相关原因造成的，可以关闭文章找其他办法了。</p><h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>如果不是就打开 PowerShell（管理员身份），输入：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span>-executionpolicy remotesigned</span><br></pre></td></tr></table></figure><p>在继续选项中输入 Y。</p><p>Finished！</p>]]></content>
     
     
-    
-    <category term="技术" scheme="https://childeyouyu.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="Windows" scheme="https://childeyouyu.github.io/categories/%E6%8A%80%E6%9C%AF/Windows/"/>
-    
-    <category term="命令行" scheme="https://childeyouyu.github.io/categories/%E6%8A%80%E6%9C%AF/Windows/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    <summary type="html">最近公司的工作频繁变动，经常要重新安装系统，在一台新电脑上想要使用 Ps.1 下载镜像时遇到了一些问题，将解决方案放在下面。</summary>
     
     
-    <category term="探索互联网" scheme="https://childeyouyu.github.io/tags/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
+    
+    <category term="命令行" scheme="https://childeyouyu.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
   </entry>
   
