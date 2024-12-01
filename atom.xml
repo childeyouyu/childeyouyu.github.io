@@ -63,6 +63,31 @@
   </entry>
   
   <entry>
+    <title>PySide6开发日记（二）</title>
+    <link href="https://childeyouyu.github.io/posts/23589.html"/>
+    <id>https://childeyouyu.github.io/posts/23589.html</id>
+    <published>2024-11-21T14:07:49.000Z</published>
+    <updated>2024-12-01T13:36:27.446Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="笔记二-富文本格式"><a href="#笔记二-富文本格式" class="headerlink" title="笔记二 富文本格式"></a>笔记二 富文本格式</h1><p>关于设置文字自动换行以及问题：纯数字时自动换行不起作用。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置文字为富文本格式，字体大小16pt</span></span><br><span class="line">book_name_label = QLabel(</span><br><span class="line">        <span class="string">f&quot;&lt;span style=&#x27;font-size:16pt&#x27;&gt;<span class="subst">&#123;book_name&#125;</span>&lt;/span&gt;&quot;</span></span><br><span class="line">    )</span><br><span class="line"><span class="comment"># 设置自动换行</span></span><br><span class="line">book_name_label.setWordWrap(<span class="literal">True</span>)</span><br></pre></td></tr></table></figure><p>一些问题：如果文字是纯数字将不起作用。</p><h1 id="笔记三-滚动布局"><a href="#笔记三-滚动布局" class="headerlink" title="笔记三 滚动布局"></a>笔记三 滚动布局</h1><p>设置滚动布局：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">area = QScrollArea()</span><br><span class="line">widget_area = QWidget()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注1</span></span><br><span class="line">area.setWidgetResizable(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">layout_area = QVBoxLayout(widget_area)</span><br><span class="line">layout_area.addStretch(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">area.setWidget(widget_area)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>注1：处理坑，子控件大小和area不一致，设置area的属性。</p><h1 id="笔记四-分割线"><a href="#笔记四-分割线" class="headerlink" title="笔记四 分割线"></a>笔记四 分割线</h1><ol><li>分割线</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置一个分割线</span></span><br><span class="line">frame = QFrame()</span><br><span class="line">frame.setFrameShape(QFrame.Shape.HLine)  <span class="comment"># 设置为水平分割线</span></span><br><span class="line">frame.setLineWidth(<span class="number">1</span>)  <span class="comment"># 设置分割线宽度为1像素</span></span><br><span class="line">layout_area.addWidget(frame)</span><br></pre></td></tr></table></figure><ol start="2"><li>分割用的矩形</li></ol><p>可以用来填充界面。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建QFrame</span></span><br><span class="line">frame = QtWidgets.QFrame(<span class="variable language_">self</span>)</span><br><span class="line">frame.setFrameShape(QtWidgets.QFrame.StyledPanel)</span><br><span class="line">frame.setFrameShadow(QtWidgets.QFrame.Raised)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置尺寸策略为自动扩充</span></span><br><span class="line">sizePolicy = QtWidgets.QSizePolicy(</span><br><span class="line">    QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding</span><br><span class="line">)</span><br><span class="line">frame.setSizePolicy(sizePolicy)</span><br><span class="line">frame.setFrameShape(QtWidgets.QFrame.NoFrame)</span><br><span class="line"><span class="comment"># 设置QFrame背景为透明</span></span><br><span class="line">frame.setAttribute(QtCore.Qt.WA_TranslucentBackground)</span><br><span class="line"></span><br><span class="line">layout.addWidget(frame)</span><br></pre></td></tr></table></figure><h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>本来以为这个系列可以出很多期，结果现在的项目很快也就写完了，PySide6还有很多不完善的地方，我又开始纠结犹豫，和《纸间书摘》的开发者聊了之后他推荐给我一套新的技术栈，这周终于有时间看了一下，基于compose的安卓开发比以往容易了许多，kotlin+compose终于变得优雅起来了，相比之下感觉比flutter更让人心动？</p><p>总之开始学习起来了。</p>]]></content>
+    
+    
+    <summary type="html">从今天开始，语之屋开始写自己的周记。</summary>
+    
+    
+    
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+    <category term="python" scheme="https://childeyouyu.github.io/tags/python/"/>
+    
+    <category term="PySide6" scheme="https://childeyouyu.github.io/tags/PySide6/"/>
+    
+    <category term="周记" scheme="https://childeyouyu.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PySide6开发日记（一）</title>
     <link href="https://childeyouyu.github.io/posts/52319.html"/>
     <id>https://childeyouyu.github.io/posts/52319.html</id>
@@ -503,34 +528,6 @@
     <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
     <category term="问题小记" scheme="https://childeyouyu.github.io/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023 年在通辽的最后一天</title>
-    <link href="https://childeyouyu.github.io/posts/5d29.html"/>
-    <id>https://childeyouyu.github.io/posts/5d29.html</id>
-    <published>2023-10-20T00:59:19.000Z</published>
-    <updated>2024-01-04T15:57:45.376Z</updated>
-    
-    <content type="html"><![CDATA[<p>飞机是下午的，但车要在早上出发，于是七点就到了通辽，却没有合适的地方去度过这个上午。</p><p>三月开学时也曾有过同样的经历，那时候选择了火车站旁边的招待所，30 元一天，8 平米的空间却让人憋得心里发慌，最后待了两个小时就跑去车站了。</p><p>在路边站了许久，小红书上搜了一下附近的娱乐设施，发现了大学生自习室，环境不错又安安静静的很适合坐下来看一会书。</p><p>八点还早，屋子里只有寥寥几人，安静的氛围更好过大学图书馆。可惜了我没有来这地方的需求，不然可真是一个好地方。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;飞机是下午的，但车要在早上出发，于是七点就到了通辽，却没有合适的地方去度过这个上午。&lt;/p&gt;
-&lt;p&gt;三月开学时也曾有过同样的经历，那时候选择了火车站旁边的招待所，30 元一天，8 平米的空间却让人憋得心里发慌，最后待了两个小时就跑去车站了。&lt;/p&gt;
-&lt;p&gt;在路边站了许久，小</summary>
-      
-    
-    
-    
-    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
-    
-    
-    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
   </entry>
   
