@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-11-26T14:25:56.310Z</updated>
+  <updated>2024-12-01T14:31:03.475Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记-SSH 配置</title>
+    <link href="https://childeyouyu.github.io/posts/14641.html"/>
+    <id>https://childeyouyu.github.io/posts/14641.html</id>
+    <published>2024-12-01T14:27:38.000Z</published>
+    <updated>2024-12-01T14:31:03.475Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录关于ssh链接到github的命令。</p><h1 id="前置教程"><a href="#前置教程" class="headerlink" title="前置教程"></a>前置教程</h1><p><a href="https://childeyouyu.github.io/posts/ea40.html">在windows上安装scoop</a>。</p><h1 id="正式开始"><a href="#正式开始" class="headerlink" title="正式开始"></a>正式开始</h1><ol><li><p>安装git</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop install git</span><br></pre></td></tr></table></figure></li><li><p>生成ssh key</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxx@xxx.com&quot;</span></span><br></pre></td></tr></table></figure><p> 替换自己的邮箱地址，回车直到结束。</p></li><li><p>将公钥添加到github<br> <img src="https://pic2.ziyuan.wang/user/Knoll9337/2024/12/1733058459501_17959a0a0cd5d.png" alt="1733058459501.png"></p></li><li><p>验证是否成功</p> <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;记录关于ssh链接到github的命令。&lt;/p&gt;
+&lt;h1 id=&quot;前置教程&quot;&gt;&lt;a href=&quot;#前置教程&quot; class=&quot;headerlink&quot; title=&quot;前置教程&quot;&gt;&lt;/a&gt;前置教程&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://childeyouyu.githu</summary>
+      
+    
+    
+    
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+    
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>最近的变化</title>
@@ -505,34 +530,6 @@
     <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
     <category term="问题小记" scheme="https://childeyouyu.github.io/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023 年在通辽的最后一天</title>
-    <link href="https://childeyouyu.github.io/posts/5d29.html"/>
-    <id>https://childeyouyu.github.io/posts/5d29.html</id>
-    <published>2023-10-20T00:59:19.000Z</published>
-    <updated>2024-01-04T15:57:45.376Z</updated>
-    
-    <content type="html"><![CDATA[<p>飞机是下午的，但车要在早上出发，于是七点就到了通辽，却没有合适的地方去度过这个上午。</p><p>三月开学时也曾有过同样的经历，那时候选择了火车站旁边的招待所，30 元一天，8 平米的空间却让人憋得心里发慌，最后待了两个小时就跑去车站了。</p><p>在路边站了许久，小红书上搜了一下附近的娱乐设施，发现了大学生自习室，环境不错又安安静静的很适合坐下来看一会书。</p><p>八点还早，屋子里只有寥寥几人，安静的氛围更好过大学图书馆。可惜了我没有来这地方的需求，不然可真是一个好地方。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;飞机是下午的，但车要在早上出发，于是七点就到了通辽，却没有合适的地方去度过这个上午。&lt;/p&gt;
-&lt;p&gt;三月开学时也曾有过同样的经历，那时候选择了火车站旁边的招待所，30 元一天，8 平米的空间却让人憋得心里发慌，最后待了两个小时就跑去车站了。&lt;/p&gt;
-&lt;p&gt;在路边站了许久，小</summary>
-      
-    
-    
-    
-    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
-    
-    
-    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
   </entry>
   
