@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2024-12-01T14:55:14.578Z</updated>
+  <updated>2024-12-06T14:24:38.162Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>节气之歌-大雪</title>
+    <link href="https://childeyouyu.github.io/posts/60445.html"/>
+    <id>https://childeyouyu.github.io/posts/60445.html</id>
+    <published>2024-12-06T14:19:01.000Z</published>
+    <updated>2024-12-06T14:24:38.162Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="时间的刻度"><a href="#时间的刻度" class="headerlink" title="时间的刻度"></a>时间的刻度</h1><p>早上在出门的路口遇到一个小女孩坐在妈妈的电动车后座，背着一个小轮胎样式的书包。<br>路面看起来有些潮湿，杭州的冬季总是这样，伴随着冷雨，比大雪落在身上还要让人心烦。<br>临近立昂时，非机动车道上的多出了一些积水，见证着昨晚发生的变化；说起变化，普洛斯门前因为修路而挖开的几个方块也在一日之间消失得无影无踪，留下几个凹凸不平的沥青缝隙，诉说着自己也曾经来到这世界上。<br>我开始越发频繁的看着Boss上的工作邀请，工业工程或是互联网，仿佛回到了最开始，还没毕业的那段时间，在不同的机会之间反复横跳的样子。<br>我和同事的关系逐渐熟络，和公司的关系却日渐疏远，把一切不开心都怪罪给那天的调整以及徐总两次拒绝我希望到IE部门的申请上。</p><p>有一天领导过来说我们部门不够努力，于是变成了周六强制加班，安慰自己说好赖也是有加班费的，实施的第三周以后开始越来越累，上四休三成了新的执念。星期二的早上，睁开眼睛就是疲惫，我越来越舍不得晚上的时间，久久不肯入睡，和领导说不想上班，在家里休息了一天，总是觉得时不我待，待在家里也没有闲下来。<br>上班的路上有一个红绿灯，在街角等待的间隙，我瞥见对面路边的树已经黄了大半，虽然风不大，却吹落一片片的叶子，金黄的叶子雨散落，不知道路对面的人在想什么，我的确很开心。<br>我和纯说，看那边的树叶落下了，纯说你看身后。这才看到身后的桥上，路边，也是一片片的叶子簌簌掉落，不同的是这里的叶子多了许多红枫，交杂着。<br>今日“大雪”，纯和我说，周六可不可以不值班，一起去九溪烟树看落叶吧，杭州的冬天真叫人哑口无言。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;时间的刻度&quot;&gt;&lt;a href=&quot;#时间的刻度&quot; class=&quot;headerlink&quot; title=&quot;时间的刻度&quot;&gt;&lt;/a&gt;时间的刻度&lt;/h1&gt;&lt;p&gt;早上在出门的路口遇到一个小女孩坐在妈妈的电动车后座，背着一个小轮胎样式的书包。&lt;br&gt;路面看起来有些潮湿，杭州的冬季</summary>
+      
+    
+    
+    
+    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    
+    
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>近况和未来一段时间的展望</title>
     <link href="https://childeyouyu.github.io/posts/22044.html"/>
     <id>https://childeyouyu.github.io/posts/22044.html</id>
     <published>2024-12-01T14:51:55.000Z</published>
-    <updated>2024-12-01T14:55:14.578Z</updated>
+    <updated>2024-12-01T14:55:20.192Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>最近一段时间，技术切换比较频繁。</p></blockquote><h2 id="Arduino"><a href="#Arduino" class="headerlink" title="Arduino"></a>Arduino</h2><p>十月末开始，有一位打游戏的搭子找到了我，说是有一些想法，开始研究一些关于嵌入式的东西，搞来了一些arduino、tft屏幕、语音芯片之类的小玩应，以前我在宿舍的时候，曾经看到过我的大学室友学习这些东西；但一切从零开始不是一件容易的事情，我研究了几次不得要领，二搭子也开始忙碌，我便请教了一位校园里的朋友帮我继续这件事，明天或许要再进行一些沟通。</p><h2 id="PySide6"><a href="#PySide6" class="headerlink" title="PySide6"></a>PySide6</h2><p>《纸间书摘》对应程序的开发已经完成，我的用户很给力，上线后立刻给予了第一份捐赠，我想这个程序也就到此为止了，毕竟没什么宣传渠道。</p><h2 id="Compose"><a href="#Compose" class="headerlink" title="Compose"></a>Compose</h2><p>结束了Python开发，工作中心正式到了安卓上，昨天下午加班结束后，开始在公司摸鱼学习一份新的技术，compose，相比于以往的《第一行代码》，谷歌的教程更加的让人心动，它实在是太优雅了，但可惜第二章之后这样优秀的教程似乎就结束了，后面的部分还要找一些其他的教程来学习。</p><p>学习中，我的新项目《语待办》也可以一起做起来了，语待办命运多舛，我为了他思考过PySide6、Flet、Flutter这些不同的技术方案，都觉得差点意思，现在真心觉得Compose是一个很好的方案。</p>]]></content>
     
@@ -504,32 +530,6 @@
     <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
     <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>去签售会</title>
-    <link href="https://childeyouyu.github.io/posts/a8a8.html"/>
-    <id>https://childeyouyu.github.io/posts/a8a8.html</id>
-    <published>2023-11-09T07:59:03.000Z</published>
-    <updated>2024-01-04T15:58:02.535Z</updated>
-    
-    <content type="html"><![CDATA[<p>半个月前的周末，我打定主意去慈溪看一次签售会，今年的下半年卢思浩跑了许多地方，起初我想着可以赶辽宁的那一场，结果回家完了几天，好在浙江还有两场。<br>整备好了行装，起床随便吃了点东西就走上了去往余姚的地铁，看窗外风景，浙江多山，短短 40 分钟的路途过了好几个隧道。</p><p>抵达后时间尚早，于是悠闲的选择了公交车出行。</p><p>上一次见还是在 20 年，那时候我还在上大一，跑了半个杭州到大悦城，那时候内场无座，我买了一本增订的《离开前请叫醒我》，在场外看完了整场。此后三年再没去过大悦城，没有目的实在不想跑去那么远的地方。</p><p>去慈溪还是一样，我没弄清楚宁波慈溪为什么下了车是余姚站，只是查找目的地，抵达现场，静坐着、等待着、倾听着，然后去要签字，坐上离开的车。</p><p>时间还是太短暂了，只有那么一瞬间我与周围的几十个同伴有了共情，我们在做同样的事情。</p><p>于是走的时候还是带了些许的遗憾，多折一段路程去买了些生腌（最后还是发现，自己对生腌的确是接受无能），然后回家。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;半个月前的周末，我打定主意去慈溪看一次签售会，今年的下半年卢思浩跑了许多地方，起初我想着可以赶辽宁的那一场，结果回家完了几天，好在浙江还有两场。&lt;br&gt;整备好了行装，起床随便吃了点东西就走上了去往余姚的地铁，看窗外风景，浙江多山，短短 40 分钟的路途过了好几个隧道。&lt;/p</summary>
-      
-    
-    
-    
-    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
-    
-    
-    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
-    
-    <category term="读书" scheme="https://childeyouyu.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
