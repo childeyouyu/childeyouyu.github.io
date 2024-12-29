@@ -13,6 +13,10 @@
     <name>公子语</name>
     
   </author>
+  <follow_challenge>
+      <feedId>78279468312666136</feedId>
+      <userId>87080982863556608</userId>
+  </follow_challenge>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
