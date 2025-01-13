@@ -102,7 +102,7 @@
                     let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
                     const cellSize = [16, 16];
 
-                    const groupedData = {"2023":[["2023-10-20",1]],"2024":[["2024-01-02",1]]};
+                    const groupedData = {"2024":[["2024-01-02",1],["2024-12-20",1]]};
                     const years = Object.keys(groupedData).reverse();
                     const initYear = '2024' || years[0];
 
@@ -284,13 +284,13 @@
                             itemStyle: {
                                 borderRadius: 8
                             },
-                            data: [{"name":"年终总结","value":1},{"name":"随笔","value":1},{"name":"看世界","value":1}],
+                            data: [{"name":"年终总结","value":1},{"name":"技术","value":1},{"name":"python","value":1}],
                         }
                     ]
                 };
                 
                 if ('tags' === 'years') {
-                    chartOptions.legend.data = ["看世界","年终总结","随笔"];
+                    chartOptions.legend.data = ["技术","年终总结","python"];
                 };
 
                 pieChart.setOption(chartOptions);
@@ -352,13 +352,13 @@
                             itemStyle: {
                                 borderRadius: 8
                             },
-                            data: [{"name":"2023","value":1},{"name":"2024","value":1}],
+                            data: [{"name":"2024","value":2}],
                         }
                     ]
                 };
                 
                 if ('years' === 'years') {
-                    chartOptions.legend.data = ["2023","2024"];
+                    chartOptions.legend.data = ["2024"];
                 };
 
                 pieChart.setOption(chartOptions);
@@ -406,7 +406,7 @@
                 const chartOptions = {
                     backgroundColor: isDarkMode ? '#333' : 'transparent',
                     radar: {
-                        indicator: [{"max":1,"name":"年终总结"},{"max":1,"name":"随笔"},{"max":1,"name":"看世界"}],
+                        indicator: [{"max":1,"name":"年终总结"},{"max":1,"name":"技术"},{"max":1,"name":"python"}],
                     },
                     tooltip: {
                         trigger: 'item',
@@ -481,7 +481,7 @@
                     series: [
                         {
                             type: 'radar',
-                            data: [{"name":"2023","value":[0,0,0,0,0,0,0,0,0,1,0,0]},{"name":"2024","value":[1,0,0,0,0,0,0,0,0,0,0,0]}],
+                            data: [{"name":"2024","value":[1,0,0,0,0,0,0,0,0,0,0,1]}],
                         }
                     ]
                 };
@@ -866,7 +866,7 @@
 
   <script type="module">
   const el = document.querySelector('#comments #beaudar');
-  util.viewportLazyload(el, load_beaudar, true);
+  util.viewportLazyload(el, load_beaudar, false);
 
   function load_beaudar() {
     if (!el) return;
