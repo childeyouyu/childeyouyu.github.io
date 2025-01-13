@@ -6,7 +6,7 @@
   <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
   <link href="https://childeyouyu.github.io/"/>
-  <updated>2025-01-01T15:02:04.024Z</updated>
+  <updated>2025-01-13T14:37:47.197Z</updated>
   <id>https://childeyouyu.github.io/</id>
   
   <author>
@@ -19,6 +19,31 @@
   </follow_challenge>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据统计</title>
+    <link href="https://childeyouyu.github.io/posts/19685.html"/>
+    <id>https://childeyouyu.github.io/posts/19685.html</id>
+    <published>2025-01-13T14:36:18.000Z</published>
+    <updated>2025-01-13T14:37:47.197Z</updated>
+    
+    <content type="html"><![CDATA[        <script>            document.addEventListener('DOMContentLoaded', function() {                const heatmapChartDom = document.getElementById('heatmapChart-0');                if (heatmapChartDom) {                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;                    const backgroundColor = isDarkMode ? '#333' : 'transparent';                    let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');                    const cellSize = [16, 16];                    const groupedData = {"2023":[["2023-10-20",1]],"2024":[["2024-01-02",1]]};                    const years = Object.keys(groupedData).reverse();                    const initYear = '2024' || years[0];                    // Define color themes                    const themes = {                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],                    };                    // Function to get a random theme                    function getRandomTheme() {                        const themeKeys = Object.keys(themes);                        const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];                        return themes[randomKey];                    }                    // Use the specified theme or default to 'random'                    const colors = themes['random'.toLowerCase()] || getRandomTheme();                    const chartOptions = {                        backgroundColor: backgroundColor,                        tooltip: {                            position: 'top',                            confine: true,                            formatter: params => `${params.value[0]}: ${params.value[1]} Article${params.value[1] !== 1 ? 's' : ''}`,                        },                        calendar: {                            top: '13%',                            left: '2%',                            right: '8%',                            range: initYear,                            cellSize: cellSize,                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } },                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0', color: backgroundColor },                            dayLabel: { show: false },                            monthLabel: { show: true },                            yearLabel: { show: false },                        },                        visualMap: {                            show: true,                            right: '8%',                            bottom: '5%',                            type: 'piecewise',                            orient: 'horizontal',                            text: ['More', 'Less'],                            min: 0,                            max: Math.max(...groupedData[initYear].map(item => item[1])),                            inRange: { color: colors },                        },                        legend: {                            type: 'scroll',                            icon: 'none',                            data: years,                            orient: 'vertical',                            top: '5%',                            right: 'right',                            itemWidth: 20,                            itemHeight: 20,                            itemGap: 10,                            pageIconSize: 10,                            pageTextStyle: { fontSize: 14 },                            selectedMode: 'single',                        },                        series: years.map(year => ({                            type: 'heatmap',                            coordinateSystem: 'calendar',                            data: groupedData[year],                            name: year,                            emphasis: { disabled: true },                            silent: year !== initYear,                        })),                    };                    heatmapChart.setOption(chartOptions);                    heatmapChart.dispatchAction({                        type: 'legendSelect',                        name: initYear,                    });                    // Function to handle legend selection changes                    const handleLegendSelectChanged = function(params) {                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);                        if (selectedYear && groupedData[selectedYear]) {                            heatmapChart.setOption({                                calendar: { range: selectedYear },                                visualMap: {                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),                                },                                series: years.map(year => ({                                    type: 'heatmap',                                    coordinateSystem: 'calendar',                                    data: groupedData[year],                                    name: year,                                    emphasis: { disabled: true },                                    silent: year !== selectedYear,                                })),                            });                        }                    };                                        const handleClick = function(params) {                        if (params.componentType === 'series') {                            const [year, month] = params.value[0].split('-');                            window.location.href = '/archives/' + year + '/' + month;                        }                    };                    heatmapChart.on('legendselectchanged', handleLegendSelectChanged);                    heatmapChart.on('click', handleClick);                    // Listen for theme changes                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {                        heatmapChart.dispose();                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');                        const newBackgroundColor = event.matches ? '#333' : 'transparent';                        chartOptions.backgroundColor = newBackgroundColor;                        chartOptions.calendar.itemStyle.color = newBackgroundColor;                        heatmapChart.setOption(chartOptions);                                                // Re-select the initial year                        heatmapChart.dispatchAction({                            type: 'legendSelect',                            name: initYear,                        });                        // Reattach the event listeners                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);                        heatmapChart.on('click', handleClick);                    });                }            });        </script>        <div style="width: 100%">            <!-- Title -->                    <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">            博客热力图        </div>                <!-- Heatmap Chart -->            <div id="heatmapChart-0" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>            <!-- Footer -->                    <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>        </div>            </div>    ]]></content>
+    
+    
+      
+      
+    <summary type="html">
+        &lt;script&gt;
+            document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+                const heatmapChartDom = document.ge</summary>
+      
+    
+    
+    
+    
+    <category term="统计" scheme="https://childeyouyu.github.io/tags/%E7%BB%9F%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>2024 年度总结</title>
@@ -492,35 +517,6 @@
     <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
     <category term="Java" scheme="https://childeyouyu.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计量的几处风景</title>
-    <link href="https://childeyouyu.github.io/posts/e7fe.html"/>
-    <id>https://childeyouyu.github.io/posts/e7fe.html</id>
-    <published>2023-11-11T15:18:42.000Z</published>
-    <updated>2024-01-04T15:57:30.237Z</updated>
-    
-    <content type="html"><![CDATA[<p>三月的一个晚上，在九号楼后面的小路上偶遇一只小小的橘猫，看起来年纪不大的样子，声音有些沙哑的在我身边蹭着，像是寻觅着实物，彼时还有供人喂猫的公益猫粮，我取了些许递给他。</p><p>它等待着，却没有吃。向更黑的树林里呼唤着，叫来了他的同伴，更加胆小的小猫，他们躲在黑暗里，向路人卖力的展示自己作为猫咪的可爱之处。</p><p>我说：“你们来这边，七号楼的女学生们最爱喂猫了。”</p><p>后来看着两只小猫日渐有了精神，也变得健康了些。</p><p>大约一个月后，我听闻生活区里有一只橘猫被撞死了，女友说正是那晚讨好我们的小橘猫。</p><hr><p>在日月湖的两侧，一侧有一群大白鹅聚众嬉戏，或是一头扎进水里，扬起一片水花；在小桥的另外一侧，是一只灰鹅，或是被欺负，或是出了其他的意外，腿卡在翅膀中间，失去了平衡，只能在小小的区域里转圈圈。</p><hr><p>一日在体育馆上完了课，看着朋友几分钟前发来消息说快来六楼，看今天的晚霞。</p><p>我匆匆跑上楼去，将手上的东西随手丢在了路过的桌子上，来不及等电梯。</p><p>但是只能看到一抹残阳，我静静的看着夕阳消散，夜幕降临。慨叹夕阳无限好。</p><hr><p>暑假时在校外租了房子，出去实习。</p><p>偶尔回到学校见见朋友拿些东西，只看寝室逐渐变空，约到的朋友越来越少，直到凑不齐一桌麻将，我再看生活区长长的路，开始觉得它无比的陌生。</p><p>怪不得我见不到几位大四的学长学姐，到了此时校园就变得无聊起来了。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;三月的一个晚上，在九号楼后面的小路上偶遇一只小小的橘猫，看起来年纪不大的样子，声音有些沙哑的在我身边蹭着，像是寻觅着实物，彼时还有供人喂猫的公益猫粮，我取了些许递给他。&lt;/p&gt;
-&lt;p&gt;它等待着，却没有吃。向更黑的树林里呼唤着，叫来了他的同伴，更加胆小的小猫，他们躲在黑暗里，</summary>
-      
-    
-    
-    
-    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
-    
-    
-    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
-    
-    <category term="校园风光" scheme="https://childeyouyu.github.io/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/"/>
     
   </entry>
   
