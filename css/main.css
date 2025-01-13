@@ -4803,7 +4803,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   width: 100%;
   display: grid;
   margin: 8px 0;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
 }
 .nav-area .menu::-webkit-scrollbar {
@@ -6807,4 +6807,8 @@ a[data-fancybox] {
   z-index: 1;
   margin-right: 1rem;
   border-radius: 8px;
+}
+.cmt-body.beaudar {
+  margin: 0 -4px;
+  width: calc(100% + 8px);
 }
