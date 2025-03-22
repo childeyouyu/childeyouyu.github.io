@@ -1,0 +1,666 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据统计 | 语之屋</title><meta name="author" content="公子语"><meta name="copyright" content="公子语"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="document.addEventListener(&#39;DOMContentLoaded&#39;, function() {                 const heatmapChartDom &#x3D; document.getElementById(&#39;heatmapChart-0&#39;);                 if (heatmapChartDom)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="数据统计">
+<meta property="og:url" content="https://blog-youyu.fun/explore/index.html">
+<meta property="og:site_name" content="语之屋">
+<meta property="og:description" content="document.addEventListener(&#39;DOMContentLoaded&#39;, function() {                 const heatmapChartDom &#x3D; document.getElementById(&#39;heatmapChart-0&#39;);                 if (heatmapChartDom)">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg">
+<meta property="article:published_time" content="2025-01-13T14:50:16.984Z">
+<meta property="article:modified_time" content="2025-01-13T14:50:16.984Z">
+<meta property="article:author" content="公子语">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><link rel="shortcut icon" href="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><link rel="canonical" href="https://blog-youyu.fun/explore/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据统计',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
+</head><body><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">语之屋</span></a></span><div id="menus"></div></nav><div id="page-site-info"><h1 id="site-title">数据统计</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const heatmapChartDom = document.getElementById('heatmapChart-0');
+                if (heatmapChartDom) {
+                    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    const backgroundColor = isDarkMode ? '#333' : 'transparent';
+                    let heatmapChart = echarts.init(heatmapChartDom, isDarkMode ? 'dark' : 'light');
+                    const cellSize = [16, 16];
+
+                    const groupedData = {"2024":[["2024-01-02",1],["2024-12-20",1]]};
+                    const years = Object.keys(groupedData).reverse();
+                    const initYear = '2024' || years[0];
+
+                    // Define color themes
+                    const themes = {
+                        oceanic: ['#A6D8E8', '#6FB3D2', '#4A90BF', '#2E6A8E', '#1A4461'],
+                        forest: ['#ACE7AE', '#8FD694', '#69C16D', '#549F57', '#3A7D3E'],
+                        sunset: ['#FFD1A6', '#FFA07A', '#FF6F52', '#D94A3D', '#A62B2B'],
+                        earthy: ['#E3C8A8', '#C4A076', '#A57C52', '#7A5A3A', '#4E3A28'],
+                        pastel: ['#F5D5E6', '#E8B8D0', '#D18FB8', '#A86A8E', '#7A4A61'],
+                        golden: ['#FFEBB5', '#FFD966', '#FFB74D', '#D18F4A', '#A66B2B'],
+                        berry: ['#F4C2D7', '#E88BB3', '#D94A7A', '#A62B5C', '#7A1F3D'],
+                        charcoal: ['#E0E0E0', '#9E9E9E', '#616161', '#424242', '#212121'],
+                    };
+
+                    // Function to get a random theme
+                    function getRandomTheme() {
+                        const themeKeys = Object.keys(themes);
+                        const randomKey = themeKeys[Math.floor(Math.random() * themeKeys.length)];
+                        return themes[randomKey];
+                    }
+
+                    // Use the specified theme or default to 'random'
+                    const colors = themes['random'.toLowerCase()] || getRandomTheme();
+
+                    const chartOptions = {
+                        backgroundColor: backgroundColor,
+                        tooltip: {
+                            position: 'top',
+                            confine: true,
+                            formatter: params => `${params.value[0]}: ${params.value[1]} Article${params.value[1] !== 1 ? 's' : ''}`,
+                        },
+                        calendar: {
+                            top: '13%',
+                            left: '2%',
+                            right: '8%',
+                            range: initYear,
+                            cellSize: cellSize,
+                            splitLine: { lineStyle: { color: '#E0E0E0', width: 1 } },
+                            itemStyle: { borderWidth: 1, borderColor: '#E0E0E0', color: backgroundColor },
+                            dayLabel: { show: false },
+                            monthLabel: { show: true },
+                            yearLabel: { show: false },
+                        },
+                        visualMap: {
+                            show: true,
+                            right: '8%',
+                            bottom: '5%',
+                            type: 'piecewise',
+                            orient: 'horizontal',
+                            text: ['More', 'Less'],
+                            min: 0,
+                            max: Math.max(...groupedData[initYear].map(item => item[1])),
+                            inRange: { color: colors },
+                        },
+                        legend: {
+                            type: 'scroll',
+                            icon: 'none',
+                            data: years,
+                            orient: 'vertical',
+                            top: '5%',
+                            right: 'right',
+                            itemWidth: 20,
+                            itemHeight: 20,
+                            itemGap: 10,
+                            pageIconSize: 10,
+                            pageTextStyle: { fontSize: 14 },
+                            selectedMode: 'single',
+                        },
+                        series: years.map(year => ({
+                            type: 'heatmap',
+                            coordinateSystem: 'calendar',
+                            data: groupedData[year],
+                            name: year,
+                            emphasis: { disabled: true },
+                            silent: year !== initYear,
+                        })),
+                    };
+
+                    heatmapChart.setOption(chartOptions);
+
+                    heatmapChart.dispatchAction({
+                        type: 'legendSelect',
+                        name: initYear,
+                    });
+
+                    // Function to handle legend selection changes
+                    const handleLegendSelectChanged = function(params) {
+                        const selectedYear = Object.keys(params.selected).find(key => params.selected[key]);
+                        if (selectedYear && groupedData[selectedYear]) {
+                            heatmapChart.setOption({
+                                calendar: { range: selectedYear },
+                                visualMap: {
+                                    max: Math.max(...groupedData[selectedYear].map(item => item[1])),
+                                },
+                                series: years.map(year => ({
+                                    type: 'heatmap',
+                                    coordinateSystem: 'calendar',
+                                    data: groupedData[year],
+                                    name: year,
+                                    emphasis: { disabled: true },
+                                    silent: year !== selectedYear,
+                                })),
+                            });
+                        }
+                    };
+                    
+                    const handleClick = function(params) {
+                        if (params.componentType === 'series') {
+                            const [year, month] = params.value[0].split('-');
+                            window.location.href = '/archives/' + year + '/' + month;
+                        }
+                    };
+
+                    heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                    heatmapChart.on('click', handleClick);
+
+                    // Listen for theme changes
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                        heatmapChart.dispose();
+                        heatmapChart = echarts.init(heatmapChartDom, event.matches ? 'dark' : 'light');
+                        const newBackgroundColor = event.matches ? '#333' : 'transparent';
+                        chartOptions.backgroundColor = newBackgroundColor;
+                        chartOptions.calendar.itemStyle.color = newBackgroundColor;
+                        heatmapChart.setOption(chartOptions);
+                        
+                        // Re-select the initial year
+                        heatmapChart.dispatchAction({
+                            type: 'legendSelect',
+                            name: initYear,
+                        });
+
+                        // Reattach the event listeners
+                        heatmapChart.on('legendselectchanged', handleLegendSelectChanged);
+                        heatmapChart.on('click', handleClick);
+                    });
+                }
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            博客热力图
+        </div>
+    
+            <!-- Heatmap Chart -->
+            <div id="heatmapChart-0" style="width: 100%; height: 200px; overflow-x: auto; overflow-y: hidden;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const pieChartDom = document.getElementById('pieChart-0');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let pieChart = echarts.init(pieChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    legend: {
+                        bottom: '1%',
+                    },
+                    series: [
+                        {
+                            type: 'pie',
+                            label: {
+                                position: 'outside',
+                                formatter: '{b}: {c}({d}%)', // {a}: series name; {b}: data name; {c}: data value; {d}: percentage
+                            },
+                            radius: ['15%', '60%'],
+                            roseType: 'radius',
+                            itemStyle: {
+                                borderRadius: 8
+                            },
+                            data: [{"name":"年终总结","value":1},{"name":"技术","value":1},{"name":"python","value":1}],
+                        }
+                    ]
+                };
+                
+                if ('tags' === 'years') {
+                    chartOptions.legend.data = ["技术","年终总结","python"];
+                };
+
+                pieChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/tags/' + encodeURIComponent(params.name);
+                };
+
+                pieChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    pieChart.dispose();
+                    pieChart = echarts.init(pieChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    pieChart.setOption(chartOptions);
+                    pieChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            标签饼图
+        </div>
+    
+            <!-- Pie Chart Container -->
+            <div id="pieChart-0" style="width: 100%; height: 425px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const pieChartDom = document.getElementById('pieChart-1');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let pieChart = echarts.init(pieChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    legend: {
+                        bottom: '1%',
+                    },
+                    series: [
+                        {
+                            type: 'pie',
+                            label: {
+                                position: 'outside',
+                                formatter: '{b}: {c}({d}%)', // {a}: series name; {b}: data name; {c}: data value; {d}: percentage
+                            },
+                            radius: ['15%', '60%'],
+                            roseType: 'radius',
+                            itemStyle: {
+                                borderRadius: 8
+                            },
+                            data: [{"name":"2024","value":2}],
+                        }
+                    ]
+                };
+                
+                if ('years' === 'years') {
+                    chartOptions.legend.data = ["2024"];
+                };
+
+                pieChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/archives/' + encodeURIComponent(params.name);
+                };
+
+                pieChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    pieChart.dispose();
+                    pieChart = echarts.init(pieChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    pieChart.setOption(chartOptions);
+                    pieChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            年份饼图
+        </div>
+    
+            <!-- Pie Chart Container -->
+            <div id="pieChart-1" style="width: 100%; height: 425px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const radarChartDom = document.getElementById('radarChart-0');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let radarChart = echarts.init(radarChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    radar: {
+                        indicator: [{"max":1,"name":"年终总结"},{"max":1,"name":"技术"},{"max":1,"name":"python"}],
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        confine: true,
+                    },
+                    series: [
+                        {
+                            type: 'radar',
+                            areaStyle: {},
+                            data: [{
+                                value: [1,1,1],
+                                name: 'Post Tags',
+                            }],
+                        }
+                    ]
+                };
+
+                radarChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/tags/';
+                };
+
+                radarChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    radarChart.dispose();
+                    radarChart = echarts.init(radarChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    radarChart.setOption(chartOptions);
+                    radarChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            标签雷达图
+        </div>
+    
+            <!-- Radar Chart Container -->
+            <div id="radarChart-0" style="width: 100%; height: 400px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const radarChartDom = document.getElementById('radarChart-1');
+                const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                let radarChart = echarts.init(radarChartDom, isDarkMode ? 'dark' : 'light');
+
+                const chartOptions = {
+                    backgroundColor: isDarkMode ? '#333' : 'transparent',
+                    radar: {
+                        indicator: [{"max":1,"name":"Jan"},{"max":1,"name":"Feb"},{"max":1,"name":"Mar"},{"max":1,"name":"Apr"},{"max":1,"name":"May"},{"max":1,"name":"Jun"},{"max":1,"name":"Jul"},{"max":1,"name":"Aug"},{"max":1,"name":"Sep"},{"max":1,"name":"Oct"},{"max":1,"name":"Nov"},{"max":1,"name":"Dec"}],
+                    },
+                    legend: {
+                        bottom: '1%',
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        confine: true,
+                    },
+                    series: [
+                        {
+                            type: 'radar',
+                            data: [{"name":"2024","value":[1,0,0,0,0,0,0,0,0,0,0,1]}],
+                        }
+                    ]
+                };
+
+                radarChart.setOption(chartOptions);
+                
+                const handleClick = function (params) {
+                    window.location.href = '/archives/' + encodeURIComponent(params.name)
+                };
+
+                radarChart.on('click', handleClick);
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+                    radarChart.dispose();
+                    radarChart = echarts.init(radarChartDom, event.matches ? 'dark' : 'light');
+                    chartOptions.backgroundColor = event.matches ? '#333' : 'transparent';
+                    radarChart.setOption(chartOptions);
+                    radarChart.on('click', handleClick);
+                });
+            });
+        </script>
+        <div style="width: 100%">
+            <!-- Title -->
+            
+        <div style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 10px;">
+            年份雷达图
+        </div>
+    
+            <!-- Radar Chart Container -->
+            <div id="radarChart-1" style="width: 100%; height: 425px; overflow-x: auto; overflow-y: auto;"></div>
+            <!-- Footer -->
+            
+        <div style="text-align: center; font-size: 12px; color: #666; margin-top: 10px; margin-bottom: 20px;">
+            Powered by <a href="https://github.com/erispyu/hexo-stats-echarts" style="color: inherit; text-decoration: none;" target="_blank">hexo-stats-echarts</a>
+        </div>
+    
+        </div>
+    </div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">公子语</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/26096.html" title="怀旧">怀旧</a><time datetime="2025-03-22T13:26:32.000Z" title="发表于 2025-03-22 21:26:32">2025-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/38883.html" title="2024 年度总结">2024 年度总结</a><time datetime="2025-01-01T14:57:48.000Z" title="发表于 2025-01-01 22:57:48">2025-01-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/40903.html" title="国际化开发的经验">国际化开发的经验</a><time datetime="2024-12-20T14:22:36.000Z" title="发表于 2024-12-20 22:22:36">2024-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/60445.html" title="节气之歌-大雪">节气之歌-大雪</a><time datetime="2024-12-06T14:19:01.000Z" title="发表于 2024-12-06 22:19:01">2024-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/22044.html" title="近况和未来一段时间的展望">近况和未来一段时间的展望</a><time datetime="2024-12-01T14:51:55.000Z" title="发表于 2024-12-01 22:51:55">2024-12-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"><span class="card-category-list-name">何不看世界</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"><span class="card-category-list-name">探索互联网</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"><span class="card-category-list-name">文艺的风</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"><span class="card-category-list-name">追求本我</span><span class="card-category-list-count">5</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 1.1em; color: #999">年终总结</a> <a href="/tags/python/" style="font-size: 1.26em; color: #999fa8">python</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.1em; color: #999">音乐</a> <a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 1.34em; color: #99a3b0">奇思妙想</a> <a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 1.34em; color: #99a3b0">看世界</a> <a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 1.1em; color: #999">校园风光</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.42em; color: #99a6b7">随笔</a> <a href="/tags/%E7%BF%BB%E8%AF%91/" style="font-size: 1.1em; color: #999">翻译</a> <a href="/tags/%E5%91%A8%E8%AE%B0/" style="font-size: 1.26em; color: #999fa8">周记</a> <a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 1.26em; color: #999fa8">好玩的 Linux</a> <a href="/tags/Windows/" style="font-size: 1.26em; color: #999fa8">Windows</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">软件推荐</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.1em; color: #999">读书</a> <a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 1.1em; color: #999">问题小记</a> <a href="/tags/%E6%95%A3%E6%96%87/" style="font-size: 1.1em; color: #999">散文</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/AHK/" style="font-size: 1.18em; color: #999ca1">AHK</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.1em; color: #999">软件</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 1.18em; color: #999ca1">命令行</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.26em; color: #999fa8">小说</a> <a href="/tags/PySide6/" style="font-size: 1.18em; color: #999ca1">PySide6</a> <a href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" style="font-size: 1.1em; color: #999">折腾日记</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/09/">
+            <span class="card-archive-list-date">
+              九月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/08/">
+            <span class="card-archive-list-date">
+              八月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-22T15:09:25.255Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 公子语</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

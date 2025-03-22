@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>最近的变化 | 语之屋</title><meta name="author" content="公子语"><meta name="copyright" content="公子语"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="最近给自己规划了许多小软件，不久之前纸间书摘的用户找到我希望可以更新三月时写的一个程序，花费了两个星期一边学习PySide6,一边完善了软件的功能，很开心。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最近的变化">
+<meta property="og:url" content="https://blog-youyu.fun/posts/25708.html">
+<meta property="og:site_name" content="语之屋">
+<meta property="og:description" content="最近给自己规划了许多小软件，不久之前纸间书摘的用户找到我希望可以更新三月时写的一个程序，花费了两个星期一边学习PySide6,一边完善了软件的功能，很开心。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg">
+<meta property="article:published_time" content="2024-11-26T13:52:33.000Z">
+<meta property="article:modified_time" content="2024-11-26T14:25:56.310Z">
+<meta property="article:author" content="公子语">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "最近的变化",
+  "url": "https://blog-youyu.fun/posts/25708.html",
+  "image": "https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg",
+  "datePublished": "2024-11-26T13:52:33.000Z",
+  "dateModified": "2024-11-26T14:25:56.310Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "公子语",
+      "url": "https://blog-youyu.fun/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><link rel="canonical" href="https://blog-youyu.fun/posts/25708.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '最近的变化',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
+</head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">语之屋</span></a><a class="nav-page-title" href="/"><span class="site-name">最近的变化</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">最近的变化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-26T13:52:33.000Z" title="发表于 2024-11-26 21:52:33">2024-11-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-26T14:25:56.310Z" title="更新于 2024-11-26 22:25:56">2024-11-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/">何不看世界</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>最近给自己规划了许多小软件，不久之前纸间书摘的用户找到我希望可以更新三月时写的一个程序，花费了两个星期一边学习PySide6,一边完善了软件的功能，很开心。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog-youyu.fun">公子语</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog-youyu.fun/posts/25708.html">https://blog-youyu.fun/posts/25708.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog-youyu.fun" target="_blank">语之屋</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/23589.html" title="PySide6开发日记（二）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">PySide6开发日记（二）</div></div><div class="info-2"><div class="info-item-1">笔记二 富文本格式关于设置文字自动换行以及问题：纯数字时自动换行不起作用。 123456# 设置文字为富文本格式，字体大小16ptbook_name_label = QLabel(        f&quot;&lt;span style=&#x27;font-size:16pt&#x27;&gt;&#123;book_name&#125;&lt;/span&gt;&quot;    )# 设置自动换行book_name_label.setWordWrap(True)  一些问题：如果文字是纯数字将不起作用。 笔记三 滚动布局设置滚动布局： 1234567891011area = QScrollArea()widget_area = QWidget()# 注1area.setWidgetResizable(True)layout_area = QVBoxLayout(widget_area)layout_area.addStretch(1)area.setWidget(widget_area)  注1：处理坑，子控件大小和area不一致，设置area的属性。 笔记四...</div></div></div></a><a class="pagination-related" href="/posts/14641.html" title="笔记-SSH 配置"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">笔记-SSH 配置</div></div><div class="info-2"><div class="info-item-1">记录关于ssh链接到github的命令。 前置教程在windows上安装scoop。 正式开始 安装git  1scoop install git 生成ssh key  1ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;   替换自己的邮箱地址，回车直到结束。  将公钥添加到github   验证是否成功  1ssh -T git@github.com  </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">公子语</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/26096.html" title="怀旧">怀旧</a><time datetime="2025-03-22T13:26:32.000Z" title="发表于 2025-03-22 21:26:32">2025-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/38883.html" title="2024 年度总结">2024 年度总结</a><time datetime="2025-01-01T14:57:48.000Z" title="发表于 2025-01-01 22:57:48">2025-01-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/40903.html" title="国际化开发的经验">国际化开发的经验</a><time datetime="2024-12-20T14:22:36.000Z" title="发表于 2024-12-20 22:22:36">2024-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/60445.html" title="节气之歌-大雪">节气之歌-大雪</a><time datetime="2024-12-06T14:19:01.000Z" title="发表于 2024-12-06 22:19:01">2024-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/22044.html" title="近况和未来一段时间的展望">近况和未来一段时间的展望</a><time datetime="2024-12-01T14:51:55.000Z" title="发表于 2024-12-01 22:51:55">2024-12-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 公子语</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
