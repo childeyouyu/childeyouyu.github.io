@@ -1,916 +1,235 @@
-<!DOCTYPE html>
-<html>
-<head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end -->
-  <meta charset="utf-8">
-  
-  
-  <title>语之屋</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>语之屋</title><meta name="author" content="公子语"><meta name="copyright" content="公子语"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="语之屋">
 <meta property="og:url" content="https://blog-youyu.fun/page/2/index.html">
 <meta property="og:site_name" content="语之屋">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg">
 <meta property="article:author" content="公子语">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
-
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">语之屋</a>
-      </h1>
+<meta name="twitter:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><link rel="shortcut icon" href="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><link rel="canonical" href="https://blog-youyu.fun/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
       
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '语之屋',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
+</head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://pic2.ziyuan.wang/user/Knoll9337/2025/03/5af17f7f881b11ebb6edd017c2d2eca2_b6c7a39023d02.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">语之屋</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">语之屋</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/36818.html" title="SQLite 数据类型">SQLite 数据类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-27T00:03:46.000Z" title="发表于 2024-08-27 08:03:46">2024-08-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></span></div><div class="content">SqliteSQLite 是一个让人喜欢的不得了的数据库，对于我个人而言，没有大量数据需要处理，从来没有过一定要使用 MySQL 或者是 PostgreSQL 的场景。 数据类型记录   存储类 描述    NULL 值是一个 NULL 值。   INTEGER 值是一个带符号的整数，根据值的大小存储在 1、2、3、4、6 或 8 字节中。   REAL 值是一个浮点值，存储为 8 字节的 IEEE 浮点数字。   TEXT 值是一个文本字符串，使用数据库编码（UTF-8、UTF-16BE 或 UTF-16LE）存储。   BLOB 值是一个 blob 数据，完全根据它的输入存储。   </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/1066.html" title="使用 RSS 来保护隐私和提高效率-(翻译)">使用 RSS 来保护隐私和提高效率-(翻译)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-06T13:01:04.000Z" title="发表于 2024-03-06 21:01:04">2024-03-06</time></span></div><div class="content"> 原文地址 https://rsapkf.org/weblog/rss  社交媒体网站充斥着广告、跟踪器和欺骗模式。尽管出于隐私原因或时间考虑，我很想避免使用它们，但如果没有它们，就不可能跟上时事。  RSS（“真正简单的聚合”）给你两全其美。对于门外汉来说，这是一种不必单独浏览它们或注册社交媒体的“订阅”网站的方式。通过 RSS 提要的集合，您可以从提要阅读器中了解来自多个源（提供 RSS 提要）的最新更新。 提供私人&#x2F;公共 RSS 提要的流行网站包括 GitHub，YouTube，Reddit 和 Stack Overflow。也有很多方法可以为 Twitter 和 Instagram 等其他网站获取 RSS 提要。在本文档中，除了如何使用和管理 RSS 订阅之外，我还想提出一个总体的一般隐私提示，通过访问 Reddit 和 YouTube 等社交媒体网站的隐私保护替代前端来减少您的数字足迹。 将所有内容迁移到...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/fc02.html" title="3 月软件推荐">3 月软件推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-03T00:05:59.000Z" title="发表于 2024-03-03 08:05:59">2024-03-03</time></span></div><div class="content">2024-03 软件推荐加入软件分享群 2024-03-22wingetui一个图形用户界面，旨在帮助您管理Windows最常见的包管理器中的包，例如Winget，Scoop，Chocolatey，Pip，Npm，.NET Tool和PowerShell Gallery。 2024-03-21影视TVBox...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/d3ee.html" title="AHK 自动复制的实现与逻辑分析">AHK 自动复制的实现与逻辑分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-11T11:26:15.000Z" title="发表于 2024-01-11 19:26:15">2024-01-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></span></div><div class="content"> 温馨提示： 本文使用 Ahk v2 进行代码编写，如有需求，自行修改为 v1 代码。 文章涉及思路分析与错误代码展示，需要成品可以下拉到最后查看。    昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。   说干就干，仔细分析一下功能需求：  鼠标左键按下，选中文本，实现复制；  鼠标点击需要插入文本的地方Ctrl+V​粘贴文本。   初步尝试  第一版代码出来了： 1234~LButton::&#123;KeyWait &quot;LButton&quot;Send &quot;^c&quot;&#125;    写的很快，错的也很快。   虽然实现了快速复制，但是我每次鼠标点击都会触发事件。   回到需求 2，很明显复制的文本会立刻被覆盖，难道用来（搭配微信输入法）做剪贴板同步吗？   鸡肋！（骂骂咧咧继续思考） 引入sleep​和GetKeyState​  一夜无果，第二天重新思考并在群里进行了询问。   很明显，我不需要在任何时候去进行复制，而选择被复制的文本肯定需要一定时间。   初步将这个时间定为 1s。  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/a706.html" title="左手">左手</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-04T14:46:41.000Z" title="发表于 2024-01-04 22:46:41">2024-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/9ea6.html" title="Next Cloud 容器挂载主机文件夹">Next Cloud 容器挂载主机文件夹</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-04T12:24:20.000Z" title="发表于 2024-01-04 20:24:20">2024-01-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></span></div><div class="content">Hello，大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。  我们打开 zimaos，应用商店搜索 Next Cloud 安装；  打开文件，选择一个我们想要去映射的文件夹，我选择 download，现在记住这个地址是 DATA&#x2F;Download；  打开 Next Cloud 容器右上角三个点，选择设置，添加卷，选择刚刚的 Download，右面输入 /download。记住右侧的路径； 701 x 3942560 x 1440  打开 Next Cloud，点击右上角，选择应用，我们向下滑，找到一个名字是 External storage support 的应用，启用；  打开设置，这里要注意，不是个人，下面有个管理，划到管理，在下面有一个外部储存；​ 701 x 3942560 x 1440  选中允许用户挂载储存；  现在我选择这里增加储存，选择本地；  目录名称：挂载后显示的名称；配置：刚刚保存的 /Download；可用于：所有用户或是选择单个用户；点击右侧对号保存，最左侧显示绿色对号则挂载成功。  701 x...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/fef3.html" title="2023 年终总结">2023 年终总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-01T16:13:58.000Z" title="发表于 2024-01-02 00:13:58">2024-01-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/">追求本我</a></span></div><div class="content">前言我在过往也一直有写年度回顾的习惯，一般是在元旦后的几个星期里，或是在上半年的某一天突然想起来，然后决定开始写一篇年度回顾。 通常我的内容是从上一年元旦开始一整年的生活，记得住的大事件，或是凭借蛛丝马迹的回忆，从 17 年至今，年年如此。 今年在 Find Blog 看到从不同方面回顾过去一年，然后再记录最骄傲的成就、最大的挑战、明年最主要的愿望这一带有目的的主题回顾，不免有些新奇，决定参与一次。 开始之前，我也加上一句对 2023...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/65a0.html" title="AHK 上手以及编辑器配置">AHK 上手以及编辑器配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-30T08:18:44.000Z" title="发表于 2023-12-30 16:18:44">2023-12-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></span></div><div class="content">前言最近要写一点简短的小东西，想起了以前加入过的一个脚本语言社区，名字是 AutoHotKey，应该可以满足我的需求，花费了半个小时搞定环境和编辑器，主要是安装路径出了一点问题。 AHK 介绍以及安装Chris Mallett，这个人在 2003 年 11 月发布了 AHK 的第一个版本，经过数年的完善，在（08 年）Lexikos 等人的帮助下，发布了经典版本：1.0.48.05。 2011 年开始社区主要开始由 Lexikos 主导，并开发 AutoHotkey v2-alpha 至今。 通常情况下，大家更支持使用经典的版本，不过我这人就喜欢玩新的，于是果断下载了最新版。 目前的官网：www.autohotkey.com 编辑器选择以及坑其实我还是比较喜欢每个语言都有自己的编辑器的，Java 就用 IDEA，Python 使用 Pycharm，但是扫了一眼目前大家推荐的编辑器还是挺丑的，就算了，还是老老实实用 vscode 吧。 下载 ahk、安装 vscode、应用商店搜索...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/ae8e.html" title="Anaconda 使用的几个点">Anaconda 使用的几个点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-05T15:38:18.000Z" title="发表于 2023-12-05 23:38:18">2023-12-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></span></div><div class="content">最近工作需要，重新配置了 Anaconda，过程中出现了些许问题，特此做个记录和汇总。 1. 系统环境配置Win + S搜索 env –&gt; 编辑系统环境变量 –&gt; 环境变量。 在 Path 中新建三个系统环境变量： 12345① anaconda 安装的目录 D:\anaconda② anaconda/scripts 的目录 D:\anaconda\Scripts③ bin 的目录 D:\Download\anaconda\Scripts\Library\bin    PS：在安装时勾选添加anaconda3 到PATH就会自动配置了。   2. Pycharm 识别配置好了后，我的pycharm还是识别不到conda的可执行文件，新建环境，选择conda，conda安装文件夹bin文件下面的conda.bat 文件。 后面遇到其他情况我再进行补充。 3. 常用命令查看conda版本：1conda --version  创建新环境：1conda create --name 环境名 python=python版本（3.12）  删除环境：1conda remove...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/4d37.html" title="Java 中文乱码问题 - 2021 年困扰我的万恶之源">Java 中文乱码问题 - 2021 年困扰我的万恶之源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-11-22T03:13:15.000Z" title="发表于 2023-11-22 11:13:15">2023-11-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></span></div><div class="content">2021 年，我选了一门名为《高级编程技术》的课，课程内容是 Java 编程，我很感兴趣，彼时我使用最新的 JDK 18，以及 IDEA。 我遇到了一点小小的问题，控制台输出的文字永远是乱码，网络上的三五种方法尝试了许久也不能解决。 时隔一年发现，或许是 JDK 18 与 IDEA 之间有些不可调和的矛盾，于是改用了 JDK 17。 </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">公子语</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/childeyouyu"><i class="fab fa-github"></i><span>关注我</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这里是语之屋，我的小屋。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/26096.html" title="怀旧">怀旧</a><time datetime="2025-03-22T13:26:32.000Z" title="发表于 2025-03-22 21:26:32">2025-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/38883.html" title="2024 年度总结">2024 年度总结</a><time datetime="2025-01-01T14:57:48.000Z" title="发表于 2025-01-01 22:57:48">2025-01-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/40903.html" title="国际化开发的经验">国际化开发的经验</a><time datetime="2024-12-20T14:22:36.000Z" title="发表于 2024-12-20 22:22:36">2024-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/60445.html" title="节气之歌-大雪">节气之歌-大雪</a><time datetime="2024-12-06T14:19:01.000Z" title="发表于 2024-12-06 22:19:01">2024-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/22044.html" title="近况和未来一段时间的展望">近况和未来一段时间的展望</a><time datetime="2024-12-01T14:51:55.000Z" title="发表于 2024-12-01 22:51:55">2024-12-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"><span class="card-category-list-name">何不看世界</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"><span class="card-category-list-name">探索互联网</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"><span class="card-category-list-name">文艺的风</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"><span class="card-category-list-name">追求本我</span><span class="card-category-list-count">5</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.1em; color: #999">读书</a> <a href="/tags/Windows/" style="font-size: 1.26em; color: #999fa8">Windows</a> <a href="/tags/python/" style="font-size: 1.26em; color: #999fa8">python</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/%E7%BF%BB%E8%AF%91/" style="font-size: 1.1em; color: #999">翻译</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.26em; color: #999fa8">小说</a> <a href="/tags/AHK/" style="font-size: 1.18em; color: #999ca1">AHK</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">软件推荐</a> <a href="/tags/%E6%95%A3%E6%96%87/" style="font-size: 1.1em; color: #999">散文</a> <a href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" style="font-size: 1.1em; color: #999">折腾日记</a> <a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 1.26em; color: #999fa8">好玩的 Linux</a> <a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 1.1em; color: #999">年终总结</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.1em; color: #999">音乐</a> <a href="/tags/PySide6/" style="font-size: 1.18em; color: #999ca1">PySide6</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 1.18em; color: #999ca1">命令行</a> <a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 1.34em; color: #99a3b0">看世界</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 1.34em; color: #99a3b0">奇思妙想</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.42em; color: #99a6b7">随笔</a> <a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 1.1em; color: #999">校园风光</a> <a href="/tags/%E5%91%A8%E8%AE%B0/" style="font-size: 1.26em; color: #999fa8">周记</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.1em; color: #999">软件</a> <a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 1.1em; color: #999">问题小记</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog-youyu.fun"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
   
-    <article id="post-SQLite-数据类型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/36818.html" class="article-date">
-  <time class="dt-published" datetime="2024-08-27T00:03:46.000Z" itemprop="datePublished">2024-08-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/36818.html">SQLite 数据类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
+    <ul class="card-archive-list">
       
-        <h1 id="Sqlite"><a href="#Sqlite" class="headerlink" title="Sqlite"></a>Sqlite</h1><p>SQLite 是一个让人喜欢的不得了的数据库，对于我个人而言，没有大量数据需要处理，从来没有过一定要使用 MySQL 或者是 PostgreSQL 的场景。</p>
-<h1 id="数据类型记录"><a href="#数据类型记录" class="headerlink" title="数据类型记录"></a>数据类型记录</h1><table>
-<thead>
-<tr>
-<th>存储类</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>NULL</td>
-<td>值是一个 NULL 值。</td>
-</tr>
-<tr>
-<td>INTEGER</td>
-<td>值是一个带符号的整数，根据值的大小存储在 1、2、3、4、6 或 8 字节中。</td>
-</tr>
-<tr>
-<td>REAL</td>
-<td>值是一个浮点值，存储为 8 字节的 IEEE 浮点数字。</td>
-</tr>
-<tr>
-<td>TEXT</td>
-<td>值是一个文本字符串，使用数据库编码（UTF-8、UTF-16BE 或 UTF-16LE）存储。</td>
-</tr>
-<tr>
-<td>BLOB</td>
-<td>值是一个 blob 数据，完全根据它的输入存储。</td>
-</tr>
-</tbody></table>
-
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/36818.html" data-id="cmav6czpm001d2g7m2z1lhtgm" data-title="SQLite 数据类型" class="article-share-link"><span class="fa fa-share">分享</span></a>
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
       
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
       
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-使用RSS来保护隐私和提高效率-翻译" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/1066.html" class="article-date">
-  <time class="dt-published" datetime="2024-03-06T13:01:04.000Z" itemprop="datePublished">2024-03-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/1066.html">使用 RSS 来保护隐私和提高效率-(翻译)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/09/">
+            <span class="card-archive-list-date">
+              九月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
       
-        看到一篇不错的 RSS 介绍文章，翻译一下。
-        
-          <p class="article-more-link">
-            <a href="/posts/1066.html#more">Read More</a>
-          </p>
-        
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/08/">
+            <span class="card-archive-list-date">
+              八月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
       
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/1066.html" data-id="cmav6czpq001p2g7m9sixad1e" data-title="使用 RSS 来保护隐私和提高效率-(翻译)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
       
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
       
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BF%BB%E8%AF%91/" rel="tag">翻译</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-3-月软件推荐" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/fc02.html" class="article-date">
-  <time class="dt-published" datetime="2024-03-03T00:05:59.000Z" itemprop="datePublished">2024-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/fc02.html">3 月软件推荐</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="2024-03-软件推荐"><a href="#2024-03-软件推荐" class="headerlink" title="2024-03 软件推荐"></a>2024-03 软件推荐</h2><h2 id="加入软件分享群"><a href="#加入软件分享群" class="headerlink" title="加入软件分享群"></a>加入软件分享群</h2><p><img src="https://pic.ziyuan.wang/user/Knoll9337/2024/03/httpsu.wechat.comMIC6-y6bvNXz4LHjBes7orM_6b0df679961a6.png" alt="语的微信"></p>
-<h2 id="2024-03-22"><a href="#2024-03-22" class="headerlink" title="2024-03-22"></a>2024-03-22</h2><h3 id="wingetui"><a href="#wingetui" class="headerlink" title="wingetui"></a><a target="_blank" rel="noopener" href="https://www.marticliment.com/wingetui/">wingetui</a></h3><p>一个图形用户界面，旨在帮助您管理Windows最常见的包管理器中的包，例如Winget，Scoop，Chocolatey，Pip，Npm，.NET Tool和PowerShell Gallery。</p>
-<h2 id="2024-03-21"><a href="#2024-03-21" class="headerlink" title="2024-03-21"></a>2024-03-21</h2><h3 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h3><p>TVBox 是一款电视盒子播放器，开源免费，简洁无广告，可以添加源，速度和资源量是根据添加的配置而决定的，只要添加的配置里的线路给力，就可以做到流畅观看电视直播、电视剧、电影等。</p>
-<p>视频源推荐：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://饭太硬.top/tv">http:&#x2F;&#x2F;饭太硬.top&#x2F;tv</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.lige.fit/tvbox">https://www.lige.fit/tvbox</a></li>
-<li><a target="_blank" rel="noopener" href="https://s.niao.su/8/">https://s.niao.su/8/</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.juwanhezi.com/other/jsonlist">https://www.juwanhezi.com/other/jsonlist</a></li>
-<li><a target="_blank" rel="noopener" href="https://agit.ai/butterfly/gaotianliuyun">https://agit.ai/butterfly/gaotianliuyun</a></li>
-</ul>
-<ul>
-<li>下载地址：<a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-hQWIh.html">https://www.123pan.com/s/lbwrVv-hQWIh.html</a></li>
-</ul>
-<h2 id="2024-03-19"><a href="#2024-03-19" class="headerlink" title="2024-03-19"></a>2024-03-19</h2><h2 id="草料二维码"><a href="#草料二维码" class="headerlink" title="草料二维码"></a><a target="_blank" rel="noopener" href="https://cli.im/">草料二维码</a></h2><p>灵活组合各种功能模块，根据实际需求搭建二维码系统；无须下载APP，用微信小程序作为操作端。</p>
-<h2 id="2024-03-18"><a href="#2024-03-18" class="headerlink" title="2024-03-18"></a>2024-03-18</h2><h3 id="音乐时刻"><a href="#音乐时刻" class="headerlink" title="音乐时刻"></a><a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-hQWIh.html">音乐时刻</a></h3><p>一款可以听音乐，下载音乐的软件，免费无广告。</p>
-<p>软件支持安卓。</p>
-<ul>
-<li>下载地址：<a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-hQWIh.html">https://www.123pan.com/s/lbwrVv-hQWIh.html</a></li>
-</ul>
-<p>软件更新：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://sdt.zishu.life/download.html">闪电藤：2.1.7</a><blockquote>
-<p>修复 bug，支持剪贴板同步（会员功能）</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="2024-03-16"><a href="#2024-03-16" class="headerlink" title="2024-03-16"></a>2024-03-16</h2><h3 id="bilidown"><a href="#bilidown" class="headerlink" title="bilidown"></a><a target="_blank" rel="noopener" href="https://zhouql.vip/bilibili/pc/">bilidown</a></h3><p>一款简洁好用的 B 站视频下载工具<br>支持由 UP 主上传的单集，多集及相关封面，弹幕，字幕，音乐，刮削等等。<br>支持任意粒度批量组合，登录后支持到 1080P，大会员可获取所有音质及画质。 </p>
-<ul>
-<li>下载地址：<a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-hQWIh.html">https://www.123pan.com/s/lbwrVv-hQWIh.html</a></li>
-</ul>
-<p>软件更新：</p>
-<ul>
-<li>闪电藤：2.1.6<blockquote>
-<p>[全新功能]</p>
-<p>支持自动剪贴板同步 @守护 @Rsugar @闪电侠客（免费版本限制最多 20 个字同步，付费会员不限字数）</p>
-<p>[体验优化]</p>
-<ul>
-<li>优化下拉刷新连接，连接速度更快</li>
-<li>设备会话页，发送和接收的背景色用不同颜色展示，更清晰区分发送和接收 @HotWater</li>
-</ul>
-<p>[BUG 修复]<br>手机系统相册&#x2F;文件管理器多选分享异常问题<br>修复扫码连接多 IP 设备只连第一个 IP 的问题<br>dwg 的格式文件的回显问题 @面条渣渣</p>
-</blockquote>
-</li>
-<li>nian: 24.3.1<blockquote>
-<p>记账本统计页，账目支持按日历显示，范围选择器支持自定义日期范围。</p>
-<p>优化部分页面细节，修复部分反馈过来的问题，提升性能和稳定性。<br>打卡本部分图表日期采用双排显示，上面月份，下面日期。</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="2024-03-11"><a href="#2024-03-11" class="headerlink" title="2024-03-11"></a>2024-03-11</h2><h3 id="Flow-Launcher"><a href="#Flow-Launcher" class="headerlink" title="Flow.Launcher"></a><a target="_blank" rel="noopener" href="https://github.com/Flow-Launcher/Flow.Launcher">Flow.Launcher</a></h3><p>快速启动工具，如果说快速启动工具有一个排行榜，我觉得 Flow.Launcher 可以排在前三，其他的两个是：Listary 和 Utools。</p>
-<p>但是！Flow.Launcher 是免费的呀。</p>
-<p><img src="https://pic.ziyuan.wang/user/Knoll9337/2024/03/Flow.Launcher_cc362077a6aeb.gif" alt="Flow.Launcher.gif"></p>
-<h2 id="24-3-6"><a href="#24-3-6" class="headerlink" title="24-3-6"></a>24-3-6</h2><h3 id="res-downloader"><a href="#res-downloader" class="headerlink" title="res-downloader"></a><a target="_blank" rel="noopener" href="https://github.com/putyy/res-downloader?tab=readme-ov-file">res-downloader</a></h3><p>获取视频、音频、图片、m3u8 支持获取视频号、抖音、快手、小红书、酷狗音乐、qq 音乐、微信小程序等网络资源</p>
-<ul>
-<li>下载地址：</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://wwjv.lanzoum.com/b04wgtfyb">蓝奏云下载 密码:9vs5</a> </p>
-<h2 id="24-3-5"><a href="#24-3-5" class="headerlink" title="24-3-5"></a>24-3-5</h2><h3 id="91-搜游-soyo"><a href="#91-搜游-soyo" class="headerlink" title="91 搜游 soyo"></a>91 搜游 soyo</h3><p>一个怀旧的手机游戏论坛，有很多的 Java 时代的手机游戏。</p>
-<ul>
-<li>下载地址：</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-CesIh.html">https://www.123pan.com/s/lbwrVv-CesIh.html</a></p>
-<h2 id="24-3-4"><a href="#24-3-4" class="headerlink" title="24-3-4"></a>24-3-4</h2><h3 id="c001apk"><a href="#c001apk" class="headerlink" title="c001apk"></a><a target="_blank" rel="noopener" href="https://rsshub.app/github/branches/bggRGjQaUbCoE/c001apk">c001apk</a></h3><p>第三方酷安 app，完蛋，让你用到真酷安了。软件支持安卓。</p>
-<ul>
-<li>下载地址：</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-BlsIh.html">https://www.123pan.com/s/lbwrVv-BlsIh.html</a></p>
-<h2 id="24-3-3"><a href="#24-3-3" class="headerlink" title="24-3-3"></a>24-3-3</h2><h3 id="奇妙影视"><a href="#奇妙影视" class="headerlink" title="奇妙影视"></a>奇妙影视</h3><p>基于开源的 TV-box 开发的一款影视应用，下载即用。支持安卓。</p>
-<ul>
-<li>下载地址：</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-x0sIh.html">https://www.123pan.com/s/lbwrVv-x0sIh.html</a></p>
-<h2 id="24-3-2"><a href="#24-3-2" class="headerlink" title="24-3-2"></a>24-3-2</h2><h3 id="闪电藤"><a href="#闪电藤" class="headerlink" title="闪电藤"></a><a target="_blank" rel="noopener" href="https://sdt.zishu.life/">闪电藤</a></h3><p>局域网文件传输。全平台支持。</p>
-<ul>
-<li>下载地址：</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-a0sIh.html">https://www.123pan.com/s/lbwrVv-a0sIh.html</a></p>
-<h2 id="24-3-1"><a href="#24-3-1" class="headerlink" title="24-3-1"></a>24-3-1</h2><h3 id="Jane-Reader"><a href="#Jane-Reader" class="headerlink" title="Jane Reader"></a><a target="_blank" rel="noopener" href="https://janereader.com/#downloads">Jane Reader</a></h3><p>现代化的 epub 阅读器，沉浸式的阅读体验。支持 Windows、MacOS。</p>
-<ul>
-<li>下载地址：</li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/lbwrVv-P0sIh.html">https://www.123pan.com/s/lbwrVv-P0sIh.html</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/fc02.html" data-id="cmav6czpg000p2g7m7vgj9wbt" data-title="3 月软件推荐" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" rel="tag">软件推荐</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-AHK-自动复制的实现与逻辑分析" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/d3ee.html" class="article-date">
-  <time class="dt-published" datetime="2024-01-11T11:26:15.000Z" itemprop="datePublished">2024-01-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/d3ee.html">AHK 自动复制的实现与逻辑分析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        昨天学习了 KeyWait，第一反应是可以做一个自动复制的脚本。
-        
-          <p class="article-more-link">
-            <a href="/posts/d3ee.html#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/d3ee.html" data-id="cmav6czph000u2g7mh7mtctgp" data-title="AHK 自动复制的实现与逻辑分析" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AHK/" rel="tag">AHK</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-左手" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/a706.html" class="article-date">
-  <time class="dt-published" datetime="2024-01-04T14:46:41.000Z" itemprop="datePublished">2024-01-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/a706.html">左手</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="生为左手"><a href="#生为左手" class="headerlink" title="生为左手"></a>生为左手</h2><p>生为左手，不同于主流，我比我的搭档更加灵活，大脑也认同这一点。</p>
-<p>我可以更快的学习，拥有更灵活的身手。</p>
-<p>那是第五年的某一天，我开始有了自己的记忆。</p>
-<p>一座农家小院，透过彩色的玻璃看到外面的世界偏离了色彩，小孩子在家里跑来跑去，我感受到自己强而有力。</p>
-<p>关于童年，我曾有过无数的记忆。像是拉开弹弓命中自己，拿起镰刀割破右手的身体，我总是带着他兴冲冲的出去，又很快他哭着跑回来。</p>
-<p>为何我强而有力，却总是显得笨拙？</p>
-<p>继续向过往回忆，是那个夏日的午后，他在学习？他去吃饭。</p>
-<p>放下筷子后，他第一次选择了右手，我看到了小右得意而阴险的表情，我听到了他欣喜又激动的语气。</p>
-<p>“我失败了。”</p>
-<p>我想，我应该就此退出。</p>
-<h2 id="进退维谷"><a href="#进退维谷" class="headerlink" title="进退维谷"></a>进退维谷</h2><p>“他可以同时用两只手。”</p>
-<p>这是在哪里？</p>
-<p>我从自我的世界中苏醒，手上的是筷子吗？</p>
-<p>嘿，老兄，你还好吗？</p>
-<p>我与久违的老朋友打了声招呼，换来的却是陌生的回复。也对，我已经很久没有出来过了，外面早已经是一代新人换旧人。</p>
-<p>那么，现在我又是在什么地方呢？一间拥挤的屋子，一群红光满面的人，一圈我不认识的亲戚。看起来又是哪家的婚礼罢。</p>
-<p>明明大家都用右手吃饭，却有人会不舒服，真是奇怪。</p>
-<p>小小少年被安排坐到那里，换上了我抓起筷子，耳边传来的是声声称颂。</p>
-<p>“他可以同时用两只手，真厉害。”</p>
-<p>年少的称赞，大多不是来自于少年本身，一是对孩子的热爱、二是看孩子父母的面子，少年照单全收。</p>
-<p>我也曾风光一阵，在我和小右势均力敌的时代。</p>
-<p>我看得见的此消彼长，我渐渐的退步抽身，只有时不时的遇到新物件，我会被大脑潜意识的拿起，直到与人碰撞。</p>
-<p>“咦，你用左手打球啊。”</p>
-<p>乒乓球桌上，羽毛球场，或是台球案上，我总是突然被看到，或是意识到自己与其他人的不同，于是换上了小右。</p>
-<p>小右跃跃欲试，他总是比我灵活，他早就比我灵活。</p>
-<p>但他不行。</p>
-<h2 id="世界、小右和我"><a href="#世界、小右和我" class="headerlink" title="世界、小右和我"></a>世界、小右和我</h2><p>我是在什么时候被要求退下的？</p>
-<p>那年，他要上学，他年龄太小，于是老师说：他用左手写字，这样子不行的。</p>
-<p>于是强行让小右上了场。</p>
-<p>小右比我努力吧，或许如此。</p>
-<p>总之在那个午后，小右接过了我的工作，从此笔由他握住。</p>
-<p>我不记得我工作时是怎样的光景，只是在几年后的一天，爸爸问他，你还会用你的左手吗？</p>
-<p>我许久没有拿起笔，就像是初生的稚子，笨拙。</p>
-<p>小右的字虽然流利，还是很丑；小右用筷子渐渐比我好的多了，仅此而已。</p>
-<p>笨拙的小右获得了我的权柄，没能去发扬光大。</p>
-<p>我不知道我是不是会做的更好，我永远也不会了。</p>
-<p>我的天赋就像是遇到滔滔江水，只能被裹挟着流到下游，从此不见踪迹。</p>
-<h2 id="另一个小左"><a href="#另一个小左" class="headerlink" title="另一个小左"></a>另一个小左</h2><p>或许在另一个世界，我不是这样的境遇。</p>
-<p>就像在那天，看到的它。</p>
-<p>高中时代，我见到了那个用左手写字的人。</p>
-<p>他其貌不扬，却用左手写出一手好字。</p>
-<p>老师喜欢说你们的右手要拿起笔。</p>
-<p>于是我们的视线望向它，可以拿起笔的左手。</p>
-<p>在时代滚滚时，它可以自由的放飞自我。</p>
-<p>或许，在另一个世界，我也如此。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/a706.html" data-id="cmav6czps001z2g7m6vha8438" data-title="左手" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" rel="tag">奇思妙想</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%A3%E6%96%87/" rel="tag">散文</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Next-Cloud-容器挂载主机文件夹" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/9ea6.html" class="article-date">
-  <time class="dt-published" datetime="2024-01-04T12:24:20.000Z" itemprop="datePublished">2024-01-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/9ea6.html">Next Cloud 容器挂载主机文件夹</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Hello，大家好，这期我来给大家讲一下如何在 next cloud 云盘中挂载本机的目录。</p>
-<ol>
-<li><p>我们打开 zimaos，应用商店搜索 Next Cloud 安装；</p>
-</li>
-<li><p>打开文件，选择一个我们想要去映射的文件夹，我选择 download，现在记住这个地址是 DATA&#x2F;Download；</p>
-</li>
-<li><p>打开 Next Cloud 容器右上角三个点，选择设置，添加卷，选择刚刚的 Download，右面输入 <code>/download</code>。记住右侧的路径；<img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202056-fjkilov.png?imageView2/2/interlace/1/format/webp" alt="image"></p>
-<p>701 x 3942560 x 1440</p>
-</li>
-<li><p>打开 Next Cloud，点击右上角，选择应用，我们向下滑，找到一个名字是 External storage support 的应用，启用；</p>
-</li>
-<li><p>打开设置，这里要注意，不是个人，下面有个管理，划到管理，在下面有一个外部储存；<br>​<img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202157-eme3ch9.png?imageView2/2/interlace/1/format/webp" alt="image"></p>
-<p>701 x 3942560 x 1440</p>
-</li>
-<li><p>选中允许用户挂载储存；</p>
-</li>
-<li><p>现在我选择这里增加储存，选择本地；</p>
-</li>
-<li><p>目录名称：挂载后显示的名称；配置：刚刚保存的 <code>/Download</code>；可用于：所有用户或是选择单个用户；点击右侧对号保存，最左侧显示绿色对号则挂载成功。</p>
-<p><img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202254-57dfxrd.png?imageView2/2/interlace/1/format/webp" alt="image"></p>
-<p>701 x 3942560 x 1440</p>
-</li>
-<li><p>回到文件目录可以查看。<br>​<img src="https://b3logfile.com/file/2024/01/siyuan/1644380880609/assets/image-20240104202327-639wxiu.png?imageView2/2/interlace/1/format/webp" alt="image"></p>
-<p>701 x 3942560 x 1440</p>
-</li>
-</ol>
-<p>  ‍</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/9ea6.html" data-id="cmav6czpk00122g7m0ek9670g" data-title="Next Cloud 容器挂载主机文件夹" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" rel="tag">好玩的 Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" rel="tag">折腾日记</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-年终总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/fef3.html" class="article-date">
-  <time class="dt-published" datetime="2024-01-01T16:13:58.000Z" itemprop="datePublished">2024-01-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/">追求本我</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/fef3.html">2023 年终总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我在过往也一直有写年度回顾的习惯，一般是在元旦后的几个星期里，或是在上半年的某一天突然想起来，然后决定开始写一篇年度回顾。</p>
-<p>通常我的内容是从上一年元旦开始一整年的生活，记得住的大事件，或是凭借蛛丝马迹的回忆，从 17 年至今，年年如此。</p>
-<p>今年在 Find Blog 看到从不同方面回顾过去一年，然后再记录最骄傲的成就、最大的挑战、明年最主要的愿望这一带有目的的主题回顾，不免有些新奇，决定参与一次。</p>
-<p>开始之前，我也加上一句对 2023 年年末这几天的简单概述：七零八碎，一地鸡毛，最后又绝处逢生，不同的地方都有了新的开始，面对下一年的是百废待兴。正在此时，我开始我的年度回顾和新年展望。</p>
-<h1 id="健康-锻炼"><a href="#健康-锻炼" class="headerlink" title="健康&#x2F;锻炼"></a>健康&#x2F;锻炼</h1><p>今年的健康状况其实算是历年都比较差，三月份在甲流肆虐的时间里，几次都感到身体不舒服，最后在室友沦陷的日子里，我还是倒下了。</p>
-<p>后来的一年倒是平安顺遂，悠然的结束了这一整年。</p>
-<p>在去年的年末，随着一份文件的下达，校园跑开始了，说实话这个东西很大程度上消磨了我跑步的热情，让人大有一种“我可以想跑步，但不能是因为你强迫我。”，于是今年的跑步也就只有那么几次，或有十几公里的样子，下半年更加的怠惰起来。</p>
-<h1 id="工作与职业"><a href="#工作与职业" class="headerlink" title="工作与职业"></a>工作与职业</h1><p>今年的一整年，是在飘摇中度过的，年初对于考研和工作的选择，直到某一天终于下定了决心扔下全部复习资料，决定开始找工作。</p>
-<p>自从暑假开始，直到十二月这么长的日子里，有过两次实习，大多数时间都是在无所事事和被无聊的事耽搁，总之是面试了十多家，最后也没拿到满意的 offer。</p>
-<p>最后在现在的实习公司留下，打算就这么一直干下去了。</p>
-<h1 id="个人生活与家庭"><a href="#个人生活与家庭" class="headerlink" title="个人生活与家庭"></a>个人生活与家庭</h1><p>说实在的，个人生活逐渐的丰富起来，我还总是记得大学四年，每年在不同的地方，因为不同的境遇遇到的不同的社交圈子，我拓展、熟识，又舍弃，最后所遗留的朋友却不多。</p>
-<p>今年终于算是卸下了社团的活动，于是又和很多人彻底告别。</p>
-<p>十月份回了一次家里，回来后与宿舍的同学也基本没了什么交流。</p>
-<p>几天前，和家里面会联系的姐姐弟弟都联系了个遍，去感受自己和世界的羁绊，又约了在学校还联系的两个朋友。</p>
-<p>总的来说，在社交这里，我的一级朋友又缺失了一个，但剩下的关系到依然很好。</p>
-<h1 id="学习和知识管理"><a href="#学习和知识管理" class="headerlink" title="学习和知识管理"></a>学习和知识管理</h1><p>直到 11 月，我才后知后觉，过度使用 Chat GPT 对个人而言危害巨大，尤其是我现在正处于学习阶段，对于代码的掌控能力直线下降。</p>
-<p>忙里忙慌的去大模型化，只有很熟悉的领域才敢交给大模型去做。</p>
-<p>在知识管理这里，我终于确定选择好了工具，过去几年用过太多：语雀、微秘、Logseq、黑曜石、思源笔记、幕布。</p>
-<p>我对笔记有天然的不信任，语雀的运营让我很惊慌，思源笔记又没有良好的同步性，手机、电脑、公司的文档始终是不能完全同步。</p>
-<p>思源笔记的 S3 推出以后，我再次下载了这个老伙计，网络上关于开发者的争议我倒是不太在乎，于是尝试了一段时间，我付费购买了永久的功能特性以使用 S3 同步功能，也慢慢的将我的数据迁移过来。</p>
-<h1 id="旅游与文化"><a href="#旅游与文化" class="headerlink" title="旅游与文化"></a>旅游与文化</h1><p>大概的盘算了一下，今年没有去什么远处旅游，只是无聊就跑一次西湖，算下来应该也有个七八次？</p>
-<p>一年里最值得纪念的活动一是五月份去看氧气音乐节，看到了毛不易；十一月去慈溪，参加卢思浩的读者见面会，这是我第二次去看他的见面会，搭车、寻路、买书、入场、听他讲故事，也留下自己的故事。</p>
-<p>今年读书还不错，在纸间书摘上面的记录是 17 本，和 2022 持平，当然也藏进去基本消遣的网文，这一年开始偏爱推理小说，看了两本东野圭吾做消遣之后，去看江户川乱步、松本清张，还把《无人生还》的电影、小说都看了一遍。</p>
-<p>年末趁着各种活动，买了很多书，从《山海经》到《镜花缘》，老舍作品和鲁迅小说集，想起来高中时从同学那里借来的鲁迅文集，毕业归还时竟然也看完了半本。</p>
-<p>网络文学作品也偶尔带来一些惊喜，像是我高一读《择天记》时的惊喜一样，断断续续读了几年，我终于读完了《修真四万年》，竟然也收获颇丰，带着修仙、修真大道之争的主线，一路上却讨论了不知道多少深刻的社会运行模式，以至于有很长一段时间，和人聊起小说，都是以《修真四万年》开场。</p>
-<h1 id="兴趣和创造"><a href="#兴趣和创造" class="headerlink" title="兴趣和创造"></a>兴趣和创造</h1><p>今年的兴趣没什么大的变化，还是会常常读书、不时下一下象棋、偶尔买一份积木  DIY。</p>
-<p>程序设计文件夹里新建了一个又一个小程序的设计思路，囿于能力等待着实现的时间。年末终于开始动手去写，目前写完了第二个，等待着完善后发出来。</p>
-<p>折腾了很久，终于开始正式的运营自己的博客，折腾了几个 Hexo 的主题，选一个自己喜欢的，买了一个 玩客云的小主机玩了几天又转手出去，从学长的手里买一个性能更好的 x86 小主机，搞了一个自己的 nas，做了相册的备份，其他功能则是继续探索。</p>
-<p>偶尔也买一个游戏玩，不过多的时候还是在模拟器或玩玩学习版，十月后忽然心血来潮，看了几天买回来一个 NS，玩了一个月的《火焰纹章 风花雪月》，而后又转手出去，也算是终于体验了一次主机玩家的乐趣，不过卡带倒是不太好卖，还留在自己的柜子里。</p>
-<h1 id="情绪-精神状态"><a href="#情绪-精神状态" class="headerlink" title="情绪&amp;精神状态"></a>情绪&amp;精神状态</h1><p>今年有那么一段时间，我的精神状态是很不好的，那段时间女朋友深陷抑郁症的折磨，我常常在陪她伤心难过后，感叹为什么世界对人为何不带有一丝怜悯。</p>
-<p>我在二月份时写完了整个 22 年的回顾日记，相比之下，大二是轻松的，于是看上去也要有趣的多。</p>
-<h1 id="财务总结"><a href="#财务总结" class="headerlink" title="财务总结"></a>财务总结</h1><p>关于这一年的财务状况，最该说的是花呗，我曾在去年短暂的清空了花呗的借款，一次出行计划又打破了平衡，关闭花呗的计划就又搁浅了下来，今年二月和三月，吃了许久挂面的情况下，彻底的清算了全部的账单，后面的财务依旧是生活费的月光，身上也感觉到了轻松，后来看到了花呗开始与征信挂钩。</p>
-<p>今年最开心的部分其实也在于此，我开始逐渐有了工资，七八月份实习的公司，财务搞错了状况，让我的花销也没控制好，最后也没能存下些钱。拿了第一份工资，给家里人去买些礼物，主要是给爸爸买了一个飞利浦的筋膜枪，希望可以缓解他的背部疼痛。</p>
-<p>十二月以后，新的公司开始提供实习工资，我的房租、生活费再次有了保障。</p>
-<hr>
-<h1 id="最骄傲的成就"><a href="#最骄傲的成就" class="headerlink" title="最骄傲的成就"></a>最骄傲的成就</h1><p>今年给我感受最好的一件事是在三月，某室友再次请教我一道 matlab 编程的问题，找到了我 22 年 12 月 30 日写的一份代码，当时的代码巧妙发挥了索引的作用，让程序不多一个变量，原来自己也写过这么漂亮二代码。</p>
-<h1 id="最大的挑战"><a href="#最大的挑战" class="headerlink" title="最大的挑战"></a>最大的挑战</h1><p>在放弃了考研后，目标就变成了找工作，忽而间，我的大学同学与我大多断了联系，我开始游走在学校以外的地方，找工作、探索创业。</p>
-<h1 id="24-年的规划"><a href="#24-年的规划" class="headerlink" title="24 年的规划"></a>24 年的规划</h1><p>新的一年没什么大的志向，认真的做完毕业设计，平平安安的结束我的大学生活。</p>
-<p>春招时再去碰碰运气，能不能找到一份更好工作。</p>
-<p>第一年或许不会有太多的工资，就一为家人添置些礼物，达成给女友的承诺，买一部小米 15 作为礼物。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/fef3.html" data-id="cmav6czp800072g7mg6xf9ocl" data-title="2023 年终总结" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" rel="tag">年终总结</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-AHK-上手以及编辑器配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/65a0.html" class="article-date">
-  <time class="dt-published" datetime="2023-12-30T08:18:44.000Z" itemprop="datePublished">2023-12-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/65a0.html">AHK 上手以及编辑器配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近要写一点简短的小东西，想起了以前加入过的一个脚本语言社区，名字是 AutoHotKey，应该可以满足我的需求，花费了半个小时搞定环境和编辑器，主要是安装路径出了一点问题。</p>
-<h1 id="AHK-介绍以及安装"><a href="#AHK-介绍以及安装" class="headerlink" title="AHK 介绍以及安装"></a>AHK 介绍以及安装</h1><p>Chris Mallett，这个人在 2003 年 11 月发布了 AHK 的第一个版本，经过数年的完善，在（08 年）Lexikos 等人的帮助下，发布了经典版本：1.0.48.05。</p>
-<p>2011 年开始社区主要开始由 Lexikos 主导，并开发 AutoHotkey v2-alpha 至今。</p>
-<p>通常情况下，大家更支持使用经典的版本，不过我这人就喜欢玩新的，于是果断下载了最新版。</p>
-<p>目前的官网：<a target="_blank" rel="noopener" href="https://www.autohotkey.com/">www.autohotkey.com</a></p>
-<h1 id="编辑器选择以及坑"><a href="#编辑器选择以及坑" class="headerlink" title="编辑器选择以及坑"></a>编辑器选择以及坑</h1><p>其实我还是比较喜欢每个语言都有自己的编辑器的，Java 就用 IDEA，Python 使用 Pycharm，但是扫了一眼目前大家推荐的编辑器还是挺丑的，就算了，还是老老实实用 vscode 吧。</p>
-<p>下载 ahk、安装 vscode、应用商店搜索 AutoHotkey，一气呵成，写下第一个脚本。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">运行失败</span><br></pre></td></tr></table></figure>
-
-<p>嗯，看一下报错：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(哦，忘记截图了）</span><br></pre></td></tr></table></figure>
-
-<p>大概就是 C 盘位置没有找到 ahk 文件，那应该是默认安装位置。</p>
-<p>于是打开设置，选择拓展，果然找到了相关选项：</p>
-<p><img src="https://pic.ziyuan.wang/user/Knoll9337/2023/12/1703924462437_6e1c2926469a7.png" alt="1703924462437.png"></p>
-<p>果断改成我的安装路径，重新运行。</p>
-<p><img src="https://pic.ziyuan.wang/user/Knoll9337/2023/12/1703924515162_63bcb3da1f332.png" alt="1703924515162.png"></p>
-<p>果断成功。</p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
-<li>下载 AHK：<a target="_blank" rel="noopener" href="https://www.autohotkey.com/">官网</a></li>
-<li>下载安装 vscode</li>
-<li>搜索拓展 AutoHotkey，选择 AutoHotkey v2 Language Support 或者 AutoHotkey Plus Plus，打开设置–&gt;拓展位置，选中对应拓展。<ol>
-<li>如果是 AutoHotkey v2 Language Support<ol>
-<li><img src="https://pic.ziyuan.wang/user/Knoll9337/2023/12/1703924462437_6e1c2926469a7.png" alt="1703924462437.png"></li>
-</ol>
-</li>
-<li>如果是 AutoHotkey Plus Plus 选项有点多，对应着都改一下。<ol>
-<li><img src="https://pic.ziyuan.wang/user/Knoll9337/2023/12/1703924559058_ac2b847e31e2c.png" alt="1703924559058.png"></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/65a0.html" data-id="cmav6czpf000n2g7mew1752nu" data-title="AHK 上手以及编辑器配置" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AHK/" rel="tag">AHK</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Anaconda-使用的几个点" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/ae8e.html" class="article-date">
-  <time class="dt-published" datetime="2023-12-05T15:38:18.000Z" itemprop="datePublished">2023-12-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/ae8e.html">Anaconda 使用的几个点</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>最近工作需要，重新配置了 Anaconda，过程中出现了些许问题，特此做个记录和汇总。</p>
-<h1 id="1-系统环境配置"><a href="#1-系统环境配置" class="headerlink" title="1. 系统环境配置"></a>1. 系统环境配置</h1><p><code>Win + S</code>搜索 env –&gt; 编辑系统环境变量 –&gt; 环境变量。</p>
-<p>在 Path 中新建三个系统环境变量：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">① anaconda 安装的目录 D:\anaconda</span><br><span class="line"></span><br><span class="line">② anaconda/scripts 的目录 D:\anaconda\Scripts</span><br><span class="line"></span><br><span class="line">③ bin 的目录 D:\Download\anaconda\Scripts\Library\bin</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<p>PS：在安装时勾选添加anaconda3 到PATH就会自动配置了。</p>
-<p><img src="/assets/image-20231205232514-ounax5i.png" alt="image"></p>
-</blockquote>
-<h1 id="2-Pycharm-识别"><a href="#2-Pycharm-识别" class="headerlink" title="2. Pycharm 识别"></a>2. Pycharm 识别</h1><p>配置好了后，我的pycharm还是识别不到conda的可执行文件，新建环境，选择conda，conda安装文件夹bin文件下面的conda.bat 文件。</p>
-<p>后面遇到其他情况我再进行补充。</p>
-<h1 id="3-常用命令"><a href="#3-常用命令" class="headerlink" title="3. 常用命令"></a>3. 常用命令</h1><h2 id="查看conda版本："><a href="#查看conda版本：" class="headerlink" title="查看conda版本："></a>查看conda版本：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建新环境："><a href="#创建新环境：" class="headerlink" title="创建新环境："></a>创建新环境：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name 环境名 python=python版本（3.12）</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除环境："><a href="#删除环境：" class="headerlink" title="删除环境："></a>删除环境：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove --name envname --all</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/ae8e.html" data-id="cmav6czpi000v2g7m2ttx2otd" data-title="Anaconda 使用的几个点" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Java中文乱码问题-2021年困扰我的万恶之源" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/posts/4d37.html" class="article-date">
-  <time class="dt-published" datetime="2023-11-22T03:13:15.000Z" itemprop="datePublished">2023-11-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/posts/4d37.html">Java 中文乱码问题 - 2021 年困扰我的万恶之源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>2021 年，我选了一门名为《高级编程技术》的课，课程内容是 Java 编程，我很感兴趣，彼时我使用最新的 JDK 18，以及 IDEA。</p>
-<p>我遇到了一点小小的问题，控制台输出的文字永远是乱码，网络上的三五种方法尝试了许久也不能解决。</p>
-<p>时隔一年发现，或许是 JDK 18 与 IDEA 之间有些不可调和的矛盾，于是改用了 JDK 17。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://blog-youyu.fun/posts/4d37.html" data-id="cmav6czpj000z2g7m0do76txj" data-title="Java 中文乱码问题 - 2021 年困扰我的万恶之源" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页 &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/">何不看世界</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/">追求本我</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AHK/" rel="tag">AHK</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PySide6/" rel="tag">PySide6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%A8%E8%AE%B0/" rel="tag">周记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" rel="tag">命令行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" rel="tag">奇思妙想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" rel="tag">好玩的 Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" rel="tag">年终总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" rel="tag">折腾日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%A3%E6%96%87/" rel="tag">散文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" rel="tag">校园风光</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" rel="tag">看世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BF%BB%E8%AF%91/" rel="tag">翻译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" rel="tag">软件推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" rel="tag">问题小记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E4%B9%90/" rel="tag">音乐</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/AHK/" style="font-size: 12px;">AHK</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/PySide6/" style="font-size: 12px;">PySide6</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Windows/" style="font-size: 14px;">Windows</a> <a href="/tags/python/" style="font-size: 14px;">python</a> <a href="/tags/%E5%91%A8%E8%AE%B0/" style="font-size: 14px;">周记</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 12px;">命令行</a> <a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 16px;">奇思妙想</a> <a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 14px;">好玩的 Linux</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 14px;">小说</a> <a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年终总结</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 20px;">技术</a> <a href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" style="font-size: 10px;">折腾日记</a> <a href="/tags/%E6%95%A3%E6%96%87/" style="font-size: 10px;">散文</a> <a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 10px;">校园风光</a> <a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 16px;">看世界</a> <a href="/tags/%E7%BF%BB%E8%AF%91/" style="font-size: 10px;">翻译</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 10px;">读书</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 10px;">软件</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">软件推荐</a> <a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 10px;">问题小记</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 18px;">随笔</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">音乐</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">三月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">十二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">十一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">九月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">八月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/posts/26096.html">怀旧</a>
-          </li>
-        
-          <li>
-            <a href="/posts/38883.html">2024 年度总结</a>
-          </li>
-        
-          <li>
-            <a href="/posts/40903.html">国际化开发的经验</a>
-          </li>
-        
-          <li>
-            <a href="/posts/60445.html">节气之歌-大雪</a>
-          </li>
-        
-          <li>
-            <a href="/posts/22044.html">近况和未来一段时间的展望</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2025 公子语<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-05-19T14:23:12.560Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 公子语</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
