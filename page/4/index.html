@@ -1,235 +1,392 @@
-<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end --><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>语之屋</title><meta name="author" content="公子语"><meta name="copyright" content="公子语"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html>
+<head><!-- hexo injector head_begin start --><script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script><!-- hexo injector head_begin end -->
+  <meta charset="utf-8">
+  
+  
+  <title>语之屋</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="语之屋">
 <meta property="og:url" content="https://blog-youyu.fun/page/4/index.html">
 <meta property="og:site_name" content="语之屋">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg">
 <meta property="article:author" content="公子语">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><link rel="shortcut icon" href="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg"><link rel="canonical" href="https://blog-youyu.fun/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        if (!ttl) return
-        const expiry = Date.now() + ttl * 86400000
-        localStorage.setItem(key, JSON.stringify({ value, expiry }))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return undefined
-        const { value, expiry } = JSON.parse(itemStr)
-        if (Date.now() > expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return value
-      }
-    }
-
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
-        script.onload = script.onreadystatechange = () => {
-          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
-        }
-        script.onerror = reject
-        document.head.appendChild(script)
-      }),
-      getCSS: (url, id) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onload = link.onreadystatechange = () => {
-          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
-        }
-        link.onerror = reject
-        document.head.appendChild(link)
-      }),
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
   
-      
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
-        
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
-    
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
+    <link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
   
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: '复制成功',
-    error: '复制失败',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '语之屋',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'home'
-}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="语之屋" type="application/atom+xml">
-</head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://pic2.ziyuan.wang/user/Knoll9337/2025/03/5af17f7f881b11ebb6edd017c2d2eca2_b6c7a39023d02.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">语之屋</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">语之屋</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/12762.html" title="梦幻的">梦幻的</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-09T13:34:09.000Z" title="发表于 2022-03-09 21:34:09">2022-03-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/">追求本我</a></span></div><div class="content">小城里烟雾蒙蒙，灰蓝的天空仿佛没了力气，散落的阳光也没有任何的神采。我撑着空伞，走在一条小路上，临近学校，身为住校的学生却是少来此地，路上遇到的便都是陌生的人。 转身走进另一条不算太热闹的巷子，前面只有一个人漫步巷中，正是迎面见到。 “嗨，许久未见。”极为熟悉的面庞，是年少时相识的姑娘，小茉莉啊。 “很久不见了。”茉莉也是这样回答我。 往事一桩桩浮上心头，短短一年多的时间线被与她相关的交集串联起来，死去的记忆复活在我的心头。 三年前的往事聊来也很少能够拿出来的回忆，只是当时觉得是很好的朋友，我也未曾想过分班后、不算太久后，交流就日渐稀疏。 最后是伤了心，路上开始学会了不再打招呼，学会了目不斜视，形同陌路。 我向共同的友人倾诉，因为这个人、那件事我们才会走到素不相识般。友人轻笑：“怕的什么，你们之间还有我这样的朋友，怎么会彻底断交。”他不清楚，也不理解。 于是我和小茉莉站在原地也没了下文，静静的僵持着，直到天旋地转，内心被其他冲击。 睁开眼，手里握着的是播放着视频的手机，原是刷到了小茉莉的抖音，却陷入睡眠，呵。 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/28392.html" title="蝉生不问久长，而以先出土者为长">蝉生不问久长，而以先出土者为长</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-09T13:59:21.000Z" title="发表于 2021-12-09 21:59:21">2021-12-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/4971.html" title="蝇之惑">蝇之惑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-18T02:34:07.000Z" title="发表于 2021-02-18 10:34:07">2021-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a></span></div><div class="content">教室里一如既往，老学究在讲台上倾授晦涩的知识，几个优等生随声附和着，使这课堂不至于无聊，但更多的是趴伏在桌子上，沉睡在天书的 BGM...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic2.ziyuan.wang/user/Knoll9337/2024/01/7888108e6578eddaa81cb788fe896ee_b67452ff53391.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">公子语</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">24</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/childeyouyu"><i class="fab fa-github"></i><span>关注我</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这里是语之屋，我的小屋。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/26096.html" title="怀旧">怀旧</a><time datetime="2025-03-22T13:26:32.000Z" title="发表于 2025-03-22 21:26:32">2025-03-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/38883.html" title="2024 年度总结">2024 年度总结</a><time datetime="2025-01-01T14:57:48.000Z" title="发表于 2025-01-01 22:57:48">2025-01-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/40903.html" title="国际化开发的经验">国际化开发的经验</a><time datetime="2024-12-20T14:22:36.000Z" title="发表于 2024-12-20 22:22:36">2024-12-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/60445.html" title="节气之歌-大雪">节气之歌-大雪</a><time datetime="2024-12-06T14:19:01.000Z" title="发表于 2024-12-06 22:19:01">2024-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/22044.html" title="近况和未来一段时间的展望">近况和未来一段时间的展望</a><time datetime="2024-12-01T14:51:55.000Z" title="发表于 2024-12-01 22:51:55">2024-12-01</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            
-          </div>
-          <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"><span class="card-category-list-name">何不看世界</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"><span class="card-category-list-name">探索互联网</span><span class="card-category-list-count">15</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"><span class="card-category-list-name">文艺的风</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"><span class="card-category-list-name">追求本我</span><span class="card-category-list-count">5</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 1.1em; color: #999">年终总结</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.42em; color: #99a6b7">随笔</a> <a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 1.1em; color: #999">校园风光</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/%E6%95%A3%E6%96%87/" style="font-size: 1.1em; color: #999">散文</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 1.1em; color: #999">音乐</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.1em; color: #999">读书</a> <a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 1.1em; color: #999">问题小记</a> <a href="/tags/python/" style="font-size: 1.26em; color: #999fa8">python</a> <a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 1.34em; color: #99a3b0">看世界</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">软件推荐</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 1.26em; color: #999fa8">小说</a> <a href="/tags/%E5%91%A8%E8%AE%B0/" style="font-size: 1.26em; color: #999fa8">周记</a> <a href="/tags/AHK/" style="font-size: 1.18em; color: #999ca1">AHK</a> <a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 1.34em; color: #99a3b0">奇思妙想</a> <a href="/tags/Windows/" style="font-size: 1.26em; color: #999fa8">Windows</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 1.18em; color: #999ca1">命令行</a> <a href="/tags/PySide6/" style="font-size: 1.18em; color: #999ca1">PySide6</a> <a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 1.26em; color: #999fa8">好玩的 Linux</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.1em; color: #999">软件</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" style="font-size: 1.1em; color: #999">折腾日记</a> <a href="/tags/%E7%BF%BB%E8%AF%91/" style="font-size: 1.1em; color: #999">翻译</a></div></div><div class="card-widget card-archives">
-    <div class="item-headline">
-      <i class="fas fa-archive"></i>
-      <span>归档</span>
-      <a class="card-more-btn" href="/archives/"
-            title="查看更多">
-            <i class="fas fa-angle-right"></i>
-          </a>
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">语之屋</a>
+      </h1>
+      
     </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog-youyu.fun"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
   
-    <ul class="card-archive-list">
+    <article id="post-2025-03-22 梦幻的" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/posts/12762.html" class="article-date">
+  <time class="dt-published" datetime="2022-03-09T13:34:09.000Z" itemprop="datePublished">2022-03-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/">追求本我</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/posts/12762.html">梦幻的</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/03/">
-            <span class="card-archive-list-date">
-              三月 2025
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
+        <p>小城里烟雾蒙蒙，灰蓝的天空仿佛没了力气，散落的阳光也没有任何的神采。我撑着空伞，走在一条小路上，临近学校，身为住校的学生却是少来此地，路上遇到的便都是陌生的人。</p>
+<p>转身走进另一条不算太热闹的巷子，前面只有一个人漫步巷中，正是迎面见到。</p>
+<p>“嗨，许久未见。”极为熟悉的面庞，是年少时相识的姑娘，小茉莉啊。</p>
+<p>“很久不见了。”茉莉也是这样回答我。</p>
+<p>往事一桩桩浮上心头，短短一年多的时间线被与她相关的交集串联起来，死去的记忆复活在我的心头。</p>
+<p>三年前的往事聊来也很少能够拿出来的回忆，只是当时觉得是很好的朋友，我也未曾想过分班后、不算太久后，交流就日渐稀疏。</p>
+<p>最后是伤了心，路上开始学会了不再打招呼，学会了目不斜视，形同陌路。</p>
+<p>我向共同的友人倾诉，因为这个人、那件事我们才会走到素不相识般。友人轻笑：“怕的什么，你们之间还有我这样的朋友，怎么会彻底断交。”他不清楚，也不理解。</p>
+<p>于是我和小茉莉站在原地也没了下文，静静的僵持着，直到天旋地转，内心被其他冲击。</p>
+<p>睁开眼，手里握着的是播放着视频的手机，原是刷到了小茉莉的抖音，却陷入睡眠，呵。</p>
+
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2025/01/">
-            <span class="card-archive-list-date">
-              一月 2025
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog-youyu.fun/posts/12762.html" data-id="cm8kczvgs000m6c7m2j043i0s" data-title="梦幻的" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2024/12/">
-            <span class="card-archive-list-date">
-              十二月 2024
-            </span>
-            <span class="card-archive-list-count">4</span>
-          </a>
-        </li>
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2024/11/">
-            <span class="card-archive-list-date">
-              十一月 2024
-            </span>
-            <span class="card-archive-list-count">3</span>
-          </a>
-        </li>
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2024/09/">
-            <span class="card-archive-list-date">
-              九月 2024
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2025-03-22 蝉生不问久长，而以先出土者为长" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/posts/28392.html" class="article-date">
+  <time class="dt-published" datetime="2021-12-09T13:59:21.000Z" itemprop="datePublished">2021-12-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/posts/28392.html">蝉生不问久长，而以先出土者为长</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2024/08/">
-            <span class="card-archive-list-date">
-              八月 2024
-            </span>
-            <span class="card-archive-list-count">1</span>
-          </a>
-        </li>
+        <h3 id="破土时刻"><a href="#破土时刻" class="headerlink" title="破土时刻"></a>破土时刻</h3><hr>
+<p>“吱吱吱吱吱吱……”</p>
+<p>夏日，一个周末的早晨，蝉声不断，巨大响声不比施工的工地弱上分毫。旁边的校园里，学生们有些无奈的爬下床，或是洗漱出门；或是掩上阳台的门，试图再续旧梦。然而如何他们的周末还是就此消失了。</p>
+<p>“老三，回来记的给我带一份烤冷面。”甚至有一位连眼睛都未曾睁开，只是在老三关门前的一瞬间补上一句，不过老三也不一定会回来，那晚烤冷面多半是知道晚上也不会到他的床边了。</p>
+<p>学生们的慵懒日常并不是全部，更多的是在学校的各个角落里做着属于他们的项目。与这些人相同的，是在校园里同样勤奋的是知了。周末的校园确实比平时要空旷许多，但不会改变百花盛开，争奇斗艳的姿态。</p>
+<p>校园内某棵树下，它还在回忆着昨夜的惊心动魄。时间刚刚入夜，金蝉又数了一遍日子，虽然久居地下，它也知道自从进入这地底深处，两千多个昼夜已经过去，今天有些不同寻常，刚刚从“食堂——一棵老树的根茎”进食的时候就有所察觉，今天又下雨了。</p>
+<p>看来已经是时候了，在这暗无边际，周遭都是泥土的地下生活了将近七年的它终于等来了出土的时机。七年前它被送进父母送进这里，在黑暗中汲取养分，只是为了今天的觉醒。</p>
+<p>逐渐活动着自己的身子，舒展好自己的肢体后，它开始向着一个方向的土壤发起了进攻。在某种与生俱来的能力帮助下，他知道那就是通往地面的路线。</p>
+<p>路程很远，金蝉费了很大的劲还是在路上，他已经隐隐听到隔着土壤传来的歌唱的声音，只是这会，意外陡生！</p>
+<h3 id="蚁穴惊魂"><a href="#蚁穴惊魂" class="headerlink" title="蚁穴惊魂"></a>蚁穴惊魂</h3><hr>
+<p>金蝉又一次举起镰刀，用力向前挥舞，这次没有充实的感觉，凡是像是戳漏了什么一般，它心头一动，这绝对不会是什么好的预兆。</p>
+<p>打开的地方并不是宽广，却让它感到心悸，一条狭小的隧道？金蝉这么想着，忽的感到有什么东西触碰到了自己，单眼和复眼在这种情况下并不能起到多大作用，不过它还是隐约看到了是一只极小的生物在牵扯它。</p>
+<p>说不上来是什么感受，可能是愤怒吧，这样弱小的虫子竟然也会过来捕食它，是一种耻辱。镰刀更快的落下，有些偏，小东西的三节身子不自然的扭曲起来，痛苦的逃进了隧道里。</p>
+<p>金蝉不能进去，只好慢慢的离开当然他没有忘记，顺手堵死了这奇怪的通道，没有蝉兑过的金蝉子，对一切的风险都要谨慎对待。路上它一次次的回忆，终于想起了那只小生物的名字，那是铭刻在 DNA 里的天敌——蚂蚁。</p>
+<p>祖辈的记忆渐渐复苏，它心中一阵后怕，摸着身后暄软的土壤，庆幸自己的运气足够好，没有陷入蚁群的围攻。此刻它不得不停下了，虽然距离地面只有几厘米的距离，但是知道了周遭环境后它不得不谨慎地走每一步以免再次走进万劫不复的境地。</p>
+<p>没有任何的反馈给它，只能够一步一步的探索，在一张纵横交错的三维网络中，金蝉举步维艰，本应很快走出的地底深处，它花费了更长久的时间。</p>
+<p>一道刺眼的光芒出现，单眼和复眼仅存的一点视力也消失不见，许久后慢慢才恢复，不远处是那个小小的蚁穴，依旧是记忆中的奇怪尖塔的形状，心中躁动的想要去捣毁掉，而对周遭那几个相对“大个头”的兵蚁的恐惧又很快让金蝉打消了这个念头。</p>
+<p>趁着蚂蚁们还没注意到这边的气味，它向着远处一棵树爬去，今夜它要蜕壳，危险还在呢。</p>
+<h3 id="蝉生友，乐队"><a href="#蝉生友，乐队" class="headerlink" title="蝉生友，乐队"></a>蝉生友，乐队</h3><hr>
+<p>金蝉最先遇到的是两个同族，它当然知道那动作中的一滞有什么含义，和它一样，它们都是为了寻找一个姑娘才拼了性命从那地底深处爬出来的，为了繁衍。</p>
+<p>两只蝉的停滞只是一瞬间，它们的目的是邀请金蝉，这是一场团队作战，西面的杨树七过两天会有很多姑娘出土，那棵树并不能够完全内部消化，相邻的几棵树将会有一场大比拼。</p>
+<p>蝉生友，是金蝉所在的松树三上的蝉乐队，时间紧迫，整片林荫树道的各家乐队都在练习着。金蝉到了以后也立刻加入这场训练。</p>
+<h3 id="努力的人，都很优秀"><a href="#努力的人，都很优秀" class="headerlink" title="努力的人，都很优秀"></a>努力的人，都很优秀</h3><hr>
+<p>蝉们在为了自己的未来不断努力着，这种努力让夏日更加聒噪，钱塘江的江风吹进大学，带来的是潮湿而又闷热，图书馆里的人不时停下笔，烦躁的看着窗外。</p>
+<p>在六层的高度上，几乎已经没有了什么树木能够齐窗高了，地面也已经变成了遥远的地方，无论是哪个时间段都有来来往往的人，或者是刚刚从寝室出来的，捧着学习的资料，闲庭胜步；或者是学习一个上午，去把早饭和午饭一起补足，快步趋向学校的大门；有的是和朋友相约的三三两两；也有独自一人自由自在……无论如何，这些人在高高的楼层看去，都成了一个个二维的点，失去了真实感，那些绿油油的树木仿佛也成了静止的插画，只有蝉声不断，充耳不绝。</p>
+<p>环顾四周，仍旧沉迷于学习的大有人在，仿佛这噪声不存在一般毫不在意。</p>
+<p>“都是这该死的蝉，影响我的思路。”暗暗咕囔一声，却也沉不下心来，犹豫了一会左手伸向了手机，不一会脸上浮现笑的表情，也不出声，时间就这样不断溜走。许久，日头西斜，落日余晖打在他的脸上，耀眼的光芒照射下，他猛地回过神来，暗自悔恨的放下手机，投入学习，也不再念叨什么蝉鸣。</p>
+<p>直至太阳彻底落下后，图书馆也已经关上了大门，他收拾了那几本看了不多的课本，缓步出门，奔着寝室走去。路上遇到了寝室的同学，对方刚刚忙完导师的任务回来。</p>
+<p>“老三！”室友叫住了他，谈笑着两个人一同回到了寝室。</p>
+<h2 id="内卷"><a href="#内卷" class="headerlink" title="内卷"></a>内卷</h2><p>“金蝉，你还在练习啊？”蝉生友的训练已经结束了很久，黑蝉闲逛的时候还是听到了蝉鸣声，巡音找来，竟然是金蝉。</p>
+<p>“是啊，多练习练习总没有错。”金蝉练完一小段后，抽闲回答黑蝉的话，又进入了练习。</p>
+<p>看着忘我的金蝉，黑蝉带着嘲笑离开了，蝉生友已经是周围最强的队伍了，胜利早就是板上钉钉。</p>
+<h2 id="期末考试"><a href="#期末考试" class="headerlink" title="期末考试"></a>期末考试</h2><p>七月的夜结束的很早，老三喝下最后一杯水，窗外早就已经升起了晨曦，寝室里传来此起彼伏的伸懒腰、打哈欠的声音，考试前夜几人不约而同的通宵做了复习。</p>
+<p>“王小明，下楼吧，去吃早饭。”寝室的朋友叫他。</p>
+<p>老三收回目光，从阳台走回来，拿起早就准备好的考试物品，跟上了室友们的步伐。</p>
+<p>今天的校园林荫小路很安静，只有零星的几只此起彼伏的应和着。</p>
+<p>“欸，我听说蝉鸣是求偶的，”寝室里的一个人咽下了最后一口包子想到了什么似得说道，“那你们说这几只蝉会不会也是在内卷。”</p>
+<p>那岂不是万物都要卷起来。几人的笑声打破了林荫的安静，久久回响。</p>
+<h2 id="卷心菜很卷"><a href="#卷心菜很卷" class="headerlink" title="卷心菜很卷"></a>卷心菜很卷</h2><p>天气随着太阳的升起热了起来，教室里的老师来来回回的走了几圈，出去不知到哪里找来一个空调遥控器。</p>
+<p>凉风吹来，老三的心一下子静了下来，熬夜后的昏昏欲睡也逃的干干净净，潜心回到考试之后中。</p>
+<p>一题、两题、三题，终于将所有的题目都填满后，考试的铃声响起，老三的心也跟着沉了下去，今年的状态比之去年又差了很多，大学生活并不想自己的预期一样顺利。</p>
+<p>“老三，你怎么样？”走出考场，几个室友已经出来等着他了，他摇摇头，“和去年差不多吧，也不是很好。”</p>
+<p>回去时蝉鸣声音又剧烈响了起来，蝉们的声音也是随着阳光的升起变得更响，王小明想起来早上说过的笑话，只不过此刻不是感慨万物竞争，而是自己一年来怎么卷也卷不过系里的那几个大佬。</p>
+<p>“卷心菜这种东西，再怎么卷也还是菜啊。”他叹了一口气。</p>
+<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>日头西斜，蝉鸣声缓了下来，蝉生友不愧是校园里最好的乐队，吸引来了最多的破土新蝉，不过黑蝉此刻有些懊恼，他一直以为身处蝉生友就会成功找到配偶，然而来到这棵树的新蝉只有寥寥几十只，他们这些平庸的蝉都做了嫁衣。</p>
+<p>金蝉不这么认为，这一次换成了他鄙视黑蝉眼里的怨毒，他当之无愧，哪怕不是最优，可是凭借了加练，他成功跻身成功者的队伍。</p>
+<p>蝉生将尽，那些“不努力”的家伙们就不会有后代了，“下一次轮回的时候，长些记性吧。”</p>
+
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2024/03/">
-            <span class="card-archive-list-date">
-              三月 2024
-            </span>
-            <span class="card-archive-list-count">2</span>
-          </a>
-        </li>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog-youyu.fun/posts/28392.html" data-id="cm8kczvgq000i6c7m7myg5cxu" data-title="蝉生不问久长，而以先出土者为长" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2024/01/">
-            <span class="card-archive-list-date">
-              一月 2024
-            </span>
-            <span class="card-archive-list-count">4</span>
-          </a>
-        </li>
       
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">33</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-23T11:52:23.018Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 公子语</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" rel="tag">奇思妙想</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-蝇之惑" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/posts/4971.html" class="article-date">
+  <time class="dt-published" datetime="2021-02-18T02:34:07.000Z" itemprop="datePublished">2021-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/posts/4971.html">蝇之惑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>教室里一如既往，老学究在讲台上倾授晦涩的知识，几个优等生随声附和着，使这课堂不至于无聊，但更多的是趴伏在桌子上，沉睡在天书的 BGM 中。蝇就是在这时出来的，它并不是一只普通的蝇，相较于同伴，它的块头比较大，颜色也更加艳丽，江湖人称绿豆蝇。蝇对于这个雅号还是接受的，这已经展示了它的主要特征，非要说还有什么不足，就是没有把它声音很大也概括进去。因为这个特点，多数绿豆蝇进入屋子很快就会被发现并杀死。</p>
+<p>这只蝇并不是普通的蝇，它很聪明，虽然它的神经系统和它的兄弟姐妹们差不多，但它已经来到这间屋子三天了，没有被发现杀死，又学到了“孟德尔”“萨顿”“摩尔根”等一群人和它们的事迹。在为那不知名的同伴感到悲哀的同时，它觉得它已经可以放肆些了，毕竟它已经是一只“知识蝇”。</p>
+<p>蝇还是很谨慎的，每一次活动前它都要先仔细寻找苍蝇拍，粘蝇纸一类的大杀器，也只在人许久不动，进入休眠状态时才会大胆活动。人一动不动，只有嘴巴偶尔一张一合，“像是鱼在水中呼吸时的样子”，窗子边就有一盆金鱼，对付它们，蝇已经轻车熟路，“这很安全，在鱼身上只要注意不要落水就好，何况这里没有水。”疲乏的蝇落在了人的身上。人的睫毛抖动了一下，呼吸也加重了几分，变化轻微，又在一瞬间就恢复原态，蝇并没有察觉，放松的蝇舒展着肢体，搓动前爪。</p>
+<p>不知从何处传来音乐声，是著名的钢琴曲《爱的纪念》，它知道，是一位叫做理……的名人。这几天它总是可以听到这首曲子。很惬意的听着，危险是陡然间到来的，纵使它尽最大努力舞动翅膀，但方形课本破空时发出的气流将它卡在原处，无法离去。只能听着自己内脏绽开的声音，无力的挣动腿部，体会那个名为“知识”的力量。</p>
+<p>那位讲解摩尔根的老人走下讲台，蝇倒在血泊中，耳中喧闹的声音愈发渺远，失去意识前，蝇看着被染红的身体，“原来绿色表皮下，我的血也是这般的红。”</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog-youyu.fun/posts/4971.html" data-id="cm8kczvhe00296c7meumfgcoj" data-title="蝇之惑" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" rel="tag">奇思妙想</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; 上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/">何不看世界</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/">探索互联网</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/">文艺的风</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/">追求本我</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AHK/" rel="tag">AHK</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PySide6/" rel="tag">PySide6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%A8%E8%AE%B0/" rel="tag">周记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" rel="tag">命令行</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" rel="tag">奇思妙想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" rel="tag">好玩的 Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" rel="tag">年终总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" rel="tag">折腾日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%A3%E6%96%87/" rel="tag">散文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" rel="tag">校园风光</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" rel="tag">看世界</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BF%BB%E8%AF%91/" rel="tag">翻译</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" rel="tag">软件推荐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" rel="tag">问题小记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E4%B9%90/" rel="tag">音乐</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AHK/" style="font-size: 12px;">AHK</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/PySide6/" style="font-size: 12px;">PySide6</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Windows/" style="font-size: 14px;">Windows</a> <a href="/tags/python/" style="font-size: 14px;">python</a> <a href="/tags/%E5%91%A8%E8%AE%B0/" style="font-size: 14px;">周记</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 12px;">命令行</a> <a href="/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/" style="font-size: 16px;">奇思妙想</a> <a href="/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/" style="font-size: 14px;">好玩的 Linux</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 14px;">小说</a> <a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" style="font-size: 10px;">年终总结</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 20px;">技术</a> <a href="/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/" style="font-size: 10px;">折腾日记</a> <a href="/tags/%E6%95%A3%E6%96%87/" style="font-size: 10px;">散文</a> <a href="/tags/%E6%A0%A1%E5%9B%AD%E9%A3%8E%E5%85%89/" style="font-size: 10px;">校园风光</a> <a href="/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/" style="font-size: 16px;">看世界</a> <a href="/tags/%E7%BF%BB%E8%AF%91/" style="font-size: 10px;">翻译</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 10px;">读书</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 10px;">软件</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" style="font-size: 10px;">软件推荐</a> <a href="/tags/%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" style="font-size: 10px;">问题小记</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 18px;">随笔</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">音乐</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">三月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">一月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/12/">十二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">十一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">九月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">八月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/posts/26096.html">怀旧</a>
+          </li>
+        
+          <li>
+            <a href="/posts/38883.html">2024 年度总结</a>
+          </li>
+        
+          <li>
+            <a href="/posts/40903.html">国际化开发的经验</a>
+          </li>
+        
+          <li>
+            <a href="/posts/60445.html">节气之歌-大雪</a>
+          </li>
+        
+          <li>
+            <a href="/posts/22044.html">近况和未来一段时间的展望</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 公子语<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
