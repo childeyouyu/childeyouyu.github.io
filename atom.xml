@@ -3,27 +3,23 @@
   <title>语之屋</title>
   
   
-  <link href="https://blog-youyu.fun/atom.xml" rel="self"/>
+  <link href="https://childeyouyu.github.io/atom.xml" rel="self"/>
   
-  <link href="https://blog-youyu.fun/"/>
+  <link href="https://childeyouyu.github.io/"/>
   <updated>2025-03-22T13:28:54.000Z</updated>
-  <id>https://blog-youyu.fun/</id>
+  <id>https://childeyouyu.github.io/</id>
   
   <author>
     <name>公子语</name>
     
   </author>
-  <follow_challenge>
-      <feedId>78279468312666136</feedId>
-      <userId>87080982863556608</userId>
-  </follow_challenge>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>怀旧</title>
-    <link href="https://blog-youyu.fun/posts/26096.html"/>
-    <id>https://blog-youyu.fun/posts/26096.html</id>
+    <link href="https://childeyouyu.github.io/posts/26096.html"/>
+    <id>https://childeyouyu.github.io/posts/26096.html</id>
     <published>2025-03-22T13:26:32.000Z</published>
     <updated>2025-03-22T13:28:54.000Z</updated>
     
@@ -32,17 +28,17 @@
     
     
     
-    <category term="追求本我" scheme="https://blog-youyu.fun/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
+    <category term="追求本我" scheme="https://childeyouyu.github.io/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
     
     
-    <category term="随笔" scheme="https://blog-youyu.fun/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>2024 年度总结</title>
-    <link href="https://blog-youyu.fun/posts/38883.html"/>
-    <id>https://blog-youyu.fun/posts/38883.html</id>
+    <link href="https://childeyouyu.github.io/posts/38883.html"/>
+    <id>https://childeyouyu.github.io/posts/38883.html</id>
     <published>2025-01-01T14:57:48.000Z</published>
     <updated>2025-01-01T15:02:06.000Z</updated>
     
@@ -53,15 +49,15 @@
     
     
     
-    <category term="追求本我" scheme="https://blog-youyu.fun/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
+    <category term="追求本我" scheme="https://childeyouyu.github.io/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
     
     
   </entry>
   
   <entry>
     <title>国际化开发的经验</title>
-    <link href="https://blog-youyu.fun/posts/40903.html"/>
-    <id>https://blog-youyu.fun/posts/40903.html</id>
+    <link href="https://childeyouyu.github.io/posts/40903.html"/>
+    <id>https://childeyouyu.github.io/posts/40903.html</id>
     <published>2024-12-20T14:22:36.000Z</published>
     <updated>2024-12-20T14:57:56.000Z</updated>
     
@@ -76,19 +72,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="python" scheme="https://blog-youyu.fun/tags/python/"/>
+    <category term="python" scheme="https://childeyouyu.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>节气之歌-大雪</title>
-    <link href="https://blog-youyu.fun/posts/60445.html"/>
-    <id>https://blog-youyu.fun/posts/60445.html</id>
+    <link href="https://childeyouyu.github.io/posts/60445.html"/>
+    <id>https://childeyouyu.github.io/posts/60445.html</id>
     <published>2024-12-06T14:19:01.000Z</published>
     <updated>2024-12-06T15:24:10.000Z</updated>
     
@@ -102,19 +98,19 @@
     
     
     
-    <category term="何不看世界" scheme="https://blog-youyu.fun/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
     
-    <category term="随笔" scheme="https://blog-youyu.fun/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="看世界" scheme="https://blog-youyu.fun/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="看世界" scheme="https://childeyouyu.github.io/tags/%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
   </entry>
   
   <entry>
     <title>近况和未来一段时间的展望</title>
-    <link href="https://blog-youyu.fun/posts/22044.html"/>
-    <id>https://blog-youyu.fun/posts/22044.html</id>
+    <link href="https://childeyouyu.github.io/posts/22044.html"/>
+    <id>https://childeyouyu.github.io/posts/22044.html</id>
     <published>2024-12-01T14:51:55.000Z</published>
     <updated>2024-12-01T14:55:22.000Z</updated>
     
@@ -131,19 +127,19 @@
     
     
     
-    <category term="追求本我" scheme="https://blog-youyu.fun/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
+    <category term="追求本我" scheme="https://childeyouyu.github.io/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
     
     
-    <category term="随笔" scheme="https://blog-youyu.fun/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://childeyouyu.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
-    <category term="周记" scheme="https://blog-youyu.fun/tags/%E5%91%A8%E8%AE%B0/"/>
+    <category term="周记" scheme="https://childeyouyu.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>笔记-SSH 配置</title>
-    <link href="https://blog-youyu.fun/posts/14641.html"/>
-    <id>https://blog-youyu.fun/posts/14641.html</id>
+    <link href="https://childeyouyu.github.io/posts/14641.html"/>
+    <id>https://childeyouyu.github.io/posts/14641.html</id>
     <published>2024-12-01T14:27:38.000Z</published>
     <updated>2024-12-01T14:31:20.000Z</updated>
     
@@ -158,17 +154,17 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>最近的变化</title>
-    <link href="https://blog-youyu.fun/posts/25708.html"/>
-    <id>https://blog-youyu.fun/posts/25708.html</id>
+    <link href="https://childeyouyu.github.io/posts/25708.html"/>
+    <id>https://childeyouyu.github.io/posts/25708.html</id>
     <published>2024-11-26T13:52:33.000Z</published>
     <updated>2024-11-26T14:25:58.000Z</updated>
     
@@ -183,15 +179,15 @@
     
     
     
-    <category term="何不看世界" scheme="https://blog-youyu.fun/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
+    <category term="何不看世界" scheme="https://childeyouyu.github.io/categories/%E4%BD%95%E4%B8%8D%E7%9C%8B%E4%B8%96%E7%95%8C/"/>
     
     
   </entry>
   
   <entry>
     <title>PySide6开发日记（二）</title>
-    <link href="https://blog-youyu.fun/posts/23589.html"/>
-    <id>https://blog-youyu.fun/posts/23589.html</id>
+    <link href="https://childeyouyu.github.io/posts/23589.html"/>
+    <id>https://childeyouyu.github.io/posts/23589.html</id>
     <published>2024-11-21T14:07:49.000Z</published>
     <updated>2024-12-01T14:54:22.000Z</updated>
     
@@ -202,21 +198,21 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="python" scheme="https://blog-youyu.fun/tags/python/"/>
+    <category term="python" scheme="https://childeyouyu.github.io/tags/python/"/>
     
-    <category term="PySide6" scheme="https://blog-youyu.fun/tags/PySide6/"/>
+    <category term="PySide6" scheme="https://childeyouyu.github.io/tags/PySide6/"/>
     
-    <category term="周记" scheme="https://blog-youyu.fun/tags/%E5%91%A8%E8%AE%B0/"/>
+    <category term="周记" scheme="https://childeyouyu.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>PySide6开发日记（一）</title>
-    <link href="https://blog-youyu.fun/posts/52319.html"/>
-    <id>https://blog-youyu.fun/posts/52319.html</id>
+    <link href="https://childeyouyu.github.io/posts/52319.html"/>
+    <id>https://childeyouyu.github.io/posts/52319.html</id>
     <published>2024-11-11T14:07:49.000Z</published>
     <updated>2024-12-01T14:53:54.000Z</updated>
     
@@ -227,21 +223,21 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="python" scheme="https://blog-youyu.fun/tags/python/"/>
+    <category term="python" scheme="https://childeyouyu.github.io/tags/python/"/>
     
-    <category term="PySide6" scheme="https://blog-youyu.fun/tags/PySide6/"/>
+    <category term="PySide6" scheme="https://childeyouyu.github.io/tags/PySide6/"/>
     
-    <category term="周记" scheme="https://blog-youyu.fun/tags/%E5%91%A8%E8%AE%B0/"/>
+    <category term="周记" scheme="https://childeyouyu.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>新电脑：因为在此电脑上禁止运行脚本 问题的解决</title>
-    <link href="https://blog-youyu.fun/posts/59813.html"/>
-    <id>https://blog-youyu.fun/posts/59813.html</id>
+    <link href="https://childeyouyu.github.io/posts/59813.html"/>
+    <id>https://childeyouyu.github.io/posts/59813.html</id>
     <published>2024-09-05T03:34:08.000Z</published>
     <updated>2024-10-02T04:04:22.000Z</updated>
     
@@ -252,21 +248,21 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Windows" scheme="https://blog-youyu.fun/tags/Windows/"/>
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
-    <category term="命令行" scheme="https://blog-youyu.fun/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
+    <category term="命令行" scheme="https://childeyouyu.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"/>
     
   </entry>
   
   <entry>
     <title>SQLite 数据类型</title>
-    <link href="https://blog-youyu.fun/posts/36818.html"/>
-    <id>https://blog-youyu.fun/posts/36818.html</id>
+    <link href="https://childeyouyu.github.io/posts/36818.html"/>
+    <id>https://childeyouyu.github.io/posts/36818.html</id>
     <published>2024-08-27T00:03:46.000Z</published>
     <updated>2024-10-02T04:05:36.000Z</updated>
     
@@ -277,17 +273,17 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>使用 RSS 来保护隐私和提高效率-(翻译)</title>
-    <link href="https://blog-youyu.fun/posts/1066.html"/>
-    <id>https://blog-youyu.fun/posts/1066.html</id>
+    <link href="https://childeyouyu.github.io/posts/1066.html"/>
+    <id>https://childeyouyu.github.io/posts/1066.html</id>
     <published>2024-03-06T13:01:04.000Z</published>
     <updated>2024-03-18T01:44:56.000Z</updated>
     
@@ -299,14 +295,14 @@
     
     
     
-    <category term="翻译" scheme="https://blog-youyu.fun/tags/%E7%BF%BB%E8%AF%91/"/>
+    <category term="翻译" scheme="https://childeyouyu.github.io/tags/%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
   <entry>
     <title>3 月软件推荐</title>
-    <link href="https://blog-youyu.fun/posts/fc02.html"/>
-    <id>https://blog-youyu.fun/posts/fc02.html</id>
+    <link href="https://childeyouyu.github.io/posts/fc02.html"/>
+    <id>https://childeyouyu.github.io/posts/fc02.html</id>
     <published>2024-03-03T00:05:59.000Z</published>
     <updated>2024-03-11T11:53:24.000Z</updated>
     
@@ -321,14 +317,14 @@
     
     
     
-    <category term="软件推荐" scheme="https://blog-youyu.fun/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    <category term="软件推荐" scheme="https://childeyouyu.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
   <entry>
     <title>AHK 自动复制的实现与逻辑分析</title>
-    <link href="https://blog-youyu.fun/posts/d3ee.html"/>
-    <id>https://blog-youyu.fun/posts/d3ee.html</id>
+    <link href="https://childeyouyu.github.io/posts/d3ee.html"/>
+    <id>https://childeyouyu.github.io/posts/d3ee.html</id>
     <published>2024-01-11T11:26:15.000Z</published>
     <updated>2024-01-11T13:54:58.000Z</updated>
     
@@ -339,19 +335,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="AHK" scheme="https://blog-youyu.fun/tags/AHK/"/>
+    <category term="AHK" scheme="https://childeyouyu.github.io/tags/AHK/"/>
     
   </entry>
   
   <entry>
     <title>左手</title>
-    <link href="https://blog-youyu.fun/posts/a706.html"/>
-    <id>https://blog-youyu.fun/posts/a706.html</id>
+    <link href="https://childeyouyu.github.io/posts/a706.html"/>
+    <id>https://childeyouyu.github.io/posts/a706.html</id>
     <published>2024-01-04T14:46:41.000Z</published>
     <updated>2024-01-21T04:20:18.000Z</updated>
     
@@ -367,19 +363,19 @@
     
     
     
-    <category term="文艺的风" scheme="https://blog-youyu.fun/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
+    <category term="文艺的风" scheme="https://childeyouyu.github.io/categories/%E6%96%87%E8%89%BA%E7%9A%84%E9%A3%8E/"/>
     
     
-    <category term="奇思妙想" scheme="https://blog-youyu.fun/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
+    <category term="奇思妙想" scheme="https://childeyouyu.github.io/tags/%E5%A5%87%E6%80%9D%E5%A6%99%E6%83%B3/"/>
     
-    <category term="散文" scheme="https://blog-youyu.fun/tags/%E6%95%A3%E6%96%87/"/>
+    <category term="散文" scheme="https://childeyouyu.github.io/tags/%E6%95%A3%E6%96%87/"/>
     
   </entry>
   
   <entry>
     <title>Next Cloud 容器挂载主机文件夹</title>
-    <link href="https://blog-youyu.fun/posts/9ea6.html"/>
-    <id>https://blog-youyu.fun/posts/9ea6.html</id>
+    <link href="https://childeyouyu.github.io/posts/9ea6.html"/>
+    <id>https://childeyouyu.github.io/posts/9ea6.html</id>
     <published>2024-01-04T12:24:20.000Z</published>
     <updated>2024-01-04T15:59:20.000Z</updated>
     
@@ -397,19 +393,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="折腾日记" scheme="https://blog-youyu.fun/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
+    <category term="折腾日记" scheme="https://childeyouyu.github.io/tags/%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
     
-    <category term="好玩的 Linux" scheme="https://blog-youyu.fun/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
+    <category term="好玩的 Linux" scheme="https://childeyouyu.github.io/tags/%E5%A5%BD%E7%8E%A9%E7%9A%84-Linux/"/>
     
   </entry>
   
   <entry>
     <title>2023 年终总结</title>
-    <link href="https://blog-youyu.fun/posts/fef3.html"/>
-    <id>https://blog-youyu.fun/posts/fef3.html</id>
+    <link href="https://childeyouyu.github.io/posts/fef3.html"/>
+    <id>https://childeyouyu.github.io/posts/fef3.html</id>
     <published>2024-01-01T16:13:58.000Z</published>
     <updated>2024-10-01T00:10:12.000Z</updated>
     
@@ -424,17 +420,17 @@
     
     
     
-    <category term="追求本我" scheme="https://blog-youyu.fun/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
+    <category term="追求本我" scheme="https://childeyouyu.github.io/categories/%E8%BF%BD%E6%B1%82%E6%9C%AC%E6%88%91/"/>
     
     
-    <category term="年终总结" scheme="https://blog-youyu.fun/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <category term="年终总结" scheme="https://childeyouyu.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>AHK 上手以及编辑器配置</title>
-    <link href="https://blog-youyu.fun/posts/65a0.html"/>
-    <id>https://blog-youyu.fun/posts/65a0.html</id>
+    <link href="https://childeyouyu.github.io/posts/65a0.html"/>
+    <id>https://childeyouyu.github.io/posts/65a0.html</id>
     <published>2023-12-30T08:18:44.000Z</published>
     <updated>2024-01-04T15:58:58.000Z</updated>
     
@@ -448,19 +444,19 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="AHK" scheme="https://blog-youyu.fun/tags/AHK/"/>
+    <category term="AHK" scheme="https://childeyouyu.github.io/tags/AHK/"/>
     
   </entry>
   
   <entry>
     <title>Anaconda 使用的几个点</title>
-    <link href="https://blog-youyu.fun/posts/ae8e.html"/>
-    <id>https://blog-youyu.fun/posts/ae8e.html</id>
+    <link href="https://childeyouyu.github.io/posts/ae8e.html"/>
+    <id>https://childeyouyu.github.io/posts/ae8e.html</id>
     <published>2023-12-05T15:38:18.000Z</published>
     <updated>2024-01-04T15:59:10.000Z</updated>
     
@@ -475,21 +471,21 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Windows" scheme="https://blog-youyu.fun/tags/Windows/"/>
+    <category term="Windows" scheme="https://childeyouyu.github.io/tags/Windows/"/>
     
-    <category term="Python" scheme="https://blog-youyu.fun/tags/Python/"/>
+    <category term="Python" scheme="https://childeyouyu.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Java 中文乱码问题 - 2021 年困扰我的万恶之源</title>
-    <link href="https://blog-youyu.fun/posts/4d37.html"/>
-    <id>https://blog-youyu.fun/posts/4d37.html</id>
+    <link href="https://childeyouyu.github.io/posts/4d37.html"/>
+    <id>https://childeyouyu.github.io/posts/4d37.html</id>
     <published>2023-11-22T03:13:15.000Z</published>
     <updated>2024-01-04T15:59:14.000Z</updated>
     
@@ -505,12 +501,12 @@
     
     
     
-    <category term="探索互联网" scheme="https://blog-youyu.fun/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    <category term="探索互联网" scheme="https://childeyouyu.github.io/categories/%E6%8E%A2%E7%B4%A2%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
-    <category term="技术" scheme="https://blog-youyu.fun/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://childeyouyu.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="Java" scheme="https://blog-youyu.fun/tags/Java/"/>
+    <category term="Java" scheme="https://childeyouyu.github.io/tags/Java/"/>
     
   </entry>
   
